@@ -1,0 +1,234 @@
+{% load static %}
+<header class="header">
+    <div class="header__head">
+        <div class="header__inner inner">
+            <div class="header__wrapper">
+                <div class="header__start">
+                    <div class="header__logo">
+                        <img src="/local/templates/main/img/logo.svg" alt="">
+
+                    </div>
+                    <span href="#call-back" data-modal="text" class="call_back"><img
+                                src="/local/templates/main/img/call-back.svg"
+                                alt=""></span> <a href="tel:88002349919" class="header__phone">
+                            <img src="/local/templates/main/img/icon/phone.svg" alt="">
+                            <span class="header__phone-tel">8 (800) 234 99 19</span>
+                        </a>
+                    <a href="#locationModal" class="location__header" data-modal="text">
+                        <svg class="location__header_icon">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-point"></use>
+                        </svg>
+                        <span class="location__header_text" id="select_region">
+                            <!--'start_frame_cache_select_region'-->Баку<!--'end_frame_cache_select_region'-->                                </span>
+                    </a>
+                </div>
+                <div class="header__end">
+
+
+
+                    <nav class="header__menu-top" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+
+
+
+
+                        <div class="header__menu-top-box">
+                            <a itemprop="url" href="/articles/" class="header__menu-top-link"><span itemprop="name">Статьи</span></a>
+                        </div>
+
+
+
+
+
+
+                        <div class="header__menu-top-box">
+                            <a itemprop="url" href="/about/" class="header__menu-top-link">
+        <span itemprop="name">О нас</span>
+        <svg class="header__menu-top-link-icon" width="16" height="9">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-dotted"></use>
+        </svg>
+    </a>
+                            <div class="header__menu-top-hidd">
+
+
+
+
+
+
+                                <a itemprop="url" href="/faq/" class="header__menu-top-link-second">
+        <svg class="header__menu-top-link-second-icon" width="10" height="11">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-enterLink"></use>
+        </svg>
+        <span itemprop="name">FAQ</span> </a>
+
+
+
+
+
+
+                                <a itemprop="url" href="/about/" class="header__menu-top-link-second">
+        <svg class="header__menu-top-link-second-icon" width="10" height="11">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-enterLink"></use>
+        </svg>
+        <span itemprop="name">О компании</span> </a>
+
+
+
+
+
+
+                                <a itemprop="url" href="/reviews/" class="header__menu-top-link-second">
+        <svg class="header__menu-top-link-second-icon" width="10" height="11">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-enterLink"></use>
+        </svg>
+        <span itemprop="name">Отзывы</span> </a>
+
+
+
+
+                            </div>
+                        </div>
+
+                        <div class="header__menu-top-box">
+                            <a itemprop="url" href="javascript:void(0)" class="header__menu-top-link">
+        <span itemprop="name">Клиентам</span>
+        <svg class="header__menu-top-link-icon" width="16" height="9">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-dotted"></use>
+        </svg>
+    </a>
+                            <div class="header__menu-top-hidd">
+
+
+
+
+
+
+                                <a itemprop="url" href="/support/" class="header__menu-top-link-second">
+        <svg class="header__menu-top-link-second-icon" width="10" height="11">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-enterLink"></use>
+        </svg>
+        <span itemprop="name">Тех. поддержка</span> </a>
+
+
+
+
+
+
+                                <a itemprop="url" href="/delivery/" class="header__menu-top-link-second">
+        <svg class="header__menu-top-link-second-icon" width="10" height="11">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-enterLink"></use>
+        </svg>
+        <span itemprop="name">Доставка и оплата</span> </a>
+
+
+
+
+
+
+                                <a itemprop="url" href="/garanty/" class="header__menu-top-link-second">
+        <svg class="header__menu-top-link-second-icon" width="10" height="11">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-enterLink"></use>
+        </svg>
+        <span itemprop="name">Гарантия</span> </a>
+
+
+
+
+                            </div>
+                        </div>
+
+                        <div class="header__menu-top-box">
+                            <a itemprop="url" href="/contacts/" class="header__menu-top-link"><span itemprop="name">Контакты</span></a>
+                        </div>
+
+
+
+
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header__foot">
+        <div class="header__inner inner">
+            <div class="header__wrapper">
+                <div class="header__start">
+
+
+                    <div class="header__menu">
+                        <nav itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="header__menu-box">
+
+                            <a itemprop="url" href="/constructor/" class="header__menu-link ">
+                                <div class="header__menu-link-icon-box">
+                                    <svg class="header__menu-link-icon" width="20" height="20">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-mobile_konfig"></use>
+</svg>
+                                </div> <span itemprop="name" class="header__menu-link-span">Конфигуратор ПК</span>
+                            </a>
+                            <a itemprop="url" href="/nedorogie-pc/" class="header__menu-link ">
+                                <div class="header__menu-link-icon-box">
+                                    <svg class="header__menu-link-icon" width="22" height="22">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-game"></use>
+</svg>
+                                </div> <span itemprop="name" class="header__menu-link-span">Недорогие ПК</span>
+                            </a>
+                            <a itemprop="url" href="/power-pc/" class="header__menu-link no-pad">
+            <span itemprop="name">Игровые ПК</span>                </a>
+                            <a itemprop="url" href="/powerfull-pc/" class="header__menu-link no-pad">
+            <span itemprop="name">Мощнейшие ПК</span>                </a>
+                            <a itemprop="url" href="/pc-amd/" class="header__menu-link no-pad">
+            <span itemprop="name">ПК на базе AMD</span>                </a>
+                            <a itemprop="url" href="/game/" class="header__menu-link no-pad">
+            <span itemprop="name">ПК под игру</span>                </a>
+
+                        </nav>
+                    </div>
+
+                </div>
+                <div class="header__end">
+                    <div class="header__controll">
+                        <div class="header__controll-box">
+                            <a href="/search/" class="header__controll-link js-search-btn">
+                                <div class="header__controll-link-icon-box">
+                                    <svg class="header__controll-link-icon" width="18" height="18">
+    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-search"></use>
+</svg>
+                                </div>
+                                <span class="header__controll-text">Поиск</span>
+                            </a>
+                            <div class="search">
+                                <div class="search__inner inner">
+                                    <form class="search__form" action="/search/">
+                                        <input type="text" value="" name="q" class="search__input" placeholder="Введите слово или фразу...">
+                                        <input type="submit" name="s" class="search__btn btn" value="найти" disabled>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/cart/" id="bx_basketFKauiI" class="header__controll-link js-btn-search">
+                            <!--'start_frame_cache_bx_basketFKauiI'-->
+                            <div class="header__controll-link-box">
+                                <div class="header__controll-link-icon-box">
+                                    <svg class="header__controll-link-icon" width="20" height="20">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-basket"></use>
+    </svg>
+                                </div>
+                                <span class="header__controll-sum">0</span>
+                            </div>
+                            <span class="header__controll-text">Корзина</span>
+                            <!--'end_frame_cache_bx_basketFKauiI'-->
+                        </a>
+                        <a href="#" class="header__controll-link header__controll-link--menu js-btn-menu">
+                            <div class="header__controll-link-icon-box">
+                                <svg class="header__controll-link-icon" width="20" height="12">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-menu"></use>
+                                </svg>
+                            </div>
+                            <span class="header__controll-text">Меню</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

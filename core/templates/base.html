@@ -1,0 +1,609 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Компьютерный интернет-магазин EDELWEISS - продажа персональных компьютеров в Москве</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="купить компьютер, продажа пк, системные блоки, интернет-магазин" />
+    <meta name="description" content="Производство и продажа компьютеров. Удобный конфигуратор, выгодные цены, индивидуальный подход к клиенту, Заказывайте и покупайте новые настольные ПК с доставкой по Москве и России." />
+    <link rel="canonical" href="https://edelws.ru/" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+
+    <script type="text/javascript" data-skip-moving="true">
+        (function(w, d, n) {
+
+            var cl = "bx-core";
+            var ht = d.documentElement;
+            var htc = ht ? ht.className : undefined;
+            if (htc === undefined || htc.indexOf(cl) !== -1) {
+                return;
+            }
+
+            var ua = n.userAgent;
+            if (/(iPad;)|(iPhone;)/i.test(ua)) {
+                cl += " bx-ios";
+            } else if (/Android/i.test(ua)) {
+                cl += " bx-android";
+            }
+
+            cl += (/(ipad|iphone|android|mobile|touch)/i.test(ua) ? " bx-touch" : " bx-no-touch");
+
+            cl += w.devicePixelRatio && w.devicePixelRatio >= 2 ?
+                " bx-retina" :
+                " bx-no-retina";
+
+            var ieVersion = -1;
+            if (/AppleWebKit/.test(ua)) {
+                cl += " bx-chrome";
+            } else if ((ieVersion = getIeVersion()) > 0) {
+                cl += " bx-ie bx-ie" + ieVersion;
+                if (ieVersion > 7 && ieVersion < 10 && !isDoctype()) {
+                    cl += " bx-quirks";
+                }
+            } else if (/Opera/.test(ua)) {
+                cl += " bx-opera";
+            } else if (/Gecko/.test(ua)) {
+                cl += " bx-firefox";
+            }
+
+            if (/Macintosh/i.test(ua)) {
+                cl += " bx-mac";
+            }
+
+            ht.className = htc ? htc + " " + cl : cl;
+
+            function isDoctype() {
+                if (d.compatMode) {
+                    return d.compatMode == "CSS1Compat";
+                }
+
+                return d.documentElement && d.documentElement.clientHeight;
+            }
+
+            function getIeVersion() {
+                if (/Opera/i.test(ua) || /Webkit/i.test(ua) || /Firefox/i.test(ua) || /Chrome/i.test(ua)) {
+                    return -1;
+                }
+
+                var rv = -1;
+                if (!!(w.MSStream) && !(w.ActiveXObject) && ("ActiveXObject" in w)) {
+                    rv = 11;
+                } else if (!!d.documentMode && d.documentMode >= 10) {
+                    rv = 10;
+                } else if (!!d.documentMode && d.documentMode >= 9) {
+                    rv = 9;
+                } else if (d.attachEvent && !/Opera/.test(ua)) {
+                    rv = 8;
+                }
+
+                if (rv == -1 || rv == 8) {
+                    var re;
+                    if (n.appName == "Microsoft Internet Explorer") {
+                        re = new RegExp("MSIE ([0-9]+[\.0-9]*)");
+                        if (re.exec(ua) != null) {
+                            rv = parseFloat(RegExp.$1);
+                        }
+                    } else if (n.appName == "Netscape") {
+                        rv = 11;
+                        re = new RegExp("Trident/.*rv:([0-9]+[\.0-9]*)");
+                        if (re.exec(ua) != null) {
+                            rv = parseFloat(RegExp.$1);
+                        }
+                    }
+                }
+
+                return rv;
+            }
+
+        })(window, document, navigator);
+    </script>
+
+
+    <link href="/bitrix/cache/css/s1/main/template_70311f9b576698beda3af8d175cf02fe/template_70311f9b576698beda3af8d175cf02fe_v1.css?1647932249286421" type="text/css" data-template-style="true" rel="stylesheet" />
+
+
+
+
+
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <meta name="HandheldFriendly" content="True">
+    <meta property="og:title" content="Компьютерный интернет-магазин EDELWEISS - продажа персональных компьютеров в Москве" />
+    <meta property="twitter:title" content="Компьютерный интернет-магазин EDELWEISS - продажа персональных компьютеров в Москве" />
+    <meta property="og:url" content="https://edelws.ru/" />
+    <meta property="og:description" content="Производство и продажа компьютеров. Удобный конфигуратор, выгодные цены, индивидуальный подход к клиенту, Заказывайте и покупайте новые настольные ПК с доставкой по Москве и России." />
+    <meta property="twitter:description" content="Производство и продажа компьютеров. Удобный конфигуратор, выгодные цены, индивидуальный подход к клиенту, Заказывайте и покупайте новые настольные ПК с доставкой по Москве и России." />
+    <meta property="og:image" content="https://edelws.ru/local/templates/main/img/logo.svg" />
+    <meta property="twitter:image:src" content="https://edelws.ru/local/templates/main/img/logo.svg" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:type" content="website" />
+
+
+
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preload" href="/local/templates/main/fonts/PFDinDisplayPro-Regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/local/templates/main/fonts/PFDinTextCondPro-Medium.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/local/templates/main/fonts/pf_din_text_cond_pro_1.woff" as="font" type="font/woff" crossorigin>
+    <meta name="yandex-verification" content="016b0581f7b4f77d" />
+    <meta name="google-site-verification" content="aWtqDnJiKAaHBUxON9-wBjzUYFE_sVTeY0nSLzGbUUE" />
+</head>
+
+<body>
+
+    {% include 'includes/navbar.html' %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% include 'includes/footer.html' %}
+
+    {% csrf_token %}
+
+    <script>
+        const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+    </script>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NCJ6PDN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- wrapper -->
+
+    <script type="text/javascript">
+        if (!window.BX) window.BX = {};
+        if (!window.BX.message) window.BX.message = function(mess) {
+            if (typeof mess === 'object') {
+                for (let i in mess) {
+                    BX.message[i] = mess[i];
+                }
+                return true;
+            }
+        };
+    </script>
+    <script type="text/javascript">
+        (window.BX || top.BX).message({
+            'JS_CORE_LOADING': 'Загрузка...',
+            'JS_CORE_NO_DATA': '- Нет данных -',
+            'JS_CORE_WINDOW_CLOSE': 'Закрыть',
+            'JS_CORE_WINDOW_EXPAND': 'Развернуть',
+            'JS_CORE_WINDOW_NARROW': 'Свернуть в окно',
+            'JS_CORE_WINDOW_SAVE': 'Сохранить',
+            'JS_CORE_WINDOW_CANCEL': 'Отменить',
+            'JS_CORE_WINDOW_CONTINUE': 'Продолжить',
+            'JS_CORE_H': 'ч',
+            'JS_CORE_M': 'м',
+            'JS_CORE_S': 'с',
+            'JSADM_AI_HIDE_EXTRA': 'Скрыть лишние',
+            'JSADM_AI_ALL_NOTIF': 'Показать все',
+            'JSADM_AUTH_REQ': 'Требуется авторизация!',
+            'JS_CORE_WINDOW_AUTH': 'Войти',
+            'JS_CORE_IMAGE_FULL': 'Полный размер'
+        });
+    </script>
+    <script type="text/javascript" src="/bitrix/js/main/core/core.min.js?1645050340262092"></script>
+    <script>
+        BX.setJSList(['/bitrix/js/main/core/core_ajax.js', '/bitrix/js/main/core/core_promise.js', '/bitrix/js/main/polyfill/promise/js/promise.js', '/bitrix/js/main/loadext/loadext.js', '/bitrix/js/main/loadext/extension.js', '/bitrix/js/main/polyfill/promise/js/promise.js', '/bitrix/js/main/polyfill/find/js/find.js', '/bitrix/js/main/polyfill/includes/js/includes.js', '/bitrix/js/main/polyfill/matches/js/matches.js', '/bitrix/js/ui/polyfill/closest/js/closest.js', '/bitrix/js/main/polyfill/fill/main.polyfill.fill.js', '/bitrix/js/main/polyfill/find/js/find.js', '/bitrix/js/main/polyfill/matches/js/matches.js', '/bitrix/js/main/polyfill/core/dist/polyfill.bundle.js', '/bitrix/js/main/core/core.js', '/bitrix/js/main/polyfill/intersectionobserver/js/intersectionobserver.js', '/bitrix/js/main/lazyload/dist/lazyload.bundle.js', '/bitrix/js/main/polyfill/core/dist/polyfill.bundle.js', '/bitrix/js/main/parambag/dist/parambag.bundle.js']);
+        BX.setCSSList(['/bitrix/js/main/lazyload/dist/lazyload.bundle.css', '/bitrix/js/main/parambag/dist/parambag.bundle.css']);
+    </script>
+    <script type="text/javascript">
+        (window.BX || top.BX).message({
+            'pull_server_enabled': 'N',
+            'pull_config_timestamp': '0',
+            'pull_guest_mode': 'N',
+            'pull_guest_user_id': '0'
+        });
+        (window.BX || top.BX).message({
+            'PULL_OLD_REVISION': 'Для продолжения корректной работы с сайтом необходимо перезагрузить страницу.'
+        });
+    </script>
+    <script type="text/javascript">
+        (window.BX || top.BX).message({
+            'LANGUAGE_ID': 'ru',
+            'FORMAT_DATE': 'DD.MM.YYYY',
+            'FORMAT_DATETIME': 'DD.MM.YYYY HH:MI:SS',
+            'COOKIE_PREFIX': 'BITRIX_SM',
+            'SERVER_TZ_OFFSET': '10800',
+            'UTF_MODE': 'Y',
+            'SITE_ID': 's1',
+            'SITE_DIR': '/',
+            'USER_ID': '',
+            'SERVER_TIME': '1649249323',
+            'USER_TZ_OFFSET': '0',
+            'USER_TZ_AUTO': 'Y',
+            'bitrix_sessid': '3ebd52d48b424659a59df67aa8ce30c2'
+        });
+    </script>
+    <script type="text/javascript" src="/bitrix/js/pull/protobuf/protobuf.min.js?164217444476433"></script>
+    <script type="text/javascript" src="/bitrix/js/pull/protobuf/model.min.js?164217444414190"></script>
+    <script type="text/javascript" src="/bitrix/js/rest/client/rest.client.min.js?16421744449240"></script>
+    <script type="text/javascript" src="/bitrix/js/pull/client/pull.client.min.js?164217444444687"></script>
+    <script type="text/javascript">
+        BX.setJSList(['/local/templates/main/js/jquery-3.3.1.min.js', '/local/templates/main/js/vendors.min.js', '/local/templates/main/js/scripts.js', '/local/templates/main/js/custom.js', '/local/templates/.default/components/bitrix/sale.basket.basket.line/cart/script.js']);
+    </script>
+    <script type="text/javascript">
+        BX.setCSSList(['/local/templates/main/css/style.min.css', '/local/templates/main/template_styles.css']);
+    </script>
+    <script type="text/javascript">
+        (function() {
+            "use strict";
+
+            var counter = function() {
+                var cookie = (function(name) {
+                    var parts = ("; " + document.cookie).split("; " + name + "=");
+                    if (parts.length == 2) {
+                        try {
+                            return JSON.parse(decodeURIComponent(parts.pop().split(";").shift()));
+                        } catch (e) {}
+                    }
+                })("BITRIX_CONVERSION_CONTEXT_s1");
+
+                if (cookie && cookie.EXPIRE >= BX.message("SERVER_TIME"))
+                    return;
+
+                var request = new XMLHttpRequest();
+                request.open("POST", "/bitrix/tools/conversion/ajax_counter.php", true);
+                request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                request.send(
+                    "SITE_ID=" + encodeURIComponent("s1") +
+                    "&sessid=" + encodeURIComponent(BX.bitrix_sessid()) +
+                    "&HTTP_REFERER=" + encodeURIComponent(document.referrer)
+                );
+            };
+
+            if (window.frameRequestStart === true)
+                BX.addCustomEvent("onFrameDataReceived", counter);
+            else
+                BX.ready(counter);
+        })();
+    </script>
+    <script type="text/javascript" src="/bitrix/cache/js/s1/main/template_7141533660ba55540e4d5babd8bf21f1/template_7141533660ba55540e4d5babd8bf21f1_v1.js?1647932249481599"></script>
+    <script type="text/javascript">
+        var _ba = _ba || [];
+        _ba.push(["aid", "d930fff2c3b1d7ecb22f73daa00b0573"]);
+        _ba.push(["host", "edelws.ru"]);
+        (function() {
+            var ba = document.createElement("script");
+            ba.type = "text/javascript";
+            ba.async = true;
+            ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ba, s);
+        })();
+    </script>
+
+
+    <script>
+        var bx_basketFKauiI = new BitrixSmallCart;
+    </script>
+
+    <script type="text/javascript">
+        bx_basketFKauiI.siteId = 's1';
+        bx_basketFKauiI.cartId = 'bx_basketFKauiI';
+        bx_basketFKauiI.ajaxPath = '/bitrix/components/bitrix/sale.basket.basket.line/ajax.php';
+        bx_basketFKauiI.templateName = 'cart';
+        bx_basketFKauiI.arParams = {
+            'HIDE_ON_BASKET_PAGES': 'N',
+            'PATH_TO_AUTHORIZE': '/login/',
+            'PATH_TO_BASKET': '/cart/',
+            'PATH_TO_ORDER': '/cart/',
+            'PATH_TO_PERSONAL': '/personal/',
+            'PATH_TO_PROFILE': '/personal/',
+            'PATH_TO_REGISTER': '/login/',
+            'POSITION_FIXED': 'N',
+            'SHOW_AUTHOR': 'N',
+            'SHOW_EMPTY_VALUES': 'Y',
+            'SHOW_NUM_PRODUCTS': 'Y',
+            'SHOW_PERSONAL_LINK': 'N',
+            'SHOW_PRODUCTS': 'N',
+            'SHOW_REGISTRATION': 'N',
+            'SHOW_TOTAL_PRICE': 'N',
+            'COMPONENT_TEMPLATE': '.default',
+            'CACHE_TYPE': 'A',
+            'SHOW_DELAY': 'Y',
+            'SHOW_NOTAVAIL': 'Y',
+            'SHOW_IMAGE': 'Y',
+            'SHOW_PRICE': 'Y',
+            'SHOW_SUMMARY': 'Y',
+            'POSITION_VERTICAL': 'top',
+            'POSITION_HORIZONTAL': 'right',
+            'MAX_IMAGE_SIZE': '70',
+            'AJAX': 'N',
+            '~HIDE_ON_BASKET_PAGES': 'N',
+            '~PATH_TO_AUTHORIZE': '/login/',
+            '~PATH_TO_BASKET': '/cart/',
+            '~PATH_TO_ORDER': '/cart/',
+            '~PATH_TO_PERSONAL': '/personal/',
+            '~PATH_TO_PROFILE': '/personal/',
+            '~PATH_TO_REGISTER': '/login/',
+            '~POSITION_FIXED': 'N',
+            '~SHOW_AUTHOR': 'N',
+            '~SHOW_EMPTY_VALUES': 'Y',
+            '~SHOW_NUM_PRODUCTS': 'Y',
+            '~SHOW_PERSONAL_LINK': 'N',
+            '~SHOW_PRODUCTS': 'N',
+            '~SHOW_REGISTRATION': 'N',
+            '~SHOW_TOTAL_PRICE': 'N',
+            '~COMPONENT_TEMPLATE': '.default',
+            '~CACHE_TYPE': 'A',
+            '~SHOW_DELAY': 'Y',
+            '~SHOW_NOTAVAIL': 'Y',
+            '~SHOW_IMAGE': 'Y',
+            '~SHOW_PRICE': 'Y',
+            '~SHOW_SUMMARY': 'Y',
+            '~POSITION_VERTICAL': 'top',
+            '~POSITION_HORIZONTAL': 'right',
+            '~MAX_IMAGE_SIZE': '70',
+            '~AJAX': 'N',
+            'cartId': 'bx_basketFKauiI'
+        }; // TODO \Bitrix\Main\Web\Json::encode
+        bx_basketFKauiI.closeMessage = 'Скрыть';
+        bx_basketFKauiI.openMessage = 'Раскрыть';
+        bx_basketFKauiI.activate();
+    </script>
+    <script>
+        function customLazzyLoader() {
+            this.IntersectionObserver = null;
+            this.entries = [];
+            this.init();
+        }
+
+        customLazzyLoader.prototype.init = function() {
+            var _this = this;
+            document.addEventListener("DOMContentLoaded", function() {
+                _this.IntersectionObserver = new IntersectionObserver(BX.proxy(_this.IntersectionObserverCallBack, _this));
+                _this.observe(_this.entries);
+            });
+        };
+        customLazzyLoader.prototype.IntersectionObserverCallBack = function(entries, observer) {
+            var _this = this;
+            entries.forEach((entry) => {
+                _this.load(entry, observer)
+            });
+        };
+        customLazzyLoader.prototype.loadIframe = function(target) {
+            var iframe = document.createElement("iframe");
+
+            if (target.attributes.length) {
+                for (var j = 0; j < target.attributes.length; j++) {
+                    var value = target.attributes[j].value;
+                    var name = target.attributes[j].name;
+
+                    if (name == ';') {
+                        continue;
+                    }
+
+                    if (name == 'data-src') {
+                        name = 'src';
+                    }
+                    iframe.setAttribute(name, value);
+                }
+            }
+
+
+
+            target.innerHTML = "";
+            target.replaceWith(iframe);
+
+            return iframe;
+        };
+
+        customLazzyLoader.prototype.loadData = function(target) {
+            var _this = this;
+            var url = target.dataset.url;
+            if (typeof url != 'undefined' && url.length) {
+                $.ajax({
+                    url: url,
+                    data: {
+                        lazzyloadajax: 'Y'
+                    }
+                }).done(function(data) {
+                    $(target).append(data);
+                })
+            }
+            return target;
+        };
+        customLazzyLoader.prototype.proccessTarget = function(target) {
+            this.removeclass(target);
+            this.loadScript(target);
+            this.loadBackgound(target);
+            target.classList.add("lazyloaded");
+            target.classList.remove("lazzyload");
+        };
+
+        customLazzyLoader.prototype.loadBackgound = function(target) {
+            if (typeof target.dataset.lazzybsrc != 'undefined') {
+                target.style.backgroundImage = "url('" + target.dataset.lazzybsrc + "')";
+            }
+        };
+
+        customLazzyLoader.prototype.loadScript = function(target) {
+            if (typeof target.dataset.script != 'undefined') {
+                var script = document.createElement('script');
+                script.src = target.dataset.script;
+                script.async = 1;
+                script.deffer = 1;
+                (document.head || document.documentElement).appendChild(script);
+            }
+        };
+        customLazzyLoader.prototype.runCallBack = function(target) {
+            if (typeof target.dataset.callback != 'undefined') {
+                window[target.dataset.callback]();
+            }
+        };
+        customLazzyLoader.prototype.removeclass = function(target) {
+            if (typeof target.dataset.removeclass != 'undefined') {
+                var removeclass = target.dataset.removeclass.trim().split(' ');
+
+                removeclass.forEach((className) => {
+                    className = className.trim();
+                    if (className.length) {
+                        target.classList.remove(className);
+                    }
+                });
+            }
+        };
+
+
+        customLazzyLoader.prototype.loadByType = function(target, type) {
+            if (type == 'iframe') {
+                target = this.loadIframe(target);
+            } else if (type == 'ajax') {
+                target = this.loadData(target);
+            }
+            return target;
+        };
+
+        customLazzyLoader.prototype.loadImg = function(target) {
+
+            if (typeof target.src != 'undefined') {
+                target.srcset = target.src;
+            } else if (typeof target.dataset.lazzysrc != 'undefined') {
+                target.src = target.dataset.lazzysrc;
+            }
+
+        };
+        customLazzyLoader.prototype.load = function(entry, observer) {
+            if (entry.isIntersecting) {
+                var target = entry.target;
+
+                if (target.tagName == 'IMG') {
+                    this.loadImg(target);
+                } else if (typeof target.dataset.type != 'undefined') {
+                    target = this.loadByType(target, target.dataset.type);
+                }
+                this.proccessTarget(target);
+                this.runCallBack(target);
+                observer.unobserve(target);
+            }
+        };
+
+        customLazzyLoader.prototype.observe = function(entries) {
+            var _this = this;
+
+            if (_this.IntersectionObserver == null) {
+                setTimeout(function() {
+                    _this.observe(entries);
+                });
+                return;
+            }
+            if (entries.length) {
+                entries.forEach((entry) => {
+                    if (!entry.classList.contains('waitlazzyload')) {
+                        entry.classList.add("waitlazzyload");
+                        _this.IntersectionObserver.observe(entry);
+                    }
+
+                });
+            }
+        };
+        var $obj = new customLazzyLoader();
+
+        function initLazzyload() {
+            $obj.observe(document.querySelectorAll('.lazzyload'));
+            $obj.observe(document.querySelectorAll('[data-lazzybsrc]'));
+            $obj.observe(document.querySelectorAll('[data-srcset]'));
+        }
+
+        var youtube = document.querySelectorAll(".youtube");
+        for (var i = 0; i < youtube.length; i++) {
+            var source = "https://img.youtube.com/vi/" + youtube[i].getAttribute('src').replace('https://www.youtube.com/embed/', '') + "/hqdefault.jpg";
+            var spanplay = document.createElement("span");
+            spanplay.classList = 'play-button';
+            youtube[i].appendChild(spanplay);
+            // youtube[i].style.width = youtube[i].getAttribute('width')+'px';
+            youtube[i].style.height = youtube[i].getAttribute('height') + 'px';
+            var image = new Image();
+            image.srcset = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
+            image.src = source;
+            image.classList = "lazzyload";
+            image.addEventListener("load", function() {
+                youtube[i].appendChild(image);
+            }(i));
+
+            youtube[i].addEventListener("click", function() {
+
+                var iframe = document.createElement("iframe");
+
+                if (this.attributes.length) {
+                    for (var j = 0; j < this.attributes.length; j++) {
+                        var value = this.attributes[j].value;
+                        var name = this.attributes[j].name;
+
+                        if (name == ';') {
+                            continue;
+                        }
+
+                        if (name == 'src') {
+                            value += "?rel=0&showinfo=0&autoplay=1";
+                        }
+                        iframe.setAttribute(name, value);
+                    }
+                }
+
+                this.innerHTML = "";
+                this.replaceWith(iframe);
+            });
+        }
+        initLazzyload();
+        BX.addCustomEvent("onFrameDataReceived", function(json) {
+            initLazzyload();
+        });
+    </script>
+    <script>
+        setTimeout(function() {
+            BX.loadScript('//app.comagic.ru/static/cs.min.js');
+        }, 5000);
+    </script>
+    <script>
+        setTimeout(function() {
+            (function(w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    'gtm.start': new Date().getTime(),
+                    event: 'gtm.js'
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-NCJ6PDN');
+            setInterval(function() {
+
+            }, 100);
+        }, 5000);
+    </script>
+    <script type="text/javascript">
+        (function(m, e, t, r, i, k, a) {
+            m[i] = m[i] || function() {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(42310539, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true,
+            trackHash: true,
+            ecommerce: "dataLayer"
+        });
+    </script>
+</body>
+
+</html>
