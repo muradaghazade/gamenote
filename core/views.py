@@ -10,3 +10,16 @@ class IndexView(TemplateView):
         context = super().get_context_data(**kwargs)
         context['products'] = Product.objects.order_by("-id")
         return context
+
+
+class NewProductsView(ListView):
+    model = Product
+    context_object_name = 'products'
+    template_name = 'new.html'
+    paginate_by = 8
+
+
+class ProductDetailView(DetailView):
+    template_name = 'product-details.html'
+    model = Product
+    context_object_name = "product"
