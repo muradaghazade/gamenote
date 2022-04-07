@@ -178,9 +178,8 @@
                                                     <a href="/power-pc/edelweiss-gladiator/" class="catalog__li-name"><span itemprop="name"></span>{{ product.title }}</a>
                                                     <div class="catalog__li-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                                                         <meta itemprop="priceCurrency" content="RUB">
-                                                        <link itemprop="availability" href="https://schema.org/InStock" />
-                                                        <link itemprop="url" href="htpps://edelws.ru/power-pc/edelweiss-gladiator/" />
-                                                        <link itemprop="priceValidUntil" content="2023-04-04T12:22:49+03:00" />
+                                                        
+                                                        
                                                         <meta itemprop="price" content="287550"> {{product.price}} ₼ 
 
                                                         <div class="catalog__credit">
@@ -205,13 +204,13 @@
                                                 </div>
                                             </div>
                                             <div class="catalog__li-controll">
-                                                <a href="javascript:void(0)" class="catalog__li-controll-link catalog__li-controll-link--buy add2basket">купить</a>
+                                                <a href="javascript:void(0)" class="catalog__li-controll-link catalog__li-controll-link--buy add2basket">Əldə et</a>
                                                 <a href="/power-pc/edelweiss-gladiator/" class="catalog__li-controll-link catalog__li-controll-link-periphery">
-                <span class="catalog__li-controll-link--desc">Подробнее</span>
-                <span class="catalog__li-controll-link--mob"><img src="/local/templates/main/img/icon/info-list.svg" alt="" width="11"></span>
+                <span class="catalog__li-controll-link--desc">Ətraflı</span>
+                <span class="catalog__li-controll-link--mob"><img src="{% static 'main/img/icon/info-list.svg' %}" alt="" width="11"></span>
             </a>
                                                 <a href="/constructor/#edelweiss-gladiator" class="catalog__li-controll-link">
-                <img src="/local/templates/main/img/icon/setting.svg" alt="" width="13">
+                                                <img src="{% static 'main/img/icon/setting.svg' %}" alt="" width="13">
                 <span class="catalog__li-controll-link-hidd">конфигурировать</span>
             </a>
                                             </div>
@@ -223,78 +222,78 @@
                                             <dl class="catalog__structure-dl">
                                                 <dt class="catalog__structure-dt">
                         <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/vga.svg" alt="значёк видеокарты ( gpu )">
+                            <img src="{% static 'public/img/icon/vga.svg' %}" alt="значёк видеокарты ( gpu )">
                         </div>
                     </dt>
                                                 <dd class="catalog__structure-dd">
-                                                    <p class="catalog__structure-title">Видео-карта</p>
-                                                    <p class="catalog__structure-name">NVIDIA GЕFORCE RTX 3060 TI 8Гб</p>
+                                                    <p class="catalog__structure-title">GPU</p>
+                                                    <p class="catalog__structure-name">{{product.video_card}}</p>
                                                 </dd>
                                             </dl>
                                             <dl class="catalog__structure-dl">
                                                 <dt class="catalog__structure-dt">
                         <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/cpu.svg" alt="значёк центрального процессора ( cpu )">
+                            <img src="{% static 'public/img/icon/cpu.svg' %}" alt="значёк центрального процессора ( cpu )">
                         </div>
                     </dt>
                                                 <dd class="catalog__structure-dd">
-                                                    <p class="catalog__structure-title">Процессор</p>
-                                                    <p class="catalog__structure-name">Intel Core i5-10600 3300 МГц</p>
+                                                    <p class="catalog__structure-title">CPU</p>
+                                                    <p class="catalog__structure-name">{{product.processors.first.title}}</p>
                                                 </dd>
                                             </dl>
                                             <dl class="catalog__structure-dl">
                                                 <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
+                        {% comment %} <div class="catalog__structure-img">
                             <img src="/local/templates/main/img/icon/fan.svg" alt="значёк система охлаждения (cooler )">
-                        </div>
+                        </div> {% endcomment %}
                     </dt>
-                                                <dd class="catalog__structure-dd">
-                                                    <p class="catalog__structure-title">Охлаждение</p>
+                                                {% comment %} <dd class="catalog__structure-dd">
+                                                    <p class="catalog__structure-title">Cooler</p>
                                                     <p class="catalog__structure-name">ID-COOLING SE-224-RGB</p>
-                                                </dd>
+                                                </dd> {% endcomment %}
                                             </dl>
                                             <dl class="catalog__structure-dl">
                                                 <dt class="catalog__structure-dt">
                         <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/ram.svg" alt="значёк оперативной памяти ( ram )">
+                            <img src="{% static 'public/img/icon/ram.svg' %}" alt="значёк оперативной памяти ( ram )">
                         </div>
                     </dt>
                                                 <dd class="catalog__structure-dd">
-                                                    <p class="catalog__structure-title">Оперативная память</p>
-                                                    <p class="catalog__structure-name">16Гб Kingston HyperX Fury RGB 3000МГц</p>
+                                                    <p class="catalog__structure-title">RAM</p>
+                                                    <p class="catalog__structure-name">{{product.rams.first.title}} {{product.rams.first.amount}}</p>
                                                 </dd>
                                             </dl>
                                             <dl class="catalog__structure-dl">
                                                 <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
+                        {% comment %} <div class="catalog__structure-img">
                             <img src="/local/templates/main/img/icon/motherboard.svg" alt="значёк материнской платы ( mb ) ">
-                        </div>
+                        </div> {% endcomment %}
                     </dt>
-                                                <dd class="catalog__structure-dd">
+                                                {% comment %} <dd class="catalog__structure-dd">
                                                     <p class="catalog__structure-title">Материнская плата</p>
                                                     <p class="catalog__structure-name">Gigabyte B460M</p>
-                                                </dd>
+                                                </dd> {% endcomment %}
                                             </dl>
                                             <dl class="catalog__structure-dl">
-                                                <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
+                                                {% comment %} <dt class="catalog__structure-dt">  {% endcomment %}
+                        {% comment %} <div class="catalog__structure-img">
                             <img src="/local/templates/main/img/icon/hard-disk.svg" alt="значёк жесткого диска ( hdd )">
-                        </div>
+                        </div> {% endcomment %}
                     </dt>
-                                                <dd class="catalog__structure-dd">
+                                                {% comment %} <dd class="catalog__structure-dd">
                                                     <p class="catalog__structure-title">Жёсткий диск</p>
                                                     <p class="catalog__structure-name">1 Тб Toshiba</p>
-                                                </dd>
+                                                </dd> {% endcomment %}
                                             </dl>
                                             <dl class="catalog__structure-dl">
                                                 <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/ssd.svg" alt="значёк твердотельного диска ( ssd )">
+                        <div class="catalog__structure-img"> 
+                            <img src="{% static 'public/img/icon/ssd.svg' %}" alt="значёк твердотельного диска ( ssd )">
                         </div>
                     </dt>
                                                 <dd class="catalog__structure-dd">
-                                                    <p class="catalog__structure-title">Диск SSD</p>
-                                                    <p class="catalog__structure-name">240 Гб Kingston</p>
+                                                    <p class="catalog__structure-title">Storage</p>
+                                                    <p class="catalog__structure-name">{{product.storages.first.title}} {{product.storages.first.amount}}</p>
                                                 </dd>
                                             </dl>
                                             <dl class="catalog__structure-dl">
