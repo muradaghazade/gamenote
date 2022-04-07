@@ -27,6 +27,20 @@ class Product(models.Model):
         self.slug = f'{slugify(self.title)}-{self.id}'
         super(Product, self).save(*args, **kwargs)
 
+
+class Image(models.Model):
+    image = models.ImageField('Image',upload_to='images/', null=True, blank=True)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, db_index=True, related_name='images', null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = 'Image'
+        verbose_name_plural = 'Images'
+
+    def __str__(self):
+        return self.product.title
+
     
 class Ram(models.Model):
     title = models.CharField(max_length=200)

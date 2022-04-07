@@ -162,25 +162,26 @@
                         </div>
                         <div class="catalog__box js-scroll scroll">
                             <ul class="catalog__list catalog__list--scroll">
+                                {% for product in products %}
                                 <li class="catalog__li product__" data-id="816" id="bx_3966226736_816_362ce596257894d11ab5c1d73d13c755" data-entity="item" itemscope itemtype="https://schema.org/Product">
                                     <div class="catalog__li-box">
                                         <div class="catalog__li-content">
                                             <a href="/power-pc/edelweiss-gladiator/" class="catalog__li-img-box">
                                                 <picture>
-                                                    <img id="bx_3966226736_816_362ce596257894d11ab5c1d73d13c755_pict" src="/upload/resize_cache/iblock/b9e/220_245_1/b9e9f4c65319f0769f7ecbd44c3840c4.png" itemprop="image" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                        alt="Chieftec GP-02B SCORPION II" class="catalog__li-img lazzyload">
+                                                    <img id="bx_3966226736_816_362ce596257894d11ab5c1d73d13c755_pict" src="media/{{ product.images.first.image }}"
+                                                        alt="Chieftec GP-02B SCORPION II" class="catalog__li-img">
                                                 </picture>
                                             </a>
                                             <div class="catalog__li-wrapper">
                                                 <div class="catalog__li-wrapper-start">
                                                     <meta itemprop="brand" content="Edelweiss">
-                                                    <a href="/power-pc/edelweiss-gladiator/" class="catalog__li-name"><span itemprop="name">EDELWEISS GLADIATOR</span></a>
+                                                    <a href="/power-pc/edelweiss-gladiator/" class="catalog__li-name"><span itemprop="name"></span>{{ product.title }}</a>
                                                     <div class="catalog__li-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                                                         <meta itemprop="priceCurrency" content="RUB">
                                                         <link itemprop="availability" href="https://schema.org/InStock" />
                                                         <link itemprop="url" href="htpps://edelws.ru/power-pc/edelweiss-gladiator/" />
                                                         <link itemprop="priceValidUntil" content="2023-04-04T12:22:49+03:00" />
-                                                        <meta itemprop="price" content="287550"> 287&nbsp;550 <img src="/local/templates/main/img/icon/rub.svg" alt="Национальная валюта рубли" class="catalog__li-price-r">
+                                                        <meta itemprop="price" content="287550"> {{product.price}} ₼ 
 
                                                         <div class="catalog__credit">
                                                             <span class="catalog__li-price-i"><svg class="icon-info" width="14" height="14">
@@ -344,7 +345,9 @@
 
                                     </div>
                                 </li>
-                                <li class="catalog__li product__" data-id="762" id="bx_3966226736_762_c80764dfaf26ca80162484593ec7c29b" data-entity="item" itemscope itemtype="https://schema.org/Product">
+                                {% endfor %}
+                                
+                                <!-- <li class="catalog__li product__" data-id="762" id="bx_3966226736_762_c80764dfaf26ca80162484593ec7c29b" data-entity="item" itemscope itemtype="https://schema.org/Product">
                                     <div class="catalog__li-box">
                                         <div class="catalog__li-content">
                                             <a href="/power-pc/edelweiss-terminator/" class="catalog__li-img-box">
@@ -889,7 +892,7 @@
                                         </div>
 
                                     </div>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                     </div>
