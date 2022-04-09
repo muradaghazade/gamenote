@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView, ListView , DetailView , CreateView
-from .models import Product
+from .models import Product, Slider
 
 
 class IndexView(TemplateView):
@@ -9,6 +9,7 @@ class IndexView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['products'] = Product.objects.order_by("-id")
+        context['sliders'] = Slider.objects.order_by("-id")
         return context
 
 
