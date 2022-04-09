@@ -27,8 +27,8 @@
                         </picture>
                         <div class="main-slider__content">
                             <div class="main-slider__box">
-                                <p class="main-slider__name">ЗАРЯЖЕНЫ И НАСТРОЕНЫ НА ПОБЕДУ</p>
-                                <p class="main-slider__title">Игровые ПК на базе GEFORCE RTX 3080 Ti</p><a href="/geforce-3080/" class="btn btn--type-2 main-slider__btn">купить пк</a> </div>
+                                <p class="main-slider__name">{{ slider.title }}</p>
+                                <p class="main-slider__title">{{ slider.description }}</p><a href="{{ slider.btn_url }}" class="btn btn--type-2 main-slider__btn">{{ slider.btn_text }}</a> </div>
                             <!-- <picture>
                                 <img srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" src="/upload/uf/b87/b87f604d1c0b93240f50a7c53eb78129.png" alt="ЗАРЯЖЕНЫ И НАСТРОЕНЫ НА ПОБЕДУ" class="lazzyload main-slider__img">
                             </picture> -->
@@ -38,10 +38,10 @@
 
                     </div>
                     <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div>
+                    <!-- <div class="swiper-pagination" style="color: #a7e200;"></div> -->
                     <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev" style="color: #a7e200;"></div>
+                    <div class="swiper-button-next" style="color: #a7e200;"></div>
                   
                     <!-- If we need scrollbar -->
                     
