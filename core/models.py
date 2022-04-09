@@ -9,11 +9,11 @@ class Product(models.Model):
     video_card = models.CharField(max_length=100)
     screen_size = models.CharField(max_length=50)
     manufacturer_country = models.CharField(max_length=50)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
     slug = models.SlugField(max_length=255, null=True, blank=True)
     brand = models.ForeignKey("Brand", on_delete=models.CASCADE, blank=True, null=True, related_name="products")
     colors = models.ManyToManyField("Color", verbose_name=("Color"), db_index=True, related_name='products', null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
         verbose_name = 'Product'
@@ -61,6 +61,8 @@ class Ram(models.Model):
 class Brand(models.Model):
     title = models.CharField(max_length=50)
     logo = models.ImageField('Image',upload_to='images/', null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
         verbose_name = 'Brand'
@@ -72,6 +74,8 @@ class Brand(models.Model):
 
 class Color(models.Model):
     title = models.CharField(max_length=50)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
         verbose_name = 'Color'
@@ -86,6 +90,8 @@ class Storage(models.Model):
     added_price = models.DecimalField("Price", max_digits=6, decimal_places=2)
     amount = models.CharField(max_length=50)
     product = models.ForeignKey(Product, on_delete=models.CASCADE, db_index=True, related_name="storages", null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
 
     class Meta:
@@ -100,6 +106,8 @@ class Processor(models.Model):
     title = models.CharField(max_length=50)
     added_price = models.DecimalField("Price", max_digits=6, decimal_places=2)
     product = models.ForeignKey(Product, on_delete=models.CASCADE, db_index=True, related_name="processors", null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
         verbose_name = 'Processor'
@@ -112,8 +120,11 @@ class Processor(models.Model):
 class Slider(models.Model):
     title = models.CharField(max_length=50)
     description = models.TextField("Description")
+    image = models.ImageField('Image',upload_to='images/', null=True, blank=True)
     btn_text = models.CharField(max_length=50)
     btn_url = models.CharField(max_length=50)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
         verbose_name = 'Slider'
