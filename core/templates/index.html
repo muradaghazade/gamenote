@@ -114,7 +114,7 @@
                                 <li class="catalog__li product__" data-id="816" id="bx_3966226736_816_362ce596257894d11ab5c1d73d13c755" data-entity="item" itemscope itemtype="https://schema.org/Product">
                                     <div class="catalog__li-box">
                                         <div class="catalog__li-content">
-                                            <a href="/power-pc/edelweiss-gladiator/" class="catalog__li-img-box">
+                                            <a href="{% url 'core:product-detail' product.slug%}" class="catalog__li-img-box">
                                                 <picture>
                                                     <img id="bx_3966226736_816_362ce596257894d11ab5c1d73d13c755_pict" src="/media/{{ product.images.first.image }}"
                                                         alt="Chieftec GP-02B SCORPION II" class="catalog__li-img">
@@ -123,7 +123,7 @@
                                             <div class="catalog__li-wrapper">
                                                 <div class="catalog__li-wrapper-start">
                                                     <meta itemprop="brand" content="Edelweiss">
-                                                    <a href="/power-pc/edelweiss-gladiator/" class="catalog__li-name"><span itemprop="name"></span>{{ product.title }}</a>
+                                                    <a href="{% url 'core:product-detail' product.slug%}" class="catalog__li-name"><span itemprop="name"></span>{{ product.title }}</a>
                                                     <div class="catalog__li-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                                                         <meta itemprop="priceCurrency" content="RUB">
                                                         
