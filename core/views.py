@@ -18,6 +18,7 @@ class NewProductsView(ListView):
     context_object_name = 'products'
     template_name = 'new.html'
     paginate_by = 8
+    queryset = Product.objects.order_by("-id")
 
 
 class ProductDetailView(DetailView):

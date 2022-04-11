@@ -3808,7 +3808,7 @@ h4,
 }
 
 .advantages__li-text {
-    font-family: 'PF DinDisplay Pro';
+    /* font-family: 'PF DinDisplay Pro'; */
     line-height: 1.5;
     color: #8490a4;
     margin-bottom: 1rem
@@ -5622,7 +5622,7 @@ h4,
 }
 
 .catalog__li-desc {
-    font-family: 'PF DinDisplay Pro';
+    /* font-family: 'PF DinDisplay Pro'; */
     font-size: .75rem;
     line-height: 1.33;
     color: #8490a4;
@@ -7238,7 +7238,7 @@ h4,
 }
 
 .compilation-pk__text {
-    font-family: 'PF DinDisplay Pro';
+    /* font-family: 'PF DinDisplay Pro'; */
     font-size: 1.5rem;
     line-height: 1.33;
     color: #8490a4;
@@ -12946,7 +12946,7 @@ label.error {
     font-size: 1rem;
     line-height: 1.5;
     color: #8490a4;
-    font-family: 'PF DinDisplay Pro';
+    /* font-family: 'PF DinDisplay Pro'; */
     -webkit-transition: .3s ease;
     -o-transition: .3s ease;
     transition: .3s ease
@@ -15296,7 +15296,7 @@ label.error {
 }
 
 .seo p:not([class]) {
-    font-family: 'PF DinDisplay Pro';
+    /* font-family: 'PF DinDisplay Pro'; */
     line-height: 1.5;
     color: #8490a4;
     margin-bottom: 1.5rem
