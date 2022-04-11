@@ -6,6 +6,7 @@ class Product(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField("Description")
     price = models.DecimalField("Price", max_digits=6, decimal_places=2)
+    operative_system = models.CharField(max_length=200)
     video_card = models.CharField(max_length=100)
     screen_size = models.CharField(max_length=50)
     manufacturer_country = models.CharField(max_length=50)
@@ -44,6 +45,7 @@ class Image(models.Model):
     
 class Ram(models.Model):
     title = models.CharField(max_length=200)
+    image = models.ImageField('Image',upload_to='images/', null=True, blank=True)
     added_price = models.DecimalField("Price", max_digits=6, decimal_places=2)
     amount = models.CharField(max_length=50)
     product = models.ForeignKey(Product, on_delete=models.CASCADE, db_index=True, related_name="rams", null=True, blank=True)
@@ -85,18 +87,37 @@ class Color(models.Model):
         return f"{self.title}"
 
 
-class Storage(models.Model):
+class SSD(models.Model):
     title = models.CharField(max_length=50)
+    image = models.ImageField('Image',upload_to='images/', null=True, blank=True)
     added_price = models.DecimalField("Price", max_digits=6, decimal_places=2)
     amount = models.CharField(max_length=50)
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, db_index=True, related_name="storages", null=True, blank=True)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, db_index=True, related_name="ssds", null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
 
     class Meta:
-        verbose_name = 'Storage'
-        verbose_name_plural = 'Storages'
+        verbose_name = 'SSD'
+        verbose_name_plural = 'SSDs'
+
+    def __str__(self):
+        return f"{self.title}"
+
+
+class HDD(models.Model):
+    title = models.CharField(max_length=50)
+    image = models.ImageField('Image',upload_to='images/', null=True, blank=True)
+    added_price = models.DecimalField("Price", max_digits=6, decimal_places=2)
+    amount = models.CharField(max_length=50)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, db_index=True, related_name="hdds", null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+
+    class Meta:
+        verbose_name = 'HDD'
+        verbose_name_plural = 'HDDs'
 
     def __str__(self):
         return f"{self.title}"
@@ -104,6 +125,7 @@ class Storage(models.Model):
 
 class Processor(models.Model):
     title = models.CharField(max_length=50)
+    image = models.ImageField('Image',upload_to='images/', null=True, blank=True)
     added_price = models.DecimalField("Price", max_digits=6, decimal_places=2)
     product = models.ForeignKey(Product, on_delete=models.CASCADE, db_index=True, related_name="processors", null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
