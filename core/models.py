@@ -7,6 +7,7 @@ class Product(models.Model):
     description = models.TextField("Description")
     price = models.DecimalField("Price", max_digits=6, decimal_places=2)
     operative_system = models.CharField(max_length=200)
+    has_cd_drive = models.BooleanField(default=False)
     video_card = models.CharField(max_length=100)
     screen_size = models.CharField(max_length=50)
     manufacturer_country = models.CharField(max_length=50)
