@@ -186,30 +186,30 @@
                 <div class="header__end">
                     <div class="header__controll">
                         <div class="header__controll-box">
-                            <a href="/search/" class="header__controll-link js-search-btn">
+                            <a href="#" class="header__controll-link js-search-btn _active">
                                 <div class="header__controll-link-icon-box">
                                     <svg class="header__controll-link-icon" width="18" height="18">
-    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href={% static 'img/sprite.svg#icon-search' %}></use>
-</svg>
+                                        <img width="50px" height="50px" style="margin-left: -13px;" src="{% static 'public/img/icon/search.png' %}"/>
+                                    </svg>
                                 </div>
-                                <span class="header__controll-text">Поиск</span>
+                                <span class="header__controll-text">Axtar</span>
                             </a>
-                            <div class="search">
+                            <div class="search" style="visibility: hidden;">
                                 <div class="search__inner inner">
                                     <form class="search__form" action="/search/">
                                         <input type="text" value="" name="q" class="search__input" placeholder="Введите слово или фразу...">
-                                        <input type="submit" name="s" class="search__btn btn" value="найти" disabled>
+                                        <input type="submit" name="s" class="search__btn btn" value="axtar" >
                                     </form>
                                 </div>
                             </div>
                         </div>
-                        <a href="/cart/" id="bx_basketFKauiI" class="header__controll-link js-btn-search">
+                        <a href="/cart/" id="bx_basketFKauiI" class="header__controll-link js-btn-search" style="display: flex; justify-content: center; align-items: center;">
                             <!--'start_frame_cache_bx_basketFKauiI'-->
                             <div class="header__controll-link-box">
-                                <div class="header__controll-link-icon-box">
+                                <div class="header__controll-link-icon-box" style="margin-left: -15px;">
                                     <svg class="header__controll-link-icon" width="20" height="20">
-        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-basket"></use>
-    </svg>
+                                        <img width="30px" height="50px" src="{% static 'public/img/icon/basket.png' %}"/>
+                                    </svg>
                                 </div>
                                 <span class="header__controll-sum">0</span>
                             </div>
@@ -230,3 +230,15 @@
         </div>
     </div>
 </header>
+
+<script>
+    document.querySelector('.header__controll-link').addEventListener('click', () => {
+        var searchLayer =  document.querySelector('.search')
+        if (searchLayer.style.visibility == "visible"){
+            searchLayer.style.visibility = "hidden"
+        }else{
+            searchLayer.style.visibility = "visible"
+        }
+    })
+
+</script>

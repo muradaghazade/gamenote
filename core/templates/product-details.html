@@ -277,6 +277,7 @@
                             <div class="card__prev">
 
                                 <div class="card__prev-img" style="padding-top: 0 !important;">
+                                    <img class="desc_img" width="100%" height="100%"/>
                                 </div>
                                 <div class="card__prev-title" style="width: 100% ; word-break: keep-all; display: flex; justify-content: center; align-items: center;"></div>
                                 <!-- <dl class="card__prev-dl">
@@ -672,53 +673,38 @@
 
     <script>
         document.querySelector('.detalic__equipment-name-gpu').addEventListener("click", () => {
-            var img = document.createElement("img")
-            img.src = "/media/{{product.video_card.image}}"
+            document.querySelector('.card__prev-img').innerHTML = `<img src="/media/{{product.video_card.image}}" width="100%" height="100%">`
             document.querySelector('.card__prev-title').innerHTML = "{{product.video_card}}"
-            document.querySelector('.card__prev-img').appendChild(img)
         })
 
         document.querySelector('.detalic__equipment-name-cpu').addEventListener("click", () => {
-            var img = document.createElement("img")
-            img.src = "/media/{{product.processors.image}}"
-            document.querySelector('.card__prev-img')
+            document.querySelector('.card__prev-img').innerHTML = `<img src="/media/{{product.processors.first.image}}" width="100%" height="100%">`
             document.querySelector('.card__prev-title').innerHTML = "{{product.processors.first}}"
-            document.querySelector('.card__prev-img').appendChild(img)
         })
 
         document.querySelector('.detalic__equipment-name-ram').addEventListener("click", () => {
-            var img = document.createElement("img")
-            img.src = "/media/{{product.rams.first.image}}"
+            document.querySelector('.card__prev-img').innerHTML = `<img src="/media/{{product.rams.first.image}}" width="100%" height="100%">`
             document.querySelector('.card__prev-title').innerHTML = "{{product.rams.first}} {{product.rams.first.amount}}"
-            document.querySelector('.card__prev-img').appendChild(img)
         })
 
         document.querySelector('.detalic__equipment-name-hdd').addEventListener("click", () => {
-            var img = document.createElement("img")
-            img.src = "/media/{{product.hdds.first.image}}"
-            document.querySelector('.card__prev-title').innerHTML = "{{product.hdds.first}}"
-            document.querySelector('.card__prev-img').appendChild(img)
+            document.querySelector('.card__prev-img').innerHTML = `<img src="/media/{{product.hdds.first.image}}" width="100%" height="100%">`
+            document.querySelector('.card__prev-title').innerHTML = "{{product.hdds.first}} {{product.hdds.first.amount}}"
         })
 
         document.querySelector('.detalic__equipment-name-ssd').addEventListener("click", () => {
-            var img = document.createElement("img")
-            img.src = "/media/{{product.video_card.image}}"
+            document.querySelector('.card__prev-img').innerHTML = `<img src="/media/{{product.ssds.first.image}}" width="100%" height="100%">`
             document.querySelector('.card__prev-title').innerHTML = "{{product.ssds.first}} {{product.ssds.first.amount}}"
-            document.querySelector('.card__prev-img').appendChild(img)
         })
 
         document.querySelector('.detalic__equipment-name-dvd').addEventListener("click", () => {
-            var img = document.createElement("img")
-            img.src = "/media/{{product.video_card.image}}"
+            document.querySelector('.card__prev-img').innerHTML = ``
             document.querySelector('.card__prev-title').innerHTML = "{% if product.has_cd_drive == False %}Yoxdur{% else %} Var {% endif %}"
-            document.querySelector('.card__prev-img').appendChild(img)
         })
 
         document.querySelector('.detalic__equipment-name-os').addEventListener("click", () => {
-            var img = document.createElement("img")
-            img.src = "/media/{{product.video_card.image}}"
-            document.querySelector('.card__prev-title').innerHTML = "{{product.os}}"
-            document.querySelector('.card__prev-img').appendChild(img)
+            document.querySelector('.card__prev-img').innerHTML = ``
+            document.querySelector('.card__prev-title').innerHTML = "{{product.operative_system}}"
         })
 
         

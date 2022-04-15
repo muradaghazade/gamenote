@@ -222,15 +222,15 @@
                                                 </dd> {% endcomment %}
                                             </dl>
                                             <dl class="catalog__structure-dl">
-                                                {% comment %} <dt class="catalog__structure-dt">  {% endcomment %}
-                        {% comment %} <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/hard-disk.svg" alt="значёк жесткого диска ( hdd )">
-                        </div> {% endcomment %}
+                                                <dt class="catalog__structure-dt"> 
+                        <div class="catalog__structure-img">
+                            <img src="{% static 'public/img/icon/hard-disk.svg' %}" alt="значёк жесткого диска ( hdd )">
+                        </div> 
                     </dt>
-                                                {% comment %} <dd class="catalog__structure-dd">
-                                                    <p class="catalog__structure-title">Жёсткий диск</p>
-                                                    <p class="catalog__structure-name">1 Тб Toshiba</p>
-                                                </dd> {% endcomment %}
+                                                <dd class="catalog__structure-dd">
+                                                    <p class="catalog__structure-title">HDD</p>
+                                                    <p class="catalog__structure-name">{{product.hdds.first}}</p>
+                                                </dd> 
                                             </dl>
                                             <dl class="catalog__structure-dl">
                                                 <dt class="catalog__structure-dt">
@@ -239,20 +239,20 @@
                         </div>
                     </dt>
                                                 <dd class="catalog__structure-dd">
-                                                    <p class="catalog__structure-title">Storage</p>
-                                                    <p class="catalog__structure-name">{{product.storages.first.title}} {{product.storages.first.amount}}</p>
+                                                    <p class="catalog__structure-title">SSD</p>
+                                                    <p class="catalog__structure-name">{{product.ssds.first}} {{product.storages.first.amount}}</p>
                                                 </dd>
                                             </dl>
                                             <dl class="catalog__structure-dl">
                                                 <dt class="catalog__structure-dt">
-                        {% comment %} <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/cd-rom.svg" alt="	значёк оптического привода ( dvd-rw )">
-                        </div> {% endcomment %}
+                       <div class="catalog__structure-img">
+                            <img src="{% static 'public/img/icon/cd-rom.svg' %}" alt="	значёк оптического привода ( dvd-rw )">
+                        </div> 
                     </dt>
-                                                {% comment %} <dd class="catalog__structure-dd">
-                                                    <p class="catalog__structure-title">Оптический привод</p>
-                                                    <p class="catalog__structure-name">Без привода</p>
-                                                </dd> {% endcomment %}
+                                                <dd class="catalog__structure-dd">
+                                                    <p class="catalog__structure-title">DVD-Driver</p>
+                                                    <p class="catalog__structure-name">{% if product.has_cd_drive == False %}Yoxdur{% else %} Var {% endif %}</p>
+                                                </dd> 
                                             </dl>
                                             <dl class="catalog__structure-dl">
                                                 <dt class="catalog__structure-dt">
@@ -278,14 +278,14 @@
                                             </dl>
                                             <dl class="catalog__structure-dl">
                                                 <dt class="catalog__structure-dt">
-                        {% comment %} <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/os.svg" alt="значёк операционной системы ( os )">
-                        </div> {% endcomment %}
+                        <div class="catalog__structure-img">
+                            <img src="{% static 'public/img/icon/os.svg' %}" alt="значёк операционной системы ( os )">
+                        </div> 
                     </dt>
-                                                {% comment %} <dd class="catalog__structure-dd">
+                                                <dd class="catalog__structure-dd">
                                                     <p class="catalog__structure-title">OS</p>
-                                                    <p class="catalog__structure-name">Windows 10</p>
-                                                </dd> {% endcomment %}
+                                                    <p class="catalog__structure-name">{{product.operative_system}}</p>
+                                                </dd> 
                                             </dl>
                                         </div>
 
