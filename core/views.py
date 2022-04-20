@@ -33,3 +33,11 @@ class CheapProductsView(ListView):
     template_name = 'budget-products.html'
     paginate_by = 8
     queryset = Product.objects.order_by("price")
+
+
+class ExpensiveProductsView(ListView):
+    model = Product
+    context_object_name = 'products'
+    template_name = 'expensive-products.html'
+    paginate_by = 8
+    queryset = Product.objects.order_by("-price")
