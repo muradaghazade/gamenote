@@ -25,3 +25,11 @@ class ProductDetailView(DetailView):
     template_name = 'product-details.html'
     model = Product
     context_object_name = "product"
+
+
+class CheapProductsView(ListView):
+    model = Product
+    context_object_name = 'products'
+    template_name = 'budget-products.html'
+    paginate_by = 8
+    queryset = Product.objects.order_by("price")
