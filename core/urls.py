@@ -10,4 +10,5 @@ urlpatterns = [
     path('new/', NewProductsView.as_view(), name='new'),
     path('products/<slug:slug>', ProductDetailView.as_view(), name='product-detail'),
     path('butget-products/', CheapProductsView.as_view(), name='budget-products'),
+    path('power-products/', ExpensiveProductsView.as_view(), name='power-products'),
 ]

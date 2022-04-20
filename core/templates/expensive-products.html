@@ -1,0 +1,413 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div id="panel">
+    </div>
+    <div class="page">
+
+
+
+        <main class="page__main">
+            <div class="title-page">
+                <div class="breadcrumps" itemprop="http://schema.org/breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+                    <div class="breadcrumps__inner inner">
+                        <div class="breadcrumps__wrapper">
+                            <a href="/" class="breadcrumps__link" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                <link itemprop="item" href="https://edelws.ru/">
+                                <meta itemprop="position" content="1" />
+                                <meta itemprop="name" content="производство компьютеров" />
+                                <svg class="breadcrumps__link-icon" width="14" height="12">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-home"></use>
+                </svg>
+                            </a>
+                            <a href="/catalog/" class="breadcrumps__link" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+
+                                <link itemprop="item" href="https://edelws.ru/catalog/">
+                                <meta itemprop="position" content="2" />
+                                <meta itemprop="name" content="Компьютеры EDELWEISS" /> Компьютеры EDELWEISS</a><span class="breadcrumps__text" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+<link itemprop="item" href="https://edelws.ru/nedorogie-pc/">
+                <meta itemprop="position" content="3" />
+                <meta itemprop="name" content="Недорогие игровые компьютеры"/>
+Недорогие игровые компьютеры</span></div>
+                    </div>
+                </div>
+                <div class="title-page__bg game-1">
+                    <picture>
+                        <img srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" src="/upload/uf/ccb/ccb27cfac373aa3ae12678e395237603.png" alt="недорогие компьютеры - бюджетные пк" class="lazzyload title-page__bg-img">
+                    </picture>
+                </div>
+                <div class="title-page__inner inner">
+                    <div class="title-page__wrapp">
+                        <h1 class="title-page__h1">Недорогие игровые компьютеры</h1>
+                        <p class="title-page__text">ПК для начинающих геймеров с ограниченным бюджетом. Компьютеры оптимизированы для игр, учёбы и работы. Достаточная производительность по низкой цене. Готовые системные блоки с фирменной гарантией производителя. Качественно и рационально.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog">
+                <svg width="0" height="0" style="position: absolute;" aria-hidden="true">
+
+        <symbol id="speedometer" viewBox="0 0 56 56">
+            <circle cx="28" cy="28" r="26" transform="rotate(90 28 28)" />
+            <defs>
+                <radialGradient id="paint0_angular" cx="1" cy="0.5" r="3" gradientUnits="userSpaceOnUse" gradientTransform="translate(28 28) rotate(45) scale(27.5772)">
+                    <stop stop-color="#00ACE2" />
+                    <stop offset="0.375" stop-color="#00E291" />
+                    <stop offset="0.765625" stop-color="#A7E200" />
+                </radialGradient>
+            </defs>
+        </symbol>
+    </svg>
+                <div class="catalog__inner inner">
+                    <div class="features ">
+                        <div class="features__inner inner">
+                            <div class="features__wrapper">
+                                <h4 class="features__title">Оптимальная серия - доступные игровые ПК</h4>
+                                <ul class="features__list">
+                                    <li class="features__li">
+                                        <i class="features__star"></i>
+                                        <p class="features__text">Бюджетные системные блоки, низкая цена - разумный расход средств</p>
+                                    </li>
+                                    <li class="features__li">
+                                        <i class="features__star"></i>
+                                        <p class="features__text">Современный дизайн и качественная сборка, справедливая стоимость</p>
+                                    </li>
+                                    <li class="features__li">
+                                        <i class="features__star"></i>
+                                        <p class="features__text">Возможность купить дёшево компьютер - универсальное решение для дома и офиса</p>
+                                    </li>
+                                </ul>
+                                <div class="features__img-box">
+                                    <picture>
+                                        <img src="/upload/uf/160/16089c7cc012093015c7d464c7e9a8a6.png" alt="" class="features__img">
+                                    </picture>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="catalog__list ">
+                        {% for product in products %}
+                        <li class="catalog__li product__" data-id="816" id="bx_3966226736_816_362ce596257894d11ab5c1d73d13c755" data-entity="item" itemscope itemtype="https://schema.org/Product">
+                            <div class="catalog__li-box">
+                                <div class="catalog__li-content">
+                                    <a href="{% url 'core:product-detail' product.slug%}" class="catalog__li-img-box">
+                                        <picture>
+                                            <img id="bx_3966226736_816_362ce596257894d11ab5c1d73d13c755_pict" src="/media/{{ product.images.first.image }}"
+                                                alt="Chieftec GP-02B SCORPION II" class="catalog__li-img">
+                                        </picture>
+                                    </a>
+                                    <div class="catalog__li-wrapper">
+                                        <div class="catalog__li-wrapper-start">
+                                            <meta itemprop="brand" content="Edelweiss">
+                                            <a href="{% url 'core:product-detail' product.slug%}" class="catalog__li-name"><span itemprop="name"></span>{{ product.title }}</a>
+                                            <div class="catalog__li-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                                <meta itemprop="priceCurrency" content="RUB">
+                                                
+                                                
+                                                <meta itemprop="price" content="287550"> {{product.price}} ₼ 
+
+                                                <div class="catalog__credit">
+                                                    <span class="catalog__li-price-i"><svg class="icon-info" width="14" height="14">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-info"></use>
+                    </svg></span>
+                                                    <div class="catalog__credit-hidd">
+                                                        <p class="catalog__credit-hidd-title">Оплата в кредит</p>
+                                                        <dl class="catalog__credit-hidd-dl">
+                                                            <dt class="catalog__credit-hidd-dt">Быстро и просто</dt>
+                                                            <dd class="catalog__credit-hidd-dd">Заполните анкету на сайте магазина и получите решение по вашей заявке за 2 минуты.</dd>
+                                                        </dl>
+                                                        <dl class="catalog__credit-hidd-dl">
+                                                            <dt class="catalog__credit-hidd-dt">Выбор лучших условий</dt>
+                                                            <dd class="catalog__credit-hidd-dd">Заявка уходит на рассмотрение в большое число финансовых организаций: Альфа-Банк, Pay P.S, Банк Восточный, Тинькофф Банк, Кредит Европа Банк, Second Bank и др.</dd>
+                                                        </dl>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="catalog__li-controll">
+                                        <a href="javascript:void(0)" class="catalog__li-controll-link catalog__li-controll-link--buy add2basket">Əldə et</a>
+                                        <a href="/power-pc/edelweiss-gladiator/" class="catalog__li-controll-link catalog__li-controll-link-periphery">
+        <span class="catalog__li-controll-link--desc">Ətraflı</span>
+        <span class="catalog__li-controll-link--mob"><img src="{% static 'main/img/icon/info-list.svg' %}" alt="" width="11"></span>
+    </a>
+                                        <a href="/constructor/#edelweiss-gladiator" class="catalog__li-controll-link">
+                                        <img src="{% static 'main/img/icon/setting.svg' %}" alt="" width="13">
+        <span class="catalog__li-controll-link-hidd">конфигурировать</span>
+    </a>
+                                    </div>
+                                    <p class="catalog__li-desc" itemprop="description">{{product.description}} &nbsp;&nbsp; </p>
+                                </div>
+                                <div class="catalog__structure">
+                                    <hr class="catalog__li-hr">
+                                    <dl class="catalog__structure-dl">
+                                        <dt class="catalog__structure-dt">
+                <div class="catalog__structure-img">
+                    <img src="{% static 'public/img/icon/vga.svg' %}" alt="значёк видеокарты ( gpu )">
+                </div>
+            </dt>
+                                        <dd class="catalog__structure-dd">
+                                            <p class="catalog__structure-title">GPU</p>
+                                            <p class="catalog__structure-name">{{product.video_card}}</p>
+                                        </dd>
+                                    </dl>
+                                    <dl class="catalog__structure-dl">
+                                        <dt class="catalog__structure-dt">
+                <div class="catalog__structure-img">
+                    <img src="{% static 'public/img/icon/cpu.svg' %}" alt="значёк центрального процессора ( cpu )">
+                </div>
+            </dt>
+                                        <dd class="catalog__structure-dd">
+                                            <p class="catalog__structure-title">CPU</p>
+                                            <p class="catalog__structure-name">{{product.processors.first.title}}</p>
+                                        </dd>
+                                    </dl>
+                                    <dl class="catalog__structure-dl">
+                                        <dt class="catalog__structure-dt">
+                {% comment %} <div class="catalog__structure-img">
+                    <img src="/local/templates/main/img/icon/fan.svg" alt="значёк система охлаждения (cooler )">
+                </div> {% endcomment %}
+            </dt>
+                                        {% comment %} <dd class="catalog__structure-dd">
+                                            <p class="catalog__structure-title">Cooler</p>
+                                            <p class="catalog__structure-name">ID-COOLING SE-224-RGB</p>
+                                        </dd> {% endcomment %}
+                                    </dl>
+                                    <dl class="catalog__structure-dl">
+                                        <dt class="catalog__structure-dt">
+                <div class="catalog__structure-img">
+                    <img src="{% static 'public/img/icon/ram.svg' %}" alt="значёк оперативной памяти ( ram )">
+                </div>
+            </dt>
+                                        <dd class="catalog__structure-dd">
+                                            <p class="catalog__structure-title">RAM</p>
+                                            <p class="catalog__structure-name">{{product.rams.first.title}} {{product.rams.first.amount}}</p>
+                                        </dd>
+                                    </dl>
+                                    <dl class="catalog__structure-dl">
+                                        <dt class="catalog__structure-dt">
+                {% comment %} <div class="catalog__structure-img">
+                    <img src="/local/templates/main/img/icon/motherboard.svg" alt="значёк материнской платы ( mb ) ">
+                </div> {% endcomment %}
+            </dt>
+                                        {% comment %} <dd class="catalog__structure-dd">
+                                            <p class="catalog__structure-title">Материнская плата</p>
+                                            <p class="catalog__structure-name">Gigabyte B460M</p>
+                                        </dd> {% endcomment %}
+                                    </dl>
+                                    <dl class="catalog__structure-dl">
+                                        <dt class="catalog__structure-dt"> 
+                <div class="catalog__structure-img">
+                    <img src="{% static 'public/img/icon/hard-disk.svg' %}" alt="значёк жесткого диска ( hdd )">
+                </div> 
+            </dt>
+                                        <dd class="catalog__structure-dd">
+                                            <p class="catalog__structure-title">HDD</p>
+                                            <p class="catalog__structure-name">{{product.hdds.first.title}}  {{product.hdds.first.amount}}</p>
+                                        </dd> 
+                                    </dl>
+                                    <dl class="catalog__structure-dl">
+                                        <dt class="catalog__structure-dt">
+                <div class="catalog__structure-img"> 
+                    <img src="{% static 'public/img/icon/ssd.svg' %}" alt="значёк твердотельного диска ( ssd )">
+                </div>
+            </dt>
+                                        <dd class="catalog__structure-dd">
+                                            <p class="catalog__structure-title">SSD</p>
+                                            <p class="catalog__structure-name">{{product.ssds.first.title}} {{product.ssds.first.amount}}</p>
+                                        </dd>
+                                    </dl>
+                                    <dl class="catalog__structure-dl">
+                                        <dt class="catalog__structure-dt">
+               <div class="catalog__structure-img">
+                    <img src="{% static 'public/img/icon/cd-rom.svg' %}" alt="	значёк оптического привода ( dvd-rw )">
+                </div> 
+            </dt>
+                                        <dd class="catalog__structure-dd">
+                                            <p class="catalog__structure-title">DVD-Driver</p>
+                                            <p class="catalog__structure-name">{% if product.has_cd_drive == False %}Yoxdur{% else %} Var {% endif %}</p>
+                                        </dd> 
+                                    </dl>
+                                    <dl class="catalog__structure-dl">
+                                        <dt class="catalog__structure-dt">
+                {% comment %} <div class="catalog__structure-img">
+                    <img src="/local/templates/main/img/icon/power-supply.svg" alt="	значёк блока питания ( psu )">
+                </div> {% endcomment %}
+            </dt>
+                                        {% comment %} <dd class="catalog__structure-dd">
+                                            <p class="catalog__structure-title">Блок питания</p>
+                                            <p class="catalog__structure-name">600W be quiet!</p>
+                                        </dd> {% endcomment %}
+                                    </dl>
+                                    <dl class="catalog__structure-dl">
+                                        <dt class="catalog__structure-dt">
+                {% comment %} <div class="catalog__structure-img">
+                    <img src="/local/templates/main/img/icon/case.svg" alt="иконка системного блока ( case )">
+                </div> {% endcomment %}
+            </dt>
+                                        {% comment %} <dd class="catalog__structure-dd">
+                                            <p class="catalog__structure-title">Корпус</p>
+                                            <p class="catalog__structure-name">Chieftec GP-02B SCORPION II</p>
+                                        </dd> {% endcomment %}
+                                    </dl>
+                                    <dl class="catalog__structure-dl">
+                                        <dt class="catalog__structure-dt">
+                <div class="catalog__structure-img">
+                    <img src="{% static 'public/img/icon/os.svg' %}" alt="значёк операционной системы ( os )">
+                </div> 
+            </dt>
+                                        <dd class="catalog__structure-dd">
+                                            <p class="catalog__structure-title">OS</p>
+                                            <p class="catalog__structure-name">{{product.operative_system}}</p>
+                                        </dd> 
+                                    </dl>
+                                </div>
+
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    <nav class="pagin" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+                        <span class="pagin__link pagin__arrow pagin__arrow--prev pagin__link--disabled">
+                <svg class="pagin__arrow-icon pagin__arrow-icon--prev" width="16" height="16">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-pagin"></use>
+            </svg>
+                </span> <span class="pagin__link _active">1</span>
+                        <a itemprop="url" href="/nedorogie-pc/?PAGEN_1=2" class="pagin__link"><span itemprop="name">2</span></a>
+
+                        <a itemprop="url" href="/nedorogie-pc/?PAGEN_1=2" class="pagin__link pagin__arrow pagin__arrow--next">
+                            <meta itemprop="name" content="Следующая" />
+                            <svg class="pagin__arrow-icon pagin__arrow-icon--next" width="16" height="16">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-pagin"></use>
+            </svg>
+                        </a>
+                    </nav>
+                    <div class="seo seo--little">
+                        <div class="seo__inner">
+                            <div class="seo__text">
+                                <div class="seo__start">
+                                    <h2>ПК недорого - это реально и доступно</h2>
+                                    <p>
+                                        Средняя стоимость хорошего домашнего ПК стартует от 70 000 ₽. Как быть в случае, если потратить такую сумму нет возможности, а пройти последние тайтлы хочется? Выход – купить недорогой компьютер по цене 30 000 рублей или чуть выше.
+                                    </p>
+                                    <p>
+                                        Мы предлагаем доступные системные блоки только из новых комплектующих. Это обеспечивает продолжительную стабильную работу компьютера. Каждая сборка сбалансирована. К процессору подобрана производительная видеокарта из бюджетного ценового сегмента.
+                                    </p>
+                                    <p>
+                                        Благодаря этому машина сможет запустить любую новую игру с настройками выше среднего, доставит радость своей практичностью и рациональным расходованием средств.<br>
+                                    </p>
+                                    <h3>Продажа бюджетных компьютеров для дома и офиса</h3>
+                                    <p>
+                                        В EDELWEISS можно купить приличную станцию по вполне доступной цене. Каждая сборка продумана специалистами и дает возможность глубоко погружаться в виртуальный мир. Даже самый бюджетный вариант EDELWEISS CYBORG обещает новичкам комфортное участие в Dota
+                                        2, Fortnite, League of Legends, CS:GO и других популярных проектах.
+                                    </p>
+                                    <p>
+                                        Исходя из этого, вы можете купить дёшево системный блок и полноценно работать за своим новым компьютером или сделать из него недорогое игровое решение с возможностью дальнейшей модернизации. Такая покупка обойдется совсем недорого и доставит радость своей
+                                        универсальностью.
+                                    </p>
+                                    <br>
+                                </div>
+                                <div class="seo__end">
+                                    <img alt="Недорогие игровые компьютеры -оптимальная серия EDELWEISS" src="/local/templates/main/img/nedorpc.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="seo__img lazzyload">
+                                </div>
+                            </div>
+                            <br> </div>
+                    </div>
+                </div>
+        </main>
+        </div>
+        <div class="modal modal--little" id="successaddc">
+            <p class="modal__title">Результат</p>
+            <p class="modal__text">Товар успешно добавлен в корзину</p>
+            <div class="modal__btn-rem-box">
+                <a href="/cart/" class=" btn btn--type-3">в корзину</a>
+                <span onclick="$.fancybox.close();" class="fix_margin__ btn" style="margin-left: 25px;">закрыть окно</span>
+            </div>
+        </div>
+        <div class="modal" id="call-back">
+            <p class="modal__title">Обратный звонок</p>
+            <div class="modal__box">
+                <p class="modal__text">Мы с радостью поможем Вам с выбором компьютера и ответим на все интересующие вопросы! Перезвоним Вам в течении 10 минут.</p>
+                <a href="mailto:info@edelws.ru" class="modal__mail">info@edelws.ru</a>
+                <form name="iblock_add" data-back="formResultCallback" action="/ajax/iblock.element.add.form.php" class="modal__form form js-ajax_form " method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="sessid" id="sessid" value="3ebd52d48b424659a59df67aa8ce30c2" /> <input type="hidden" name="signedParamsString" value="YTo2Nzp7czo4OiJCTE9DS19JRCI7czo5OiJjYWxsLWJhY2siO3M6Mjk6IkNVU1RPTV9USVRMRV9EQVRFX0FDVElWRV9GUk9NIjtzOjA6IiI7czoyNzoiQ1VTVE9NX1RJVExFX0RBVEVfQUNUSVZFX1RPIjtzOjA6IiI7czoyNzoiQ1VTVE9NX1RJVExFX0RFVEFJTF9QSUNUVVJFIjtzOjA6IiI7czoyNDoiQ1VTVE9NX1RJVExFX0RFVEFJTF9URVhUIjtzOjA6IiI7czoyNzoiQ1VTVE9NX1RJVExFX0lCTE9DS19TRUNUSU9OIjtzOjA6IiI7czoxNzoiQ1VTVE9NX1RJVExFX05BTUUiO3M6Mjg6ItCS0LDRiNC1INC/0L7Qu9C90L7QtSDQuNC80Y8iO3M6Mjg6IkNVU1RPTV9USVRMRV9QUkVWSUVXX1BJQ1RVUkUiO3M6MDoiIjtzOjI1OiJDVVNUT01fVElUTEVfUFJFVklFV19URVhUIjtzOjE4OiLQodC+0L7QsdGJ0LXQvdC40LUiO3M6MTc6IkNVU1RPTV9USVRMRV9UQUdTIjtzOjA6IiI7czoxODoiREVGQVVMVF9JTlBVVF9TSVpFIjtzOjI6IjMwIjtzOjI3OiJERVRBSUxfVEVYVF9VU0VfSFRNTF9FRElUT1IiO2I6MDtzOjEzOiJFTEVNRU5UX0FTU09DIjtzOjEwOiJDUkVBVEVEX0JZIjtzOjY6IkdST1VQUyI7YToxOntpOjA7czoxOiIyIjt9czo5OiJJQkxPQ0tfSUQiO3M6MjoiMzkiO3M6MTE6IklCTE9DS19UWVBFIjtzOjU6ImZvcm1zIjtzOjEwOiJMRVZFTF9MQVNUIjtzOjE6IlkiO3M6ODoiTElTVF9VUkwiO3M6MDoiIjtzOjEzOiJNQVhfRklMRV9TSVpFIjtpOjA7czoxMDoiTUFYX0xFVkVMUyI7czo2OiIxMDAwMDAiO3M6MTY6Ik1BWF9VU0VSX0VOVFJJRVMiO3M6NjoiMTAwMDAwIjtzOjI4OiJQUkVWSUVXX1RFWFRfVVNFX0hUTUxfRURJVE9SIjtiOjA7czoxNDoiUFJPUEVSVFlfQ09ERVMiO2E6Mjp7aToxO3M6NDoiTkFNRSI7aTozO2k6OTc0O31zOjIzOiJQUk9QRVJUWV9DT0RFU19SRVFVSVJFRCI7YToxOntpOjE7czo0OiJOQU1FIjt9czoxMzoiUkVTSVpFX0lNQUdFUyI7YjowO3M6ODoiU0VGX01PREUiO3M6MToiTiI7czo2OiJTVEFUVVMiO2E6MTp7aTowO3M6MzoiQU5ZIjt9czoxMDoiU1RBVFVTX05FVyI7czoxOiJOIjtzOjE2OiJVU0VSX01FU1NBR0VfQUREIjtzOjQ2OiLQrdC70LXQvNC10L3RgiDRg9GB0L/QtdGI0L3QviDQtNC+0LHQsNCy0LvQtdC9IjtzOjE3OiJVU0VSX01FU1NBR0VfRURJVCI7czo1Mjoi0JjQt9C80LXQvdC10L3QuNGPINGD0YHQv9C10YjQvdC+INGB0L7RhdGA0LDQvdC10L3RiyI7czoxMToiVVNFX0NBUFRDSEEiO3M6MToiTiI7czoxODoiQ09NUE9ORU5UX1RFTVBMQVRFIjtzOjg6Ii5kZWZhdWx0IjtzOjEwOiJDQUNIRV9UWVBFIjtzOjE6IkEiO3M6OToifkJMT0NLX0lEIjtzOjk6ImNhbGwtYmFjayI7czozMDoifkNVU1RPTV9USVRMRV9EQVRFX0FDVElWRV9GUk9NIjtzOjA6IiI7czoyODoifkNVU1RPTV9USVRMRV9EQVRFX0FDVElWRV9UTyI7czowOiIiO3M6Mjg6In5DVVNUT01fVElUTEVfREVUQUlMX1BJQ1RVUkUiO3M6MDoiIjtzOjI1OiJ+Q1VTVE9NX1RJVExFX0RFVEFJTF9URVhUIjtzOjA6IiI7czoyODoifkNVU1RPTV9USVRMRV9JQkxPQ0tfU0VDVElPTiI7czowOiIiO3M6MTg6In5DVVNUT01fVElUTEVfTkFNRSI7czoyODoi0JLQsNGI0LUg0L/QvtC70L3QvtC1INC40LzRjyI7czoyOToifkNVU1RPTV9USVRMRV9QUkVWSUVXX1BJQ1RVUkUiO3M6MDoiIjtzOjI2OiJ+Q1VTVE9NX1RJVExFX1BSRVZJRVdfVEVYVCI7czoxODoi0KHQvtC+0LHRidC10L3QuNC1IjtzOjE4OiJ+Q1VTVE9NX1RJVExFX1RBR1MiO3M6MDoiIjtzOjE5OiJ+REVGQVVMVF9JTlBVVF9TSVpFIjtzOjI6IjMwIjtzOjI4OiJ+REVUQUlMX1RFWFRfVVNFX0hUTUxfRURJVE9SIjtzOjE6Ik4iO3M6MTQ6In5FTEVNRU5UX0FTU09DIjtzOjEwOiJDUkVBVEVEX0JZIjtzOjc6In5HUk9VUFMiO2E6MTp7aTowO3M6MToiMiI7fXM6MTA6In5JQkxPQ0tfSUQiO3M6MjoiMzkiO3M6MTI6In5JQkxPQ0tfVFlQRSI7czo1OiJmb3JtcyI7czoxMToifkxFVkVMX0xBU1QiO3M6MToiWSI7czo5OiJ+TElTVF9VUkwiO3M6MDoiIjtzOjE0OiJ+TUFYX0ZJTEVfU0laRSI7czoxOiIwIjtzOjExOiJ+TUFYX0xFVkVMUyI7czo2OiIxMDAwMDAiO3M6MTc6In5NQVhfVVNFUl9FTlRSSUVTIjtzOjY6IjEwMDAwMCI7czoyOToiflBSRVZJRVdfVEVYVF9VU0VfSFRNTF9FRElUT1IiO3M6MToiTiI7czoxNToiflBST1BFUlRZX0NPREVTIjthOjI6e2k6MTtzOjQ6Ik5BTUUiO2k6MztpOjk3NDt9czoyNDoiflBST1BFUlRZX0NPREVTX1JFUVVJUkVEIjthOjE6e2k6MTtzOjQ6Ik5BTUUiO31zOjE0OiJ+UkVTSVpFX0lNQUdFUyI7czoxOiJOIjtzOjk6In5TRUZfTU9ERSI7czoxOiJOIjtzOjc6In5TVEFUVVMiO3M6MzoiQU5ZIjtzOjExOiJ+U1RBVFVTX05FVyI7czoxOiJOIjtzOjE3OiJ+VVNFUl9NRVNTQUdFX0FERCI7czowOiIiO3M6MTg6In5VU0VSX01FU1NBR0VfRURJVCI7czowOiIiO3M6MTI6In5VU0VfQ0FQVENIQSI7czoxOiJOIjtzOjE5OiJ+Q09NUE9ORU5UX1RFTVBMQVRFIjtzOjg6Ii5kZWZhdWx0IjtzOjExOiJ+Q0FDSEVfVFlQRSI7czoxOiJBIjtzOjI6IklEIjtpOjA7fQ==.3b512a2cd43ad37135aa694b5a5d5aa78af99c7de0fa76f79e80200f58ee179b">
+                    <div class="modal__content">
+
+                        <div class="modal__col">
+                            <div class="response"></div>
+                            <dl class="input__dl">
+                                <dt class="input__dt">
+                                <p class="input__title">Телефон</p></dt>
+                                <dd class="input__dd">
+                                    <label class="input__box">
+                                                            <input
+            name="PROPERTY[NAME][0]"
+            value=""
+            type="tel" class="input__text mask" data-msg="Поле обязательно" data-msg-required="Поле обязательно" required="required" id="PROPERTY_NAME_text"             />                                </label>
+                                </dd>
+                            </dl>
+                            <dl class="input__dl">
+                                <dt class="input__dt">
+                                <p class="input__title">Ваше полное имя</p></dt>
+                                <dd class="input__dd">
+                                    <label class="input__box">
+                                                            <input
+            name="PROPERTY[974][0]"
+            value=""
+            class="input__text" id="PROPERTY_974_text" type="text"             />                                </label>
+                                </dd>
+                            </dl>
+                            <p class="modal__massage">
+                                <img src="/local/templates/main/img/icon/required1.svg" alt="" class="modal__massage-icon">
+                                <span class="modal__massage-text">– Поля обязательны для заполнения</span>
+                            </p>
+                            <div class="checkbox checkbox--ok">
+                                <label class="checkbox__label">
+                            <input required type="checkbox" class="checkbox__input">
+                            <span class="checkbox__text">Я согласен на обработку персональных данных</span>
+                        </label>
+                            </div>
+                            <div class="captcha_container">
+                            </div>
+                            <input type="hidden" name="iblock_submit" value="Отправить" />
+                            <input type="submit" name="iblock_submit" value="отправить" class="form__button-send modal__btn btn btn--type-3" />
+                        </div>
+
+
+
+
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="custom">
+            <div class="tm-chat-btn" onclick="this.classList.toggle('active')">
+                <a class="tm-chat-btn__item uk-icon" style="background-color: #4a76a8;" title="Написать нам во Вконтакте" href="//vk.me/-80425418" target="_blank" rel="noopener" uk-icon="hp-vk">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" data-svg="hp-vk">
+                <path d="M20 5c0,-1 0,-1 -1,-1l-2 0c-1,0 -1,0 -1,1 0,0 -1,2 -3,4 0,1 -1,1 -1,1 0,0 0,0 0,-1l0 -4c0,-1 0,-1 -1,-1l-3 0c-1,0 -1,0 -1,1 0,0 1,0 1,2l0 3c0,1 0,1 0,1 -1,0 -3,-3 -4,-6 0,-1 -1,-1 -1,-1l-2 0c-1,0 -1,0 -1,1 0,0 1,3 3,7 2,3 5,4 7,4 2,0 2,0 2,-1l0 -2c0,-1 0,-1 0,-1 1,0 1,1 2,2 2,1 2,2 3,2l2 0c1,0 1,0 1,-1 0,-1 -1,-1 -2,-3 0,0 -1,-1 -1,-1 -1,-1 -1,-1 0,-1 0,0 2,-4 3,-5z"></path>
+            </svg>
+        </a>
+                <a class="tm-chat-btn__item uk-icon" style="background-color: #1da1f2;" title="Написать нам в Telegram" href="//t.me/edelweisspc" target="_blank" rel="noopener" uk-icon="hp-telegram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" data-svg="hp-telegram">
+                <path d="M7.59,14.74,6.45,11.18,19,1.68,1.46,8.7S.69,9,.75,9.48s.69.74.69.74l4.08,1.43,1.85,6.12,3.13-2.86h0l4.11,3.28a1.06,1.06,0,0,0,1.51-.55L19,1.68Z"></path>
+            </svg>
+        </a>
+                <a class="tm-chat-btn__item uk-icon" style="background-color: #00e676;" title="Написать нам в WhatsApp" href="//wa.me/79199947083" target="_blank" rel="noopener" uk-icon="whatsapp">
+            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="whatsapp">
+                <path d="M16.7,3.3c-1.8-1.8-4.1-2.8-6.7-2.8c-5.2,0-9.4,4.2-9.4,9.4c0,1.7,0.4,3.3,1.3,4.7l-1.3,4.9l5-1.3c1.4,0.8,2.9,1.2,4.5,1.2 l0,0l0,0c5.2,0,9.4-4.2,9.4-9.4C19.5,7.4,18.5,5,16.7,3.3 M10.1,17.7L10.1,17.7c-1.4,0-2.8-0.4-4-1.1l-0.3-0.2l-3,0.8l0.8-2.9 l-0.2-0.3c-0.8-1.2-1.2-2.7-1.2-4.2c0-4.3,3.5-7.8,7.8-7.8c2.1,0,4.1,0.8,5.5,2.3c1.5,1.5,2.3,3.4,2.3,5.5 C17.9,14.2,14.4,17.7,10.1,17.7 M14.4,11.9c-0.2-0.1-1.4-0.7-1.6-0.8c-0.2-0.1-0.4-0.1-0.5,0.1c-0.2,0.2-0.6,0.8-0.8,0.9 c-0.1,0.2-0.3,0.2-0.5,0.1c-0.2-0.1-1-0.4-1.9-1.2c-0.7-0.6-1.2-1.4-1.3-1.6c-0.1-0.2,0-0.4,0.1-0.5C8,8.8,8.1,8.7,8.2,8.5 c0.1-0.1,0.2-0.2,0.2-0.4c0.1-0.2,0-0.3,0-0.4C8.4,7.6,7.9,6.5,7.7,6C7.5,5.5,7.3,5.6,7.2,5.6c-0.1,0-0.3,0-0.4,0 c-0.2,0-0.4,0.1-0.6,0.3c-0.2,0.2-0.8,0.8-0.8,2c0,1.2,0.8,2.3,1,2.4c0.1,0.2,1.7,2.5,4,3.5c0.6,0.2,1,0.4,1.3,0.5 c0.6,0.2,1.1,0.2,1.5,0.1c0.5-0.1,1.4-0.6,1.6-1.1c0.2-0.5,0.2-1,0.1-1.1C14.8,12.1,14.6,12,14.4,11.9"></path>
+            </svg>
+        </a>
+                <span class="tm-chat-btn__text"> <span>Начать чат</span> </span>
+            </div>
+        </div>
+
+{% endblock %}
