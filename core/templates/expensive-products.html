@@ -10,28 +10,7 @@
 
         <main class="page__main">
             <div class="title-page">
-                <div class="breadcrumps" itemprop="http://schema.org/breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
-                    <div class="breadcrumps__inner inner">
-                        <div class="breadcrumps__wrapper">
-                            <a href="/" class="breadcrumps__link" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                                <link itemprop="item" href="https://edelws.ru/">
-                                <meta itemprop="position" content="1" />
-                                <meta itemprop="name" content="производство компьютеров" />
-                                <svg class="breadcrumps__link-icon" width="14" height="12">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-home"></use>
-                </svg>
-                            </a>
-                            <a href="/catalog/" class="breadcrumps__link" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-
-                                <link itemprop="item" href="https://edelws.ru/catalog/">
-                                <meta itemprop="position" content="2" />
-                                <meta itemprop="name" content="Компьютеры EDELWEISS" /> Компьютеры EDELWEISS</a><span class="breadcrumps__text" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-<link itemprop="item" href="https://edelws.ru/nedorogie-pc/">
-                <meta itemprop="position" content="3" />
-                <meta itemprop="name" content="Недорогие игровые компьютеры"/>
-Недорогие игровые компьютеры</span></div>
-                    </div>
-                </div>
+                
                 <div class="title-page__bg game-1">
                     <picture>
                         <img srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" src="/upload/uf/ccb/ccb27cfac373aa3ae12678e395237603.png" alt="недорогие компьютеры - бюджетные пк" class="lazzyload title-page__bg-img">
@@ -65,15 +44,15 @@
                                 <h4 class="features__title">Оптимальная серия - доступные игровые ПК</h4>
                                 <ul class="features__list">
                                     <li class="features__li">
-                                        <i class="features__star"></i>
+                                        <i class="features__star" style="background-image: url('{% static 'public/img/icon/star.svg' %}');"></i>
                                         <p class="features__text">Бюджетные системные блоки, низкая цена - разумный расход средств</p>
                                     </li>
                                     <li class="features__li">
-                                        <i class="features__star"></i>
+                                        <i class="features__star" style="background-image: url('{% static 'public/img/icon/star.svg' %}');"></i>
                                         <p class="features__text">Современный дизайн и качественная сборка, справедливая стоимость</p>
                                     </li>
                                     <li class="features__li">
-                                        <i class="features__star"></i>
+                                        <i class="features__star" style="background-image: url('{% static 'public/img/icon/star.svg' %}');"></i>
                                         <p class="features__text">Возможность купить дёшево компьютер - универсальное решение для дома и офиса</p>
                                     </li>
                                 </ul>
@@ -273,7 +252,8 @@
                     <nav class="pagin" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
                         <span class="pagin__link pagin__arrow pagin__arrow--prev pagin__link--disabled">
                 <svg class="pagin__arrow-icon pagin__arrow-icon--prev" width="16" height="16">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-pagin"></use>
+                    <img style="border-radius: 30px;" src="{% static 'public/img/icon/leftArrow.png' %}"/>
+                {% comment %} <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-pagin"></use> {% endcomment %}
             </svg>
                 </span> <span class="pagin__link _active">1</span>
                         <a itemprop="url" href="/nedorogie-pc/?PAGEN_1=2" class="pagin__link"><span itemprop="name">2</span></a>
@@ -281,8 +261,9 @@
                         <a itemprop="url" href="/nedorogie-pc/?PAGEN_1=2" class="pagin__link pagin__arrow pagin__arrow--next">
                             <meta itemprop="name" content="Следующая" />
                             <svg class="pagin__arrow-icon pagin__arrow-icon--next" width="16" height="16">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-pagin"></use>
-            </svg>
+                                <img style="border-radius: 30px;" src="{% static 'public/img/icon/rightArrow.png' %}"/>
+                            {% comment %} <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{% static 'public/img/sprite.svg' %}"></use> {% endcomment %}
+                            </svg>
                         </a>
                     </nav>
                     <div class="seo seo--little">
@@ -311,7 +292,7 @@
                                     <br>
                                 </div>
                                 <div class="seo__end">
-                                    <img alt="Недорогие игровые компьютеры -оптимальная серия EDELWEISS" src="/local/templates/main/img/nedorpc.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="seo__img lazzyload">
+                                    <img src="https://appletrack.com/wp-content/uploads/2020/08/2020-imac-apple-1.jpg" class="seo__img lazzyload">
                                 </div>
                             </div>
                             <br> </div>
