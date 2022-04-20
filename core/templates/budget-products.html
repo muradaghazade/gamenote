@@ -65,21 +65,21 @@
                                 <h4 class="features__title">Оптимальная серия - доступные игровые ПК</h4>
                                 <ul class="features__list">
                                     <li class="features__li">
-                                        <i class="features__star"></i>
+                                        <i class="features__star" style="background-image: url('{% static 'public/img/icon/star.svg' %}');"></i>
                                         <p class="features__text">Бюджетные системные блоки, низкая цена - разумный расход средств</p>
                                     </li>
                                     <li class="features__li">
-                                        <i class="features__star"></i>
+                                        <i class="features__star" style="background-image: url('{% static 'public/img/icon/star.svg' %}');"></i>
                                         <p class="features__text">Современный дизайн и качественная сборка, справедливая стоимость</p>
                                     </li>
                                     <li class="features__li">
-                                        <i class="features__star"></i>
+                                        <i class="features__star" style="background-image: url('{% static 'public/img/icon/star.svg' %}');"></i>
                                         <p class="features__text">Возможность купить дёшево компьютер - универсальное решение для дома и офиса</p>
                                     </li>
                                 </ul>
                                 <div class="features__img-box">
                                     <picture>
-                                        <img src="/upload/uf/160/16089c7cc012093015c7d464c7e9a8a6.png" alt="" class="features__img">
+                                        <img src="https://image.pngaaa.com/510/983510-middle.png" alt="" class="features__img">
                                     </picture>
                                 </div>
 
@@ -87,1189 +87,31 @@
                         </div>
                     </div>
                     <ul class="catalog__list ">
-                        <li class="catalog__li product__" data-id="807" id="bx_3966226736_807_7e1b8e3524755c391129a9d7e6f2d206" data-entity="item" itemscope itemtype="https://schema.org/Product">
+                       
+                        {% for product in products %}
+                        <li class="catalog__li product__" data-id="816" id="bx_3966226736_816_362ce596257894d11ab5c1d73d13c755" data-entity="item" itemscope itemtype="https://schema.org/Product">
                             <div class="catalog__li-box">
                                 <div class="catalog__li-content">
-                                    <a href="/nedorogie-pc/edelweiss-cyborg/" class="catalog__li-img-box">
+                                    <a href="{% url 'core:product-detail' product.slug%}" class="catalog__li-img-box">
                                         <picture>
-                                            <img id="bx_3966226736_807_7e1b8e3524755c391129a9d7e6f2d206_pict" src="/upload/resize_cache/iblock/c18/220_245_1/c18d5c0c91e07cc47c7bb904435bf3dd.png" itemprop="image" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                alt="AeroCool Cylon Black" class="catalog__li-img lazzyload">
+                                            <img id="bx_3966226736_816_362ce596257894d11ab5c1d73d13c755_pict" src="/media/{{ product.images.first.image }}"
+                                                alt="Chieftec GP-02B SCORPION II" class="catalog__li-img">
                                         </picture>
                                     </a>
                                     <div class="catalog__li-wrapper">
                                         <div class="catalog__li-wrapper-start">
                                             <meta itemprop="brand" content="Edelweiss">
-                                            <a href="/nedorogie-pc/edelweiss-cyborg/" class="catalog__li-name"><span itemprop="name">EDELWEISS CYBORG</span></a>
+                                            <a href="{% url 'core:product-detail' product.slug%}" class="catalog__li-name"><span itemprop="name"></span>{{ product.title }}</a>
                                             <div class="catalog__li-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                                                 <meta itemprop="priceCurrency" content="RUB">
-                                                <link itemprop="availability" href="https://schema.org/InStock" />
-                                                <link itemprop="url" href="htpps://edelws.ru/nedorogie-pc/edelweiss-cyborg/" />
-                                                <link itemprop="priceValidUntil" content="2023-04-04T11:51:36+03:00" />
-                                                <meta itemprop="price" content="94930"> 94&nbsp;930 <img src="/local/templates/main/img/icon/rub.svg" alt="Национальная валюта рубли" class="catalog__li-price-r">
+                                                
+                                                
+                                                <meta itemprop="price" content="287550"> {{product.price}} ₼ 
 
                                                 <div class="catalog__credit">
                                                     <span class="catalog__li-price-i"><svg class="icon-info" width="14" height="14">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-info"></use>
-                            </svg></span>
-                                                    <div class="catalog__credit-hidd">
-                                                        <p class="catalog__credit-hidd-title">Оплата в кредит</p>
-                                                        <dl class="catalog__credit-hidd-dl">
-                                                            <dt class="catalog__credit-hidd-dt">Быстро и просто</dt>
-                                                            <dd class="catalog__credit-hidd-dd">Заполните анкету на сайте магазина и получите решение по вашей заявке за 2 минуты.</dd>
-                                                        </dl>
-                                                        <dl class="catalog__credit-hidd-dl">
-                                                            <dt class="catalog__credit-hidd-dt">Выбор лучших условий</dt>
-                                                            <dd class="catalog__credit-hidd-dd">Заявка уходит на рассмотрение в большое число финансовых организаций: Альфа-Банк, Pay P.S, Банк Восточный, Тинькофф Банк, Кредит Европа Банк, Second Bank и др.</dd>
-                                                        </dl>
-                                                    </div>
-                                                </div>
-
-
-                                            </div>
-                                        </div>
-                                        <div class="speedometer" data-max="300" data-real='{"csgo":{"ful_hd":"165","quad_hd":119,"ultra_hd":69},"wot":{"ful_hd":"80","quad_hd":58,"ultra_hd":34},"pugb":{"ful_hd":"38","quad_hd":27,"ultra_hd":16},"gtav":{"ful_hd":"45","quad_hd":32,"ultra_hd":19},"fortnite":{"ful_hd":"50","quad_hd":36,"ultra_hd":21},"apex":{"ful_hd":"60","quad_hd":43,"ultra_hd":25},"rdr2":{"ful_hd":"26","quad_hd":19,"ultra_hd":11}}'>
-                                            <svg class="speedometer__icon" width="56" height="56" style="--stroke: 1000">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#speedometer"></use>
-                    </svg>
-                                            <svg class="speedometer__icon-bg" width="56" height="56">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#speedometer"></use>
-                    </svg>
-                                            <i class="speedometer__arrow" style="--rotate: -288deg"></i>
-                                            <div class="speedometer__bg">
-                                                <div class="speedometer__counter">0</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="catalog__li-controll">
-                                        <a href="javascript:void(0)" class="catalog__li-controll-link catalog__li-controll-link--buy add2basket">купить</a>
-                                        <a href="/nedorogie-pc/edelweiss-cyborg/" class="catalog__li-controll-link catalog__li-controll-link-periphery">
-                <span class="catalog__li-controll-link--desc">Подробнее</span>
-                <span class="catalog__li-controll-link--mob"><img src="/local/templates/main/img/icon/info-list.svg" alt="" width="11"></span>
-            </a>
-                                        <a href="/constructor/#edelweiss-cyborg" class="catalog__li-controll-link">
-                <img src="/local/templates/main/img/icon/setting.svg" alt="" width="13">
-                <span class="catalog__li-controll-link-hidd">конфигурировать</span>
-            </a>
-                                    </div>
-                                    <p class="catalog__li-desc" itemprop="description">EDELWEISS CYBORG - бюджетный компьютер для игр. На нем с легкостью и достаточно высоким показателем FPS можно запускать такие игры как: CS:GO, Dota 2, Fortnite, League of Legends и д.р. Прекрасный вариант для начинающих
-                                        геймеров.</p>
-                                </div>
-                                <div class="catalog__structure">
-                                    <hr class="catalog__li-hr">
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/vga.svg" alt="значёк видеокарты ( gpu )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Видео-карта</p>
-                                            <p class="catalog__structure-name">GEFORCE GTX 1650 4Гб</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/cpu.svg" alt="значёк центрального процессора ( cpu )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Процессор</p>
-                                            <p class="catalog__structure-name">Intel Core i3-10100F 3600 МГц</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/fan.svg" alt="значёк система охлаждения (cooler )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Охлаждение</p>
-                                            <p class="catalog__structure-name">Intel Box</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/ram.svg" alt="значёк оперативной памяти ( ram )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Оперативная память</p>
-                                            <p class="catalog__structure-name">8Гб CRUCIAL 2400 МГц</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/motherboard.svg" alt="значёк материнской платы ( mb ) ">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Материнская плата</p>
-                                            <p class="catalog__structure-name">Gigabyte H410M</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/hard-disk.svg" alt="значёк жесткого диска ( hdd )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Жёсткий диск</p>
-                                            <p class="catalog__structure-name">1 Тб Toshiba</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/ssd.svg" alt="значёк твердотельного диска ( ssd )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Диск SSD</p>
-                                            <p class="catalog__structure-name">SSD не установлен</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/cd-rom.svg" alt="	значёк оптического привода ( dvd-rw )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Оптический привод</p>
-                                            <p class="catalog__structure-name">Без привода</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/power-supply.svg" alt="	значёк блока питания ( psu )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Блок питания</p>
-                                            <p class="catalog__structure-name">500W RaidMax</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/case.svg" alt="иконка системного блока ( case )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Корпус</p>
-                                            <p class="catalog__structure-name">AeroCool Cylon Black</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/os.svg" alt="значёк операционной системы ( os )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Система</p>
-                                            <p class="catalog__structure-name">не устанавливать ОС</p>
-                                        </dd>
-                                    </dl>
-                                </div>
-
-                            </div>
-                        </li>
-                        <li class="catalog__li product__" data-id="1181" id="bx_3966226736_1181_362ce596257894d11ab5c1d73d13c755" data-entity="item" itemscope itemtype="https://schema.org/Product">
-                            <div class="catalog__li-box">
-                                <div class="catalog__li-content">
-                                    <a href="/nedorogie-pc/edelweiss_axe/" class="catalog__li-img-box">
-                                        <picture>
-                                            <img id="bx_3966226736_1181_362ce596257894d11ab5c1d73d13c755_pict" src="/upload/resize_cache/iblock/b75/220_245_1/b759680ccc1b7b5f71d3528641f59526.png" itemprop="image" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                alt="AeroCool Cylon White" class="catalog__li-img lazzyload">
-                                        </picture>
-                                    </a>
-                                    <div class="catalog__li-wrapper">
-                                        <div class="catalog__li-wrapper-start">
-                                            <meta itemprop="brand" content="Edelweiss">
-                                            <a href="/nedorogie-pc/edelweiss_axe/" class="catalog__li-name"><span itemprop="name">EDELWEISS AXE</span></a>
-                                            <div class="catalog__li-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                                                <meta itemprop="priceCurrency" content="RUB">
-                                                <link itemprop="availability" href="https://schema.org/InStock" />
-                                                <link itemprop="url" href="htpps://edelws.ru/nedorogie-pc/edelweiss_axe/" />
-                                                <link itemprop="priceValidUntil" content="2023-04-04T11:51:36+03:00" />
-                                                <meta itemprop="price" content="114370"> 114&nbsp;370 <img src="/local/templates/main/img/icon/rub.svg" alt="Национальная валюта рубли" class="catalog__li-price-r">
-
-                                                <div class="catalog__credit">
-                                                    <span class="catalog__li-price-i"><svg class="icon-info" width="14" height="14">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-info"></use>
-                            </svg></span>
-                                                    <div class="catalog__credit-hidd">
-                                                        <p class="catalog__credit-hidd-title">Оплата в кредит</p>
-                                                        <dl class="catalog__credit-hidd-dl">
-                                                            <dt class="catalog__credit-hidd-dt">Быстро и просто</dt>
-                                                            <dd class="catalog__credit-hidd-dd">Заполните анкету на сайте магазина и получите решение по вашей заявке за 2 минуты.</dd>
-                                                        </dl>
-                                                        <dl class="catalog__credit-hidd-dl">
-                                                            <dt class="catalog__credit-hidd-dt">Выбор лучших условий</dt>
-                                                            <dd class="catalog__credit-hidd-dd">Заявка уходит на рассмотрение в большое число финансовых организаций: Альфа-Банк, Pay P.S, Банк Восточный, Тинькофф Банк, Кредит Европа Банк, Second Bank и др.</dd>
-                                                        </dl>
-                                                    </div>
-                                                </div>
-
-
-                                            </div>
-                                        </div>
-                                        <div class="speedometer" data-max="300" data-real='{"csgo":{"ful_hd":"197","quad_hd":142,"ultra_hd":83},"wot":{"ful_hd":"97","quad_hd":70,"ultra_hd":41},"pugb":{"ful_hd":"54","quad_hd":39,"ultra_hd":23},"gtav":{"ful_hd":"64","quad_hd":46,"ultra_hd":27},"fortnite":{"ful_hd":"69","quad_hd":50,"ultra_hd":29},"apex":{"ful_hd":"69","quad_hd":50,"ultra_hd":29},"rdr2":{"ful_hd":"37","quad_hd":27,"ultra_hd":16}}'>
-                                            <svg class="speedometer__icon" width="56" height="56" style="--stroke: 1000">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#speedometer"></use>
-                    </svg>
-                                            <svg class="speedometer__icon-bg" width="56" height="56">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#speedometer"></use>
-                    </svg>
-                                            <i class="speedometer__arrow" style="--rotate: -288deg"></i>
-                                            <div class="speedometer__bg">
-                                                <div class="speedometer__counter">0</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="catalog__li-controll">
-                                        <a href="javascript:void(0)" class="catalog__li-controll-link catalog__li-controll-link--buy add2basket">купить</a>
-                                        <a href="/nedorogie-pc/edelweiss_axe/" class="catalog__li-controll-link catalog__li-controll-link-periphery">
-                <span class="catalog__li-controll-link--desc">Подробнее</span>
-                <span class="catalog__li-controll-link--mob"><img src="/local/templates/main/img/icon/info-list.svg" alt="" width="11"></span>
-            </a>
-                                        <a href="/constructor/#edelweiss_axe" class="catalog__li-controll-link">
-                <img src="/local/templates/main/img/icon/setting.svg" alt="" width="13">
-                <span class="catalog__li-controll-link-hidd">конфигурировать</span>
-            </a>
-                                    </div>
-                                    <p class="catalog__li-desc" itemprop="description">EDELWEISS AXE -достойный бюджетный компьютер для игр. GTX 1650 с приставкой SUPER обеспечит высоким показателем FPS при запуске CS:GO, Dota 2, Fortnite, League of Legends и д.р. Хороший помощник школьника и студентам.</p>
-                                </div>
-                                <div class="catalog__structure">
-                                    <hr class="catalog__li-hr">
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/vga.svg" alt="значёк видеокарты ( gpu )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Видео-карта</p>
-                                            <p class="catalog__structure-name">GEFORCE GTX 1650 4Гб</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/cpu.svg" alt="значёк центрального процессора ( cpu )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Процессор</p>
-                                            <p class="catalog__structure-name">Intel Core i3-10100F 3600 МГц</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/fan.svg" alt="значёк система охлаждения (cooler )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Охлаждение</p>
-                                            <p class="catalog__structure-name">Intel Box</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/ram.svg" alt="значёк оперативной памяти ( ram )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Оперативная память</p>
-                                            <p class="catalog__structure-name">8Гб CRUCIAL 2400 МГц</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/motherboard.svg" alt="значёк материнской платы ( mb ) ">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Материнская плата</p>
-                                            <p class="catalog__structure-name">Gigabyte H410M</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/hard-disk.svg" alt="значёк жесткого диска ( hdd )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Жёсткий диск</p>
-                                            <p class="catalog__structure-name">1 Тб Toshiba</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/ssd.svg" alt="значёк твердотельного диска ( ssd )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Диск SSD</p>
-                                            <p class="catalog__structure-name">120 Гб Kingston</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/cd-rom.svg" alt="	значёк оптического привода ( dvd-rw )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Оптический привод</p>
-                                            <p class="catalog__structure-name">Без привода</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/power-supply.svg" alt="	значёк блока питания ( psu )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Блок питания</p>
-                                            <p class="catalog__structure-name">500W RaidMax</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/case.svg" alt="иконка системного блока ( case )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Корпус</p>
-                                            <p class="catalog__structure-name">AeroCool Cylon White</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/os.svg" alt="значёк операционной системы ( os )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Система</p>
-                                            <p class="catalog__structure-name">Windows 10</p>
-                                        </dd>
-                                    </dl>
-                                </div>
-
-                            </div>
-                        </li>
-                        <li class="catalog__li product__" data-id="825" id="bx_3966226736_825_c80764dfaf26ca80162484593ec7c29b" data-entity="item" itemscope itemtype="https://schema.org/Product">
-                            <div class="catalog__li-box">
-                                <div class="catalog__li-content">
-                                    <a href="/nedorogie-pc/edelweiss-shark/" class="catalog__li-img-box">
-                                        <picture>
-                                            <img id="bx_3966226736_825_c80764dfaf26ca80162484593ec7c29b_pict" src="/upload/resize_cache/iblock/4d0/220_245_1/4d0d98a99535041facdb3edd13cd2c65.png" itemprop="image" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                alt="1STPLAYER FIRE DANCING V2" class="catalog__li-img lazzyload">
-                                        </picture>
-                                    </a>
-                                    <div class="catalog__li-wrapper">
-                                        <div class="catalog__li-wrapper-start">
-                                            <meta itemprop="brand" content="Edelweiss">
-                                            <a href="/nedorogie-pc/edelweiss-shark/" class="catalog__li-name"><span itemprop="name">EDELWEISS SHARK</span></a>
-                                            <div class="catalog__li-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                                                <meta itemprop="priceCurrency" content="RUB">
-                                                <link itemprop="availability" href="https://schema.org/InStock" />
-                                                <link itemprop="url" href="htpps://edelws.ru/nedorogie-pc/edelweiss-shark/" />
-                                                <link itemprop="priceValidUntil" content="2023-04-04T11:51:36+03:00" />
-                                                <meta itemprop="price" content="133680"> 133&nbsp;680 <img src="/local/templates/main/img/icon/rub.svg" alt="Национальная валюта рубли" class="catalog__li-price-r">
-
-                                                <div class="catalog__credit">
-                                                    <span class="catalog__li-price-i"><svg class="icon-info" width="14" height="14">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-info"></use>
-                            </svg></span>
-                                                    <div class="catalog__credit-hidd">
-                                                        <p class="catalog__credit-hidd-title">Оплата в кредит</p>
-                                                        <dl class="catalog__credit-hidd-dl">
-                                                            <dt class="catalog__credit-hidd-dt">Быстро и просто</dt>
-                                                            <dd class="catalog__credit-hidd-dd">Заполните анкету на сайте магазина и получите решение по вашей заявке за 2 минуты.</dd>
-                                                        </dl>
-                                                        <dl class="catalog__credit-hidd-dl">
-                                                            <dt class="catalog__credit-hidd-dt">Выбор лучших условий</dt>
-                                                            <dd class="catalog__credit-hidd-dd">Заявка уходит на рассмотрение в большое число финансовых организаций: Альфа-Банк, Pay P.S, Банк Восточный, Тинькофф Банк, Кредит Европа Банк, Second Bank и др.</dd>
-                                                        </dl>
-                                                    </div>
-                                                </div>
-
-
-                                            </div>
-                                        </div>
-                                        <div class="speedometer" data-max="300" data-real='{"csgo":{"ful_hd":"169","quad_hd":122,"ultra_hd":71},"wot":{"ful_hd":"84","quad_hd":60,"ultra_hd":35},"pugb":{"ful_hd":"41","quad_hd":30,"ultra_hd":17},"gtav":{"ful_hd":"44","quad_hd":32,"ultra_hd":18},"fortnite":{"ful_hd":"53","quad_hd":38,"ultra_hd":22},"apex":{"ful_hd":"63","quad_hd":45,"ultra_hd":26},"rdr2":{"ful_hd":"28","quad_hd":20,"ultra_hd":12}}'>
-                                            <svg class="speedometer__icon" width="56" height="56" style="--stroke: 1000">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#speedometer"></use>
-                    </svg>
-                                            <svg class="speedometer__icon-bg" width="56" height="56">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#speedometer"></use>
-                    </svg>
-                                            <i class="speedometer__arrow" style="--rotate: -288deg"></i>
-                                            <div class="speedometer__bg">
-                                                <div class="speedometer__counter">0</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="catalog__li-controll">
-                                        <a href="javascript:void(0)" class="catalog__li-controll-link catalog__li-controll-link--buy add2basket">купить</a>
-                                        <a href="/nedorogie-pc/edelweiss-shark/" class="catalog__li-controll-link catalog__li-controll-link-periphery">
-                <span class="catalog__li-controll-link--desc">Подробнее</span>
-                <span class="catalog__li-controll-link--mob"><img src="/local/templates/main/img/icon/info-list.svg" alt="" width="11"></span>
-            </a>
-                                        <a href="/constructor/#edelweiss-shark" class="catalog__li-controll-link">
-                <img src="/local/templates/main/img/icon/setting.svg" alt="" width="13">
-                <span class="catalog__li-controll-link-hidd">конфигурировать</span>
-            </a>
-                                    </div>
-                                    <p class="catalog__li-desc" itemprop="description">Стильный и доступный геймерский компьютер. EDELWEISS SHARK - отлично подойдет для участия в сетевых шутерах, MOBA играх или находящимся на пике популярности Battle Royale с огромным количеством игроков в сессии.</p>
-                                </div>
-                                <div class="catalog__structure">
-                                    <hr class="catalog__li-hr">
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/vga.svg" alt="значёк видеокарты ( gpu )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Видео-карта</p>
-                                            <p class="catalog__structure-name">ASUS RTX 3050 DUAL 8 Гб</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/cpu.svg" alt="значёк центрального процессора ( cpu )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Процессор</p>
-                                            <p class="catalog__structure-name">Intel Core i3-10100F 3600 МГц</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/fan.svg" alt="значёк система охлаждения (cooler )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Охлаждение</p>
-                                            <p class="catalog__structure-name">Intel Box</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/ram.svg" alt="значёк оперативной памяти ( ram )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Оперативная память</p>
-                                            <p class="catalog__structure-name">16Гб CRUCIAL 2400 МГц</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/motherboard.svg" alt="значёк материнской платы ( mb ) ">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Материнская плата</p>
-                                            <p class="catalog__structure-name">Gigabyte H410M</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/hard-disk.svg" alt="значёк жесткого диска ( hdd )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Жёсткий диск</p>
-                                            <p class="catalog__structure-name">1 Тб Toshiba</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/ssd.svg" alt="значёк твердотельного диска ( ssd )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Диск SSD</p>
-                                            <p class="catalog__structure-name">120 Гб Kingston</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/cd-rom.svg" alt="	значёк оптического привода ( dvd-rw )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Оптический привод</p>
-                                            <p class="catalog__structure-name">Без привода</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/power-supply.svg" alt="	значёк блока питания ( psu )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Блок питания</p>
-                                            <p class="catalog__structure-name">500W RaidMax</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/case.svg" alt="иконка системного блока ( case )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Корпус</p>
-                                            <p class="catalog__structure-name">1STPLAYER FIRE DANCING V2</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/os.svg" alt="значёк операционной системы ( os )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Система</p>
-                                            <p class="catalog__structure-name">не устанавливать ОС</p>
-                                        </dd>
-                                    </dl>
-                                </div>
-
-                            </div>
-                        </li>
-                        <li class="catalog__li product__" data-id="830" id="bx_3966226736_830_d0fb066f64e2309c4b241a491f76c62e" data-entity="item" itemscope itemtype="https://schema.org/Product">
-                            <div class="catalog__li-box">
-                                <div class="catalog__li-content">
-                                    <a href="/nedorogie-pc/edelweiss-vortex/" class="catalog__li-img-box">
-                                        <picture>
-                                            <img id="bx_3966226736_830_d0fb066f64e2309c4b241a491f76c62e_pict" src="/upload/resize_cache/iblock/c18/220_245_1/c18d5c0c91e07cc47c7bb904435bf3dd.png" itemprop="image" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                alt="AeroCool Cylon Black" class="catalog__li-img lazzyload">
-                                        </picture>
-                                    </a>
-                                    <div class="catalog__li-wrapper">
-                                        <div class="catalog__li-wrapper-start">
-                                            <meta itemprop="brand" content="Edelweiss">
-                                            <a href="/nedorogie-pc/edelweiss-vortex/" class="catalog__li-name"><span itemprop="name">EDELWEISS VORTEX</span></a>
-                                            <div class="catalog__li-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                                                <meta itemprop="priceCurrency" content="RUB">
-                                                <link itemprop="availability" href="https://schema.org/InStock" />
-                                                <link itemprop="url" href="htpps://edelws.ru/nedorogie-pc/edelweiss-vortex/" />
-                                                <link itemprop="priceValidUntil" content="2023-04-04T11:51:36+03:00" />
-                                                <meta itemprop="price" content="137570"> 137&nbsp;570 <img src="/local/templates/main/img/icon/rub.svg" alt="Национальная валюта рубли" class="catalog__li-price-r">
-
-                                                <div class="catalog__credit">
-                                                    <span class="catalog__li-price-i"><svg class="icon-info" width="14" height="14">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-info"></use>
-                            </svg></span>
-                                                    <div class="catalog__credit-hidd">
-                                                        <p class="catalog__credit-hidd-title">Оплата в кредит</p>
-                                                        <dl class="catalog__credit-hidd-dl">
-                                                            <dt class="catalog__credit-hidd-dt">Быстро и просто</dt>
-                                                            <dd class="catalog__credit-hidd-dd">Заполните анкету на сайте магазина и получите решение по вашей заявке за 2 минуты.</dd>
-                                                        </dl>
-                                                        <dl class="catalog__credit-hidd-dl">
-                                                            <dt class="catalog__credit-hidd-dt">Выбор лучших условий</dt>
-                                                            <dd class="catalog__credit-hidd-dd">Заявка уходит на рассмотрение в большое число финансовых организаций: Альфа-Банк, Pay P.S, Банк Восточный, Тинькофф Банк, Кредит Европа Банк, Second Bank и др.</dd>
-                                                        </dl>
-                                                    </div>
-                                                </div>
-
-
-                                            </div>
-                                        </div>
-                                        <div class="speedometer" data-max="300" data-real='{"csgo":{"ful_hd":"205","quad_hd":148,"ultra_hd":86},"wot":{"ful_hd":"104","quad_hd":75,"ultra_hd":44},"pugb":{"ful_hd":"58","quad_hd":42,"ultra_hd":24},"gtav":{"ful_hd":"69","quad_hd":50,"ultra_hd":29},"fortnite":{"ful_hd":"74","quad_hd":53,"ultra_hd":31},"apex":{"ful_hd":"75","quad_hd":54,"ultra_hd":32},"rdr2":{"ful_hd":"40","quad_hd":29,"ultra_hd":17}}'>
-                                            <svg class="speedometer__icon" width="56" height="56" style="--stroke: 1000">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#speedometer"></use>
-                    </svg>
-                                            <svg class="speedometer__icon-bg" width="56" height="56">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#speedometer"></use>
-                    </svg>
-                                            <i class="speedometer__arrow" style="--rotate: -288deg"></i>
-                                            <div class="speedometer__bg">
-                                                <div class="speedometer__counter">0</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="catalog__li-controll">
-                                        <a href="javascript:void(0)" class="catalog__li-controll-link catalog__li-controll-link--buy add2basket">купить</a>
-                                        <a href="/nedorogie-pc/edelweiss-vortex/" class="catalog__li-controll-link catalog__li-controll-link-periphery">
-                <span class="catalog__li-controll-link--desc">Подробнее</span>
-                <span class="catalog__li-controll-link--mob"><img src="/local/templates/main/img/icon/info-list.svg" alt="" width="11"></span>
-            </a>
-                                        <a href="/constructor/#edelweiss-vortex" class="catalog__li-controll-link">
-                <img src="/local/templates/main/img/icon/setting.svg" alt="" width="13">
-                <span class="catalog__li-controll-link-hidd">конфигурировать</span>
-            </a>
-                                    </div>
-                                    <p class="catalog__li-desc" itemprop="description">Ищите хороший игровой компьютер ? С процессором способным выполнять множество задач сразу ? Встречайте EDELWEISS VORTEX с AMD RYZEN, достойное решение для геймера, стримера, дизайнера. Гарантия 100 &#37; совместимости.</p>
-                                </div>
-                                <div class="catalog__structure">
-                                    <hr class="catalog__li-hr">
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/vga.svg" alt="значёк видеокарты ( gpu )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Видео-карта</p>
-                                            <p class="catalog__structure-name">GEFORCE GTX 1650 4Гб</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/cpu.svg" alt="значёк центрального процессора ( cpu )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Процессор</p>
-                                            <p class="catalog__structure-name">AMD Ryzen 5 3600 3600 МГц</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/fan.svg" alt="значёк система охлаждения (cooler )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Охлаждение</p>
-                                            <p class="catalog__structure-name">Deepcool GAMMAXX 300 R</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/ram.svg" alt="значёк оперативной памяти ( ram )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Оперативная память</p>
-                                            <p class="catalog__structure-name">16Гб CRUCIAL 2400 МГц</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/motherboard.svg" alt="значёк материнской платы ( mb ) ">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Материнская плата</p>
-                                            <p class="catalog__structure-name">Gigabyte A520M</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/hard-disk.svg" alt="значёк жесткого диска ( hdd )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Жёсткий диск</p>
-                                            <p class="catalog__structure-name">1 Тб Seagate</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/ssd.svg" alt="значёк твердотельного диска ( ssd )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Диск SSD</p>
-                                            <p class="catalog__structure-name">120 Гб Transcend M.2</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/cd-rom.svg" alt="	значёк оптического привода ( dvd-rw )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Оптический привод</p>
-                                            <p class="catalog__structure-name">Без привода</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/power-supply.svg" alt="	значёк блока питания ( psu )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Блок питания</p>
-                                            <p class="catalog__structure-name">500W RaidMax</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/case.svg" alt="иконка системного блока ( case )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Корпус</p>
-                                            <p class="catalog__structure-name">AeroCool Cylon Black</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/os.svg" alt="значёк операционной системы ( os )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Система</p>
-                                            <p class="catalog__structure-name">Windows 10</p>
-                                        </dd>
-                                    </dl>
-                                </div>
-
-                            </div>
-                        </li>
-                        <li class="catalog__li product__" data-id="824" id="bx_3966226736_824_8e8f6cea7f5e44ced2966cbefca3ecfa" data-entity="item" itemscope itemtype="https://schema.org/Product">
-                            <div class="catalog__li-box">
-                                <div class="catalog__li-content">
-                                    <a href="/nedorogie-pc/edelweiss-storm/" class="catalog__li-img-box">
-                                        <picture>
-                                            <img id="bx_3966226736_824_8e8f6cea7f5e44ced2966cbefca3ecfa_pict" src="/upload/resize_cache/iblock/63f/220_245_1/63fee475a1845dd0211410736fdf79b1.png" itemprop="image" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                alt="Zalman i3" class="catalog__li-img lazzyload">
-                                        </picture>
-                                    </a>
-                                    <div class="catalog__li-wrapper">
-                                        <div class="catalog__li-wrapper-start">
-                                            <meta itemprop="brand" content="Edelweiss">
-                                            <a href="/nedorogie-pc/edelweiss-storm/" class="catalog__li-name"><span itemprop="name">EDELWEISS STORM</span></a>
-                                            <div class="catalog__li-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                                                <meta itemprop="priceCurrency" content="RUB">
-                                                <link itemprop="availability" href="https://schema.org/InStock" />
-                                                <link itemprop="url" href="htpps://edelws.ru/nedorogie-pc/edelweiss-storm/" />
-                                                <link itemprop="priceValidUntil" content="2023-04-04T11:51:36+03:00" />
-                                                <meta itemprop="price" content="140000"> 140&nbsp;000 <img src="/local/templates/main/img/icon/rub.svg" alt="Национальная валюта рубли" class="catalog__li-price-r">
-
-                                                <div class="catalog__credit">
-                                                    <span class="catalog__li-price-i"><svg class="icon-info" width="14" height="14">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-info"></use>
-                            </svg></span>
-                                                    <div class="catalog__credit-hidd">
-                                                        <p class="catalog__credit-hidd-title">Оплата в кредит</p>
-                                                        <dl class="catalog__credit-hidd-dl">
-                                                            <dt class="catalog__credit-hidd-dt">Быстро и просто</dt>
-                                                            <dd class="catalog__credit-hidd-dd">Заполните анкету на сайте магазина и получите решение по вашей заявке за 2 минуты.</dd>
-                                                        </dl>
-                                                        <dl class="catalog__credit-hidd-dl">
-                                                            <dt class="catalog__credit-hidd-dt">Выбор лучших условий</dt>
-                                                            <dd class="catalog__credit-hidd-dd">Заявка уходит на рассмотрение в большое число финансовых организаций: Альфа-Банк, Pay P.S, Банк Восточный, Тинькофф Банк, Кредит Европа Банк, Second Bank и др.</dd>
-                                                        </dl>
-                                                    </div>
-                                                </div>
-
-
-                                            </div>
-                                        </div>
-                                        <div class="speedometer" data-max="300" data-real='{"csgo":{"ful_hd":"202","quad_hd":145,"ultra_hd":85},"wot":{"ful_hd":"100","quad_hd":72,"ultra_hd":42},"pugb":{"ful_hd":"57","quad_hd":41,"ultra_hd":24},"gtav":{"ful_hd":"66","quad_hd":48,"ultra_hd":28},"fortnite":{"ful_hd":"71","quad_hd":51,"ultra_hd":30},"apex":{"ful_hd":"73","quad_hd":53,"ultra_hd":31},"rdr2":{"ful_hd":"39","quad_hd":28,"ultra_hd":16}}'>
-                                            <svg class="speedometer__icon" width="56" height="56" style="--stroke: 1000">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#speedometer"></use>
-                    </svg>
-                                            <svg class="speedometer__icon-bg" width="56" height="56">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#speedometer"></use>
-                    </svg>
-                                            <i class="speedometer__arrow" style="--rotate: -288deg"></i>
-                                            <div class="speedometer__bg">
-                                                <div class="speedometer__counter">0</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="catalog__li-controll">
-                                        <a href="javascript:void(0)" class="catalog__li-controll-link catalog__li-controll-link--buy add2basket">купить</a>
-                                        <a href="/nedorogie-pc/edelweiss-storm/" class="catalog__li-controll-link catalog__li-controll-link-periphery">
-                <span class="catalog__li-controll-link--desc">Подробнее</span>
-                <span class="catalog__li-controll-link--mob"><img src="/local/templates/main/img/icon/info-list.svg" alt="" width="11"></span>
-            </a>
-                                        <a href="/constructor/#edelweiss-storm" class="catalog__li-controll-link">
-                <img src="/local/templates/main/img/icon/setting.svg" alt="" width="13">
-                <span class="catalog__li-controll-link-hidd">конфигурировать</span>
-            </a>
-                                    </div>
-                                    <p class="catalog__li-desc" itemprop="description">Четырех-ядерный процессор AMD и игровая видеокарта GTX 1650 c 4 Гб видеопамяти превращают недорогой игровой ПК EDELWEISS STORM в отличную игровую станцию сочетающую в себе баланс цены и производительности.&nbsp;&nbsp;</p>
-                                </div>
-                                <div class="catalog__structure">
-                                    <hr class="catalog__li-hr">
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/vga.svg" alt="значёк видеокарты ( gpu )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Видео-карта</p>
-                                            <p class="catalog__structure-name">GEFORCE GTX 1650 4Гб</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/cpu.svg" alt="значёк центрального процессора ( cpu )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Процессор</p>
-                                            <p class="catalog__structure-name">AMD Ryzen 5 3600 3600 МГц</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/fan.svg" alt="значёк система охлаждения (cooler )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Охлаждение</p>
-                                            <p class="catalog__structure-name">AMD Original</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/ram.svg" alt="значёк оперативной памяти ( ram )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Оперативная память</p>
-                                            <p class="catalog__structure-name">16Гб CRUCIAL 2400 МГц</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/motherboard.svg" alt="значёк материнской платы ( mb ) ">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Материнская плата</p>
-                                            <p class="catalog__structure-name">ASUS PRIME A520M</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/hard-disk.svg" alt="значёк жесткого диска ( hdd )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Жёсткий диск</p>
-                                            <p class="catalog__structure-name">1 Тб Toshiba</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/ssd.svg" alt="значёк твердотельного диска ( ssd )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Диск SSD</p>
-                                            <p class="catalog__structure-name">120 Гб Kingston</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/cd-rom.svg" alt="	значёк оптического привода ( dvd-rw )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Оптический привод</p>
-                                            <p class="catalog__structure-name">Без привода</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/power-supply.svg" alt="	значёк блока питания ( psu )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Блок питания</p>
-                                            <p class="catalog__structure-name">500W RaidMax</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/case.svg" alt="иконка системного блока ( case )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Корпус</p>
-                                            <p class="catalog__structure-name">Zalman i3</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/os.svg" alt="значёк операционной системы ( os )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Система</p>
-                                            <p class="catalog__structure-name">Windows 10</p>
-                                        </dd>
-                                    </dl>
-                                </div>
-
-                            </div>
-                        </li>
-                        <li class="catalog__li product__" data-id="1283" id="bx_3966226736_1283_0f73996d13437b0b91038138616a89fe" data-entity="item" itemscope itemtype="https://schema.org/Product">
-                            <div class="catalog__li-box">
-                                <div class="catalog__li-content">
-                                    <a href="/nedorogie-pc/edelweiss_nitro/" class="catalog__li-img-box">
-                                        <picture>
-                                            <img id="bx_3966226736_1283_0f73996d13437b0b91038138616a89fe_pict" src="/upload/resize_cache/iblock/475/220_245_1/47526bac7d675b185f94fa0f010f50b7.png" itemprop="image" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                alt="Zalman Z1 Black Neo" class="catalog__li-img lazzyload">
-                                        </picture>
-                                    </a>
-                                    <div class="catalog__li-wrapper">
-                                        <div class="catalog__li-wrapper-start">
-                                            <meta itemprop="brand" content="Edelweiss">
-                                            <a href="/nedorogie-pc/edelweiss_nitro/" class="catalog__li-name"><span itemprop="name">EDELWEISS NITRO</span></a>
-                                            <div class="catalog__li-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                                                <meta itemprop="priceCurrency" content="RUB">
-                                                <link itemprop="availability" href="https://schema.org/InStock" />
-                                                <link itemprop="url" href="htpps://edelws.ru/nedorogie-pc/edelweiss_nitro/" />
-                                                <link itemprop="priceValidUntil" content="2023-04-04T11:51:36+03:00" />
-                                                <meta itemprop="price" content="147600"> 147&nbsp;600 <img src="/local/templates/main/img/icon/rub.svg" alt="Национальная валюта рубли" class="catalog__li-price-r">
-
-                                                <div class="catalog__credit">
-                                                    <span class="catalog__li-price-i"><svg class="icon-info" width="14" height="14">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-info"></use>
-                            </svg></span>
-                                                    <div class="catalog__credit-hidd">
-                                                        <p class="catalog__credit-hidd-title">Оплата в кредит</p>
-                                                        <dl class="catalog__credit-hidd-dl">
-                                                            <dt class="catalog__credit-hidd-dt">Быстро и просто</dt>
-                                                            <dd class="catalog__credit-hidd-dd">Заполните анкету на сайте магазина и получите решение по вашей заявке за 2 минуты.</dd>
-                                                        </dl>
-                                                        <dl class="catalog__credit-hidd-dl">
-                                                            <dt class="catalog__credit-hidd-dt">Выбор лучших условий</dt>
-                                                            <dd class="catalog__credit-hidd-dd">Заявка уходит на рассмотрение в большое число финансовых организаций: Альфа-Банк, Pay P.S, Банк Восточный, Тинькофф Банк, Кредит Европа Банк, Second Bank и др.</dd>
-                                                        </dl>
-                                                    </div>
-                                                </div>
-
-
-                                            </div>
-                                        </div>
-                                        <div class="speedometer" data-max="300" data-real='{"csgo":{"ful_hd":"255","quad_hd":184,"ultra_hd":107},"wot":{"ful_hd":"122","quad_hd":88,"ultra_hd":51},"pugb":{"ful_hd":"67","quad_hd":48,"ultra_hd":28},"gtav":{"ful_hd":"83","quad_hd":60,"ultra_hd":35},"fortnite":{"ful_hd":"84","quad_hd":60,"ultra_hd":35},"apex":{"ful_hd":"89","quad_hd":64,"ultra_hd":37},"rdr2":{"ful_hd":"37","quad_hd":27,"ultra_hd":16}}'>
-                                            <svg class="speedometer__icon" width="56" height="56" style="--stroke: 1000">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#speedometer"></use>
-                    </svg>
-                                            <svg class="speedometer__icon-bg" width="56" height="56">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#speedometer"></use>
-                    </svg>
-                                            <i class="speedometer__arrow" style="--rotate: -288deg"></i>
-                                            <div class="speedometer__bg">
-                                                <div class="speedometer__counter">0</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="catalog__li-controll">
-                                        <a href="javascript:void(0)" class="catalog__li-controll-link catalog__li-controll-link--buy add2basket">купить</a>
-                                        <a href="/nedorogie-pc/edelweiss_nitro/" class="catalog__li-controll-link catalog__li-controll-link-periphery">
-                <span class="catalog__li-controll-link--desc">Подробнее</span>
-                <span class="catalog__li-controll-link--mob"><img src="/local/templates/main/img/icon/info-list.svg" alt="" width="11"></span>
-            </a>
-                                        <a href="/constructor/#edelweiss_nitro" class="catalog__li-controll-link">
-                <img src="/local/templates/main/img/icon/setting.svg" alt="" width="13">
-                <span class="catalog__li-controll-link-hidd">конфигурировать</span>
-            </a>
-                                    </div>
-                                    <p class="catalog__li-desc" itemprop="description">Яркий представитель бюджетной серии игровых ПК. Строгий черный корпус для консервативных пользователе, а вот начинка прогрессивная и задаст жару вашим виртуальным противника.. Системный блок для игр и учебы. </p>
-                                </div>
-                                <div class="catalog__structure">
-                                    <hr class="catalog__li-hr">
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/vga.svg" alt="значёк видеокарты ( gpu )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Видео-карта</p>
-                                            <p class="catalog__structure-name">ASUS RTX 3050 DUAL 8 Гб</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/cpu.svg" alt="значёк центрального процессора ( cpu )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Процессор</p>
-                                            <p class="catalog__structure-name">Intel Core i3-10100F 3600 МГц</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/fan.svg" alt="значёк система охлаждения (cooler )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Охлаждение</p>
-                                            <p class="catalog__structure-name">Deepcool GAMMAXX 300 R</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/ram.svg" alt="значёк оперативной памяти ( ram )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Оперативная память</p>
-                                            <p class="catalog__structure-name">8Гб CRUCIAL 2400 МГц</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/motherboard.svg" alt="значёк материнской платы ( mb ) ">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Материнская плата</p>
-                                            <p class="catalog__structure-name">Gigabyte H410M</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/hard-disk.svg" alt="значёк жесткого диска ( hdd )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Жёсткий диск</p>
-                                            <p class="catalog__structure-name">2 Тб Toshiba</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/ssd.svg" alt="значёк твердотельного диска ( ssd )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Диск SSD</p>
-                                            <p class="catalog__structure-name">240 Гб Kingston</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/cd-rom.svg" alt="	значёк оптического привода ( dvd-rw )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Оптический привод</p>
-                                            <p class="catalog__structure-name">Без привода</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/power-supply.svg" alt="	значёк блока питания ( psu )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Блок питания</p>
-                                            <p class="catalog__structure-name">500W RaidMax</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/case.svg" alt="иконка системного блока ( case )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Корпус</p>
-                                            <p class="catalog__structure-name">Zalman Z1 Black Neo</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/os.svg" alt="значёк операционной системы ( os )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Система</p>
-                                            <p class="catalog__structure-name">Windows 10</p>
-                                        </dd>
-                                    </dl>
-                                </div>
-
-                            </div>
-                        </li>
-                        <li class="catalog__li product__" data-id="775" id="bx_3966226736_775_ec5d0e2cff91ab20debac17d8febe5be" data-entity="item" itemscope itemtype="https://schema.org/Product">
-                            <div class="catalog__li-box">
-                                <div class="catalog__li-content">
-                                    <a href="/nedorogie-pc/edelweiss-crusader/" class="catalog__li-img-box">
-                                        <picture>
-                                            <img id="bx_3966226736_775_ec5d0e2cff91ab20debac17d8febe5be_pict" src="/upload/resize_cache/iblock/246/220_245_1/246de170a77c13727565640aac06eea6.png" itemprop="image" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                alt="Gigabyte C200 GLASS Black" class="catalog__li-img lazzyload">
-                                        </picture>
-                                    </a>
-                                    <div class="catalog__li-wrapper">
-                                        <div class="catalog__li-wrapper-start">
-                                            <meta itemprop="brand" content="Edelweiss">
-                                            <a href="/nedorogie-pc/edelweiss-crusader/" class="catalog__li-name"><span itemprop="name">EDELWEISS CRUSADER</span></a>
-                                            <div class="catalog__li-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                                                <meta itemprop="priceCurrency" content="RUB">
-                                                <link itemprop="availability" href="https://schema.org/InStock" />
-                                                <link itemprop="url" href="htpps://edelws.ru/nedorogie-pc/edelweiss-crusader/" />
-                                                <link itemprop="priceValidUntil" content="2023-04-04T11:51:36+03:00" />
-                                                <meta itemprop="price" content="154000"> 154&nbsp;000 <img src="/local/templates/main/img/icon/rub.svg" alt="Национальная валюта рубли" class="catalog__li-price-r">
-
-                                                <div class="catalog__credit">
-                                                    <span class="catalog__li-price-i"><svg class="icon-info" width="14" height="14">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-info"></use>
-                            </svg></span>
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-info"></use>
+                    </svg></span>
                                                     <div class="catalog__credit-hidd">
                                                         <p class="catalog__credit-hidd-title">Оплата в кредит</p>
                                                         <dl class="catalog__credit-hidd-dl">
@@ -1288,338 +130,149 @@
                                         </div>
                                     </div>
                                     <div class="catalog__li-controll">
-                                        <a href="javascript:void(0)" class="catalog__li-controll-link catalog__li-controll-link--buy add2basket">купить</a>
-                                        <a href="/nedorogie-pc/edelweiss-crusader/" class="catalog__li-controll-link catalog__li-controll-link-periphery">
-                <span class="catalog__li-controll-link--desc">Подробнее</span>
-                <span class="catalog__li-controll-link--mob"><img src="/local/templates/main/img/icon/info-list.svg" alt="" width="11"></span>
-            </a>
-                                        <a href="/constructor/#edelweiss-crusader" class="catalog__li-controll-link">
-                <img src="/local/templates/main/img/icon/setting.svg" alt="" width="13">
-                <span class="catalog__li-controll-link-hidd">конфигурировать</span>
-            </a>
+                                        <a href="javascript:void(0)" class="catalog__li-controll-link catalog__li-controll-link--buy add2basket">Əldə et</a>
+                                        <a href="/power-pc/edelweiss-gladiator/" class="catalog__li-controll-link catalog__li-controll-link-periphery">
+        <span class="catalog__li-controll-link--desc">Ətraflı</span>
+        <span class="catalog__li-controll-link--mob"><img src="{% static 'main/img/icon/info-list.svg' %}" alt="" width="11"></span>
+    </a>
+                                        <a href="/constructor/#edelweiss-gladiator" class="catalog__li-controll-link">
+                                        <img src="{% static 'main/img/icon/setting.svg' %}" alt="" width="13">
+        <span class="catalog__li-controll-link-hidd">конфигурировать</span>
+    </a>
                                     </div>
-                                    <p class="catalog__li-desc" itemprop="description">Классный игровой компьютер EDELWEISS CRUSADER, хорошая комплектация, интересный дизайн и яркая светодиодная подсветка. Начинающие кибеспортсмены и геймеры по достоинству оценят его функционал скорость и надежность.</p>
+                                    <p class="catalog__li-desc" itemprop="description">{{product.description}} &nbsp;&nbsp; </p>
                                 </div>
                                 <div class="catalog__structure">
                                     <hr class="catalog__li-hr">
                                     <dl class="catalog__structure-dl">
                                         <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/vga.svg" alt="значёк видеокарты ( gpu )">
-                        </div>
-                    </dt>
+                <div class="catalog__structure-img">
+                    <img src="{% static 'public/img/icon/vga.svg' %}" alt="значёк видеокарты ( gpu )">
+                </div>
+            </dt>
                                         <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Видео-карта</p>
-                                            <p class="catalog__structure-name">GEFORCE GTX 1660 SUPER 6Гб</p>
+                                            <p class="catalog__structure-title">GPU</p>
+                                            <p class="catalog__structure-name">{{product.video_card}}</p>
                                         </dd>
                                     </dl>
                                     <dl class="catalog__structure-dl">
                                         <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/cpu.svg" alt="значёк центрального процессора ( cpu )">
-                        </div>
-                    </dt>
+                <div class="catalog__structure-img">
+                    <img src="{% static 'public/img/icon/cpu.svg' %}" alt="значёк центрального процессора ( cpu )">
+                </div>
+            </dt>
                                         <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Процессор</p>
-                                            <p class="catalog__structure-name">Intel Core i5-10400F 2900 МГц</p>
+                                            <p class="catalog__structure-title">CPU</p>
+                                            <p class="catalog__structure-name">{{product.processors.first.title}}</p>
                                         </dd>
                                     </dl>
                                     <dl class="catalog__structure-dl">
                                         <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/fan.svg" alt="значёк система охлаждения (cooler )">
-                        </div>
-                    </dt>
+                {% comment %} <div class="catalog__structure-img">
+                    <img src="/local/templates/main/img/icon/fan.svg" alt="значёк система охлаждения (cooler )">
+                </div> {% endcomment %}
+            </dt>
+                                        {% comment %} <dd class="catalog__structure-dd">
+                                            <p class="catalog__structure-title">Cooler</p>
+                                            <p class="catalog__structure-name">ID-COOLING SE-224-RGB</p>
+                                        </dd> {% endcomment %}
+                                    </dl>
+                                    <dl class="catalog__structure-dl">
+                                        <dt class="catalog__structure-dt">
+                <div class="catalog__structure-img">
+                    <img src="{% static 'public/img/icon/ram.svg' %}" alt="значёк оперативной памяти ( ram )">
+                </div>
+            </dt>
                                         <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Охлаждение</p>
-                                            <p class="catalog__structure-name">Deepcool GAMMAXX 300 R</p>
+                                            <p class="catalog__structure-title">RAM</p>
+                                            <p class="catalog__structure-name">{{product.rams.first.title}} {{product.rams.first.amount}}</p>
                                         </dd>
                                     </dl>
                                     <dl class="catalog__structure-dl">
                                         <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/ram.svg" alt="значёк оперативной памяти ( ram )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Оперативная память</p>
-                                            <p class="catalog__structure-name">8Гб CRUCIAL 2400 МГц</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/motherboard.svg" alt="значёк материнской платы ( mb ) ">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
+                {% comment %} <div class="catalog__structure-img">
+                    <img src="/local/templates/main/img/icon/motherboard.svg" alt="значёк материнской платы ( mb ) ">
+                </div> {% endcomment %}
+            </dt>
+                                        {% comment %} <dd class="catalog__structure-dd">
                                             <p class="catalog__structure-title">Материнская плата</p>
-                                            <p class="catalog__structure-name">Gigabyte H410M</p>
+                                            <p class="catalog__structure-name">Gigabyte B460M</p>
+                                        </dd> {% endcomment %}
+                                    </dl>
+                                    <dl class="catalog__structure-dl">
+                                        <dt class="catalog__structure-dt"> 
+                <div class="catalog__structure-img">
+                    <img src="{% static 'public/img/icon/hard-disk.svg' %}" alt="значёк жесткого диска ( hdd )">
+                </div> 
+            </dt>
+                                        <dd class="catalog__structure-dd">
+                                            <p class="catalog__structure-title">HDD</p>
+                                            <p class="catalog__structure-name">{{product.hdds.first.title}}  {{product.hdds.first.amount}}</p>
+                                        </dd> 
+                                    </dl>
+                                    <dl class="catalog__structure-dl">
+                                        <dt class="catalog__structure-dt">
+                <div class="catalog__structure-img"> 
+                    <img src="{% static 'public/img/icon/ssd.svg' %}" alt="значёк твердотельного диска ( ssd )">
+                </div>
+            </dt>
+                                        <dd class="catalog__structure-dd">
+                                            <p class="catalog__structure-title">SSD</p>
+                                            <p class="catalog__structure-name">{{product.ssds.first.title}} {{product.ssds.first.amount}}</p>
                                         </dd>
                                     </dl>
                                     <dl class="catalog__structure-dl">
                                         <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/hard-disk.svg" alt="значёк жесткого диска ( hdd )">
-                        </div>
-                    </dt>
+               <div class="catalog__structure-img">
+                    <img src="{% static 'public/img/icon/cd-rom.svg' %}" alt="	значёк оптического привода ( dvd-rw )">
+                </div> 
+            </dt>
                                         <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Жёсткий диск</p>
-                                            <p class="catalog__structure-name">1 Тб Seagate</p>
-                                        </dd>
+                                            <p class="catalog__structure-title">DVD-Driver</p>
+                                            <p class="catalog__structure-name">{% if product.has_cd_drive == False %}Yoxdur{% else %} Var {% endif %}</p>
+                                        </dd> 
                                     </dl>
                                     <dl class="catalog__structure-dl">
                                         <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/ssd.svg" alt="значёк твердотельного диска ( ssd )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Диск SSD</p>
-                                            <p class="catalog__structure-name">120 Гб Kingston</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/cd-rom.svg" alt="	значёк оптического привода ( dvd-rw )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Оптический привод</p>
-                                            <p class="catalog__structure-name">Без привода</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/power-supply.svg" alt="	значёк блока питания ( psu )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
+                {% comment %} <div class="catalog__structure-img">
+                    <img src="/local/templates/main/img/icon/power-supply.svg" alt="	значёк блока питания ( psu )">
+                </div> {% endcomment %}
+            </dt>
+                                        {% comment %} <dd class="catalog__structure-dd">
                                             <p class="catalog__structure-title">Блок питания</p>
-                                            <p class="catalog__structure-name">500W RaidMax</p>
-                                        </dd>
+                                            <p class="catalog__structure-name">600W be quiet!</p>
+                                        </dd> {% endcomment %}
                                     </dl>
                                     <dl class="catalog__structure-dl">
                                         <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/case.svg" alt="иконка системного блока ( case )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
+                {% comment %} <div class="catalog__structure-img">
+                    <img src="/local/templates/main/img/icon/case.svg" alt="иконка системного блока ( case )">
+                </div> {% endcomment %}
+            </dt>
+                                        {% comment %} <dd class="catalog__structure-dd">
                                             <p class="catalog__structure-title">Корпус</p>
-                                            <p class="catalog__structure-name">Gigabyte C200 GLASS Black</p>
-                                        </dd>
+                                            <p class="catalog__structure-name">Chieftec GP-02B SCORPION II</p>
+                                        </dd> {% endcomment %}
                                     </dl>
                                     <dl class="catalog__structure-dl">
                                         <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/os.svg" alt="значёк операционной системы ( os )">
-                        </div>
-                    </dt>
+                <div class="catalog__structure-img">
+                    <img src="{% static 'public/img/icon/os.svg' %}" alt="значёк операционной системы ( os )">
+                </div> 
+            </dt>
                                         <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Система</p>
-                                            <p class="catalog__structure-name">Windows 10</p>
-                                        </dd>
+                                            <p class="catalog__structure-title">OS</p>
+                                            <p class="catalog__structure-name">{{product.operative_system}}</p>
+                                        </dd> 
                                     </dl>
                                 </div>
 
                             </div>
                         </li>
-                        <li class="catalog__li product__" data-id="785" id="bx_3966226736_785_e7e5a53fd4b76e4dce4f311b34c340d4" data-entity="item" itemscope itemtype="https://schema.org/Product">
-                            <div class="catalog__li-box">
-                                <div class="catalog__li-content">
-                                    <a href="/nedorogie-pc/edelweiss-villain/" class="catalog__li-img-box">
-                                        <picture>
-                                            <img id="bx_3966226736_785_e7e5a53fd4b76e4dce4f311b34c340d4_pict" src="/upload/resize_cache/iblock/1d2/220_245_1/f1kzakfjot25n8joxb4a9jguma1vpzyf.png" itemprop="image" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                alt="Zalman Z8TG" class="catalog__li-img lazzyload">
-                                        </picture>
-                                    </a>
-                                    <div class="catalog__li-wrapper">
-                                        <div class="catalog__li-wrapper-start">
-                                            <meta itemprop="brand" content="Edelweiss">
-                                            <a href="/nedorogie-pc/edelweiss-villain/" class="catalog__li-name"><span itemprop="name">EDELWEISS VILLAIN</span></a>
-                                            <div class="catalog__li-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                                                <meta itemprop="priceCurrency" content="RUB">
-                                                <link itemprop="availability" href="https://schema.org/InStock" />
-                                                <link itemprop="url" href="htpps://edelws.ru/nedorogie-pc/edelweiss-villain/" />
-                                                <link itemprop="priceValidUntil" content="2023-04-04T11:51:36+03:00" />
-                                                <meta itemprop="price" content="160770"> 160&nbsp;770 <img src="/local/templates/main/img/icon/rub.svg" alt="Национальная валюта рубли" class="catalog__li-price-r">
-
-                                                <div class="catalog__credit">
-                                                    <span class="catalog__li-price-i"><svg class="icon-info" width="14" height="14">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-info"></use>
-                            </svg></span>
-                                                    <div class="catalog__credit-hidd">
-                                                        <p class="catalog__credit-hidd-title">Оплата в кредит</p>
-                                                        <dl class="catalog__credit-hidd-dl">
-                                                            <dt class="catalog__credit-hidd-dt">Быстро и просто</dt>
-                                                            <dd class="catalog__credit-hidd-dd">Заполните анкету на сайте магазина и получите решение по вашей заявке за 2 минуты.</dd>
-                                                        </dl>
-                                                        <dl class="catalog__credit-hidd-dl">
-                                                            <dt class="catalog__credit-hidd-dt">Выбор лучших условий</dt>
-                                                            <dd class="catalog__credit-hidd-dd">Заявка уходит на рассмотрение в большое число финансовых организаций: Альфа-Банк, Pay P.S, Банк Восточный, Тинькофф Банк, Кредит Европа Банк, Second Bank и др.</dd>
-                                                        </dl>
-                                                    </div>
-                                                </div>
-
-
-                                            </div>
-                                        </div>
-                                        <div class="speedometer" data-max="300" data-real='{"csgo":{"ful_hd":"200","quad_hd":144,"ultra_hd":84},"wot":{"ful_hd":"99","quad_hd":71,"ultra_hd":42},"pugb":{"ful_hd":"55","quad_hd":40,"ultra_hd":23},"gtav":{"ful_hd":"65","quad_hd":47,"ultra_hd":27},"fortnite":{"ful_hd":"70","quad_hd":50,"ultra_hd":29},"apex":{"ful_hd":"71","quad_hd":51,"ultra_hd":30},"rdr2":{"ful_hd":"38","quad_hd":27,"ultra_hd":16}}'>
-                                            <svg class="speedometer__icon" width="56" height="56" style="--stroke: 1000">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#speedometer"></use>
-                    </svg>
-                                            <svg class="speedometer__icon-bg" width="56" height="56">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#speedometer"></use>
-                    </svg>
-                                            <i class="speedometer__arrow" style="--rotate: -288deg"></i>
-                                            <div class="speedometer__bg">
-                                                <div class="speedometer__counter">0</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="catalog__li-controll">
-                                        <a href="javascript:void(0)" class="catalog__li-controll-link catalog__li-controll-link--buy add2basket">купить</a>
-                                        <a href="/nedorogie-pc/edelweiss-villain/" class="catalog__li-controll-link catalog__li-controll-link-periphery">
-                <span class="catalog__li-controll-link--desc">Подробнее</span>
-                <span class="catalog__li-controll-link--mob"><img src="/local/templates/main/img/icon/info-list.svg" alt="" width="11"></span>
-            </a>
-                                        <a href="/constructor/#edelweiss-villain" class="catalog__li-controll-link">
-                <img src="/local/templates/main/img/icon/setting.svg" alt="" width="13">
-                <span class="catalog__li-controll-link-hidd">конфигурировать</span>
-            </a>
-                                    </div>
-                                    <p class="catalog__li-desc" itemprop="description">EDELWEISS VILLAIN - открывает возможность дёшево купить игровой пк созданный на базе современных технологий. Модель с установленным программным обеспечением Windows 10. Светодиодная подсветка на передней панели в комплекте.</p>
-                                </div>
-                                <div class="catalog__structure">
-                                    <hr class="catalog__li-hr">
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/vga.svg" alt="значёк видеокарты ( gpu )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Видео-карта</p>
-                                            <p class="catalog__structure-name">ASUS RTX 3050 DUAL 8 Гб</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/cpu.svg" alt="значёк центрального процессора ( cpu )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Процессор</p>
-                                            <p class="catalog__structure-name">Intel Core i5-10400F 2900 МГц</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/fan.svg" alt="значёк система охлаждения (cooler )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Охлаждение</p>
-                                            <p class="catalog__structure-name">DeepCool Mini</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/ram.svg" alt="значёк оперативной памяти ( ram )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Оперативная память</p>
-                                            <p class="catalog__structure-name">8Гб CRUCIAL 2400 МГц</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/motherboard.svg" alt="значёк материнской платы ( mb ) ">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Материнская плата</p>
-                                            <p class="catalog__structure-name">Gigabyte H410M</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/hard-disk.svg" alt="значёк жесткого диска ( hdd )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Жёсткий диск</p>
-                                            <p class="catalog__structure-name">1 Тб Toshiba</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/ssd.svg" alt="значёк твердотельного диска ( ssd )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Диск SSD</p>
-                                            <p class="catalog__structure-name">120 Гб Transcend M.2 x2</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/cd-rom.svg" alt="	значёк оптического привода ( dvd-rw )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Оптический привод</p>
-                                            <p class="catalog__structure-name">Без привода</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/power-supply.svg" alt="	значёк блока питания ( psu )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Блок питания</p>
-                                            <p class="catalog__structure-name">500W RaidMax</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/case.svg" alt="иконка системного блока ( case )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Корпус</p>
-                                            <p class="catalog__structure-name">Zalman Z8TG</p>
-                                        </dd>
-                                    </dl>
-                                    <dl class="catalog__structure-dl">
-                                        <dt class="catalog__structure-dt">
-                        <div class="catalog__structure-img">
-                            <img src="/local/templates/main/img/icon/os.svg" alt="значёк операционной системы ( os )">
-                        </div>
-                    </dt>
-                                        <dd class="catalog__structure-dd">
-                                            <p class="catalog__structure-title">Система</p>
-                                            <p class="catalog__structure-name">Windows 10</p>
-                                        </dd>
-                                    </dl>
-                                </div>
-
-                            </div>
-                        </li>
+                        {% endfor %}
+                        
+                        
+                        
                     </ul>
                     <nav class="pagin" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
                         <span class="pagin__link pagin__arrow pagin__arrow--prev pagin__link--disabled">
