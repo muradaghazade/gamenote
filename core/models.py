@@ -160,3 +160,21 @@ class Slider(models.Model):
 class FAQ(models.Model):
     questions = models.CharField(max_length=100)
     answer = models.CharField(max_length=200)
+
+
+class ProductVersion(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, db_index=True, related_name='product_versions', null=True, blank=True)
+    ram = models.ForeignKey(Ram, on_delete=models.CASCADE, db_index=True, related_name='product_versions', null=True, blank=True)
+    hdd = models.ForeignKey(HDD, on_delete=models.CASCADE, db_index=True, related_name='product_versions', null=True, blank=True)
+    ssd = models.ForeignKey(SSD, on_delete=models.CASCADE, db_index=True, related_name='product_versions', null=True, blank=True)
+    color = models.ForeignKey(Color, on_delete=models.CASCADE, db_index=True, related_name='product_versions', null=True, blank=True)
+    processor = models.ForeignKey(Processor, on_delete=models.CASCADE, db_index=True, related_name='product_versions', null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = 'ProductVersion'
+        verbose_name_plural = 'ProductVersion'
+
+    def __str__(self):
+        return f"{self.product.title}"

@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView, ListView , DetailView , CreateView
 from .models import Product, Slider, FAQ
+from django.views.generic.edit import FormMixin
+from .forms import ProductVersionForm
+
 
 
 class IndexView(TemplateView):
@@ -21,9 +24,10 @@ class NewProductsView(ListView):
     queryset = Product.objects.order_by("-id")
 
 
-class ProductDetailView(DetailView):
+class ProductDetailView(FormMixin,DetailView):
     template_name = 'product-details.html'
     model = Product
+    form_class = ProductVersionForm
     context_object_name = "product"
 
 

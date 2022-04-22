@@ -138,177 +138,111 @@
                     </div>
                 </div>
             </div>
-            <div class="detalic__equipment">
-                <div class="detalic__inner inner">
-                    <p class="detalic__equipment-title">Komplektatsiya</p>
-                    <div class="detalic__equipment-wrapper">
-                        <ul class="detalic__equipment-list">
-                            <li class="detalic__equipment-item">
-                                <p class="detalic__equipment-category">GPU</p>
-                                <div class="detalic__equipment-icon"><img src="{% static 'public/img/icon/vga.svg' %}" alt="значёк видеокарты ( gpu )"></div>
-                                <a href="javascript:void(0)" data-json="eyJOQU1FIjoiR0lHQUJZVEUgR0VGT1JDRSBSVFggMzA3MCBUaSA4XHUwNDEzXHUwNDMxIEdBTUlORyIsIlBJQ1RVUkUiOiJcL3VwbG9hZFwvaWJsb2NrXC8yODVcL2I4aTlpOG9idmxzZm1icWh5ZHZzZmN1dWYyYmhvcTh4LnBuZyIsIlBST1BFUlRJRVMiOltdfQ==" class="detalic__equipment-name-gpu js-output">{{product.video_card}}</a>
-                                <a href="javascript:void(0)" data-json="eyJOQU1FIjoiR0lHQUJZVEUgR0VGT1JDRSBSVFggMzA3MCBUaSA4XHUwNDEzXHUwNDMxIEdBTUlORyIsIlBJQ1RVUkUiOiJcL3VwbG9hZFwvaWJsb2NrXC8yODVcL2I4aTlpOG9idmxzZm1icWh5ZHZzZmN1dWYyYmhvcTh4LnBuZyIsIlBST1BFUlRJRVMiOltdfQ==" class="detalic__equipment-info js-output">
-                            <svg class="icon-info" width="19" height="19">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-info"></use>
-                            </svg>
-                        </a>
-                            </li>
-                            <li class="detalic__equipment-item">
-                                <p class="detalic__equipment-category">CPU</p>
-                                <div class="detalic__equipment-icon"><img src="{% static 'public/img/icon/cpu.svg' %}" alt="значёк центрального процессора ( cpu )"></div>
-                                <a href="javascript:void(0)" data-json="eyJOQU1FIjoiSW50ZWwgQ29yZSBpNS0xMDQwMEYgMjkwMCBcdTA0MWNcdTA0MTNcdTA0NDYiLCJQSUNUVVJFIjoiXC91cGxvYWRcL2libG9ja1wvNzNkXC83M2QwODFhYTRhMmUyZjY2MGEzZmZmZjQyMDJiZDU5Mi5qcGciLCJQUk9QRVJUSUVTIjpbeyJOQU1FIjoiXHUwNDIxXHUwNDNlXHUwNDNhXHUwNDM1XHUwNDQyIiwiVkFMVUUiOiJMR0ExMjAwIn0seyJOQU1FIjoiXHUwNDFlXHUwNDMxXHUwNDRhXHUwNDM1XHUwNDNjIFx1MDQzYVx1MDQ0ZFx1MDQ0OFx1MDQzMCBMMyIsIlZBTFVFIjoiMTIgXHUwNDFjXHUwNDMxIn0seyJOQU1FIjoiXHUwNDFhXHUwNDNlXHUwNDNiXHUwNDM4XHUwNDQ3XHUwNDM1XHUwNDQxXHUwNDQyXHUwNDMyXHUwNDNlIFx1MDQ0Zlx1MDQzNFx1MDQzNVx1MDQ0MCIsIlZBTFVFIjoiNiJ9LHsiTkFNRSI6Ilx1MDQyN1x1MDQzMFx1MDQ0MVx1MDQ0Mlx1MDQzZVx1MDQ0Mlx1MDQzMCBcdTA0M2ZcdTA0NDBcdTA0M2VcdTA0NDZcdTA0MzVcdTA0NDFcdTA0NDFcdTA0M2VcdTA0NDBcdTA0MzAiLCJWQUxVRSI6IjI5MDAgXHUwNDFjXHUwNDEzXHUwNDQ2In0seyJOQU1FIjoiXHUwNDJmXHUwNDM0XHUwNDQwXHUwNDNlIiwiVkFMVUUiOiJDb21ldCBMYWtlIn1dfQ=="
-                                    class="detalic__equipment-name-cpu js-output">{{product.processors.first}}</a>
-                                <a href="javascript:void(0)" data-json="eyJOQU1FIjoiSW50ZWwgQ29yZSBpNS0xMDQwMEYgMjkwMCBcdTA0MWNcdTA0MTNcdTA0NDYiLCJQSUNUVVJFIjoiXC91cGxvYWRcL2libG9ja1wvNzNkXC83M2QwODFhYTRhMmUyZjY2MGEzZmZmZjQyMDJiZDU5Mi5qcGciLCJQUk9QRVJUSUVTIjpbeyJOQU1FIjoiXHUwNDIxXHUwNDNlXHUwNDNhXHUwNDM1XHUwNDQyIiwiVkFMVUUiOiJMR0ExMjAwIn0seyJOQU1FIjoiXHUwNDFlXHUwNDMxXHUwNDRhXHUwNDM1XHUwNDNjIFx1MDQzYVx1MDQ0ZFx1MDQ0OFx1MDQzMCBMMyIsIlZBTFVFIjoiMTIgXHUwNDFjXHUwNDMxIn0seyJOQU1FIjoiXHUwNDFhXHUwNDNlXHUwNDNiXHUwNDM4XHUwNDQ3XHUwNDM1XHUwNDQxXHUwNDQyXHUwNDMyXHUwNDNlIFx1MDQ0Zlx1MDQzNFx1MDQzNVx1MDQ0MCIsIlZBTFVFIjoiNiJ9LHsiTkFNRSI6Ilx1MDQyN1x1MDQzMFx1MDQ0MVx1MDQ0Mlx1MDQzZVx1MDQ0Mlx1MDQzMCBcdTA0M2ZcdTA0NDBcdTA0M2VcdTA0NDZcdTA0MzVcdTA0NDFcdTA0NDFcdTA0M2VcdTA0NDBcdTA0MzAiLCJWQUxVRSI6IjI5MDAgXHUwNDFjXHUwNDEzXHUwNDQ2In0seyJOQU1FIjoiXHUwNDJmXHUwNDM0XHUwNDQwXHUwNDNlIiwiVkFMVUUiOiJDb21ldCBMYWtlIn1dfQ=="
-                                    class="detalic__equipment-info js-output">
-                            <svg class="icon-info" width="19" height="19">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-info"></use>
-                            </svg>
-                        </a>
-                            </li>
-                            {% comment %} <li class="detalic__equipment-item">
-                                <p class="detalic__equipment-category">Охлаждение</p>
-                                <div class="detalic__equipment-icon"><img src="/local/templates/main/img/icon/fan.svg" alt="значёк система охлаждения (cooler )"></div>
-                                <a href="javascript:void(0)" data-json="eyJOQU1FIjoiSUQtQ09PTElORyBTRS0yMjQtUkdCIiwiUElDVFVSRSI6IlwvdXBsb2FkXC9pYmxvY2tcLzVjZlwvNWNmZjMxYTQxNzZjYmJkZDMzNTQwM2Q1NzA4OWYwZTkucG5nIiwiUFJPUEVSVElFUyI6W3siTkFNRSI6Ilx1MDQxY1x1MDQzMFx1MDQ0Mlx1MDQzNVx1MDQ0MFx1MDQzOFx1MDQzMFx1MDQzYiBcdTA0NDBcdTA0MzBcdTA0MzRcdTA0MzhcdTA0MzBcdTA0NDJcdTA0M2VcdTA0NDBcdTA0MzAiLCJWQUxVRSI6Ilx1MDQzMFx1MDQzYlx1MDQ0ZVx1MDQzY1x1MDQzOFx1MDQzZFx1MDQzOFx1MDQzOSJ9LHsiTkFNRSI6Ilx1MDQxMlx1MDQ0Ylx1MDQ0MVx1MDQzZVx1MDQ0Mlx1MDQzMCBcdTA0M2FcdTA0NDNcdTA0M2JcdTA0MzVcdTA0NDBcdTA0MzAiLCJWQUxVRSI6IjI1In0seyJOQU1FIjoiXHUwNDEyXHUwNDNlXHUwNDM3XHUwNDM0XHUwNDQzXHUwNDQ4XHUwNDNkXHUwNDRiXHUwNDM5IFx1MDQzZlx1MDQzZVx1MDQ0Mlx1MDQzZVx1MDQzYSIsIlZBTFVFIjoiNTYuNSBDRk0ifSx7Ik5BTUUiOiJcdTA0MjJcdTA0MzhcdTA0M2YgXHUwNDNmXHUwNDNlXHUwNDM0XHUwNDQ4XHUwNDM4XHUwNDNmXHUwNDNkXHUwNDM4XHUwNDNhXHUwNDMwIiwiVkFMVUUiOiIyXHUwNDQ1IFx1MDQzYVx1MDQzMFx1MDQ0N1x1MDQzNVx1MDQzZFx1MDQzOFx1MDQ0ZiJ9LHsiTkFNRSI6Ilx1MDQxZlx1MDQzZVx1MDQzNFx1MDQ0MVx1MDQzMlx1MDQzNVx1MDQ0Mlx1MDQzYVx1MDQzMCIsIlZBTFVFIjoiXHUwNDQwXHUwNDMwXHUwNDM3XHUwNDNkXHUwNDNlXHUwNDQ2XHUwNDMyXHUwNDM1XHUwNDQyXHUwNDNkXHUwNDMwXHUwNDRmIn0seyJOQU1FIjoiXHUwNDEyXHUwNDM1XHUwNDQxIiwiVkFMVUUiOiIwLjk1IFx1MDQzYVx1MDQzMyJ9XX0="
-                                    class="detalic__equipment-name js-output">ID-COOLING SE-224-RGB</a>
-                                <a href="javascript:void(0)" data-json="eyJOQU1FIjoiSUQtQ09PTElORyBTRS0yMjQtUkdCIiwiUElDVFVSRSI6IlwvdXBsb2FkXC9pYmxvY2tcLzVjZlwvNWNmZjMxYTQxNzZjYmJkZDMzNTQwM2Q1NzA4OWYwZTkucG5nIiwiUFJPUEVSVElFUyI6W3siTkFNRSI6Ilx1MDQxY1x1MDQzMFx1MDQ0Mlx1MDQzNVx1MDQ0MFx1MDQzOFx1MDQzMFx1MDQzYiBcdTA0NDBcdTA0MzBcdTA0MzRcdTA0MzhcdTA0MzBcdTA0NDJcdTA0M2VcdTA0NDBcdTA0MzAiLCJWQUxVRSI6Ilx1MDQzMFx1MDQzYlx1MDQ0ZVx1MDQzY1x1MDQzOFx1MDQzZFx1MDQzOFx1MDQzOSJ9LHsiTkFNRSI6Ilx1MDQxMlx1MDQ0Ylx1MDQ0MVx1MDQzZVx1MDQ0Mlx1MDQzMCBcdTA0M2FcdTA0NDNcdTA0M2JcdTA0MzVcdTA0NDBcdTA0MzAiLCJWQUxVRSI6IjI1In0seyJOQU1FIjoiXHUwNDEyXHUwNDNlXHUwNDM3XHUwNDM0XHUwNDQzXHUwNDQ4XHUwNDNkXHUwNDRiXHUwNDM5IFx1MDQzZlx1MDQzZVx1MDQ0Mlx1MDQzZVx1MDQzYSIsIlZBTFVFIjoiNTYuNSBDRk0ifSx7Ik5BTUUiOiJcdTA0MjJcdTA0MzhcdTA0M2YgXHUwNDNmXHUwNDNlXHUwNDM0XHUwNDQ4XHUwNDM4XHUwNDNmXHUwNDNkXHUwNDM4XHUwNDNhXHUwNDMwIiwiVkFMVUUiOiIyXHUwNDQ1IFx1MDQzYVx1MDQzMFx1MDQ0N1x1MDQzNVx1MDQzZFx1MDQzOFx1MDQ0ZiJ9LHsiTkFNRSI6Ilx1MDQxZlx1MDQzZVx1MDQzNFx1MDQ0MVx1MDQzMlx1MDQzNVx1MDQ0Mlx1MDQzYVx1MDQzMCIsIlZBTFVFIjoiXHUwNDQwXHUwNDMwXHUwNDM3XHUwNDNkXHUwNDNlXHUwNDQ2XHUwNDMyXHUwNDM1XHUwNDQyXHUwNDNkXHUwNDMwXHUwNDRmIn0seyJOQU1FIjoiXHUwNDEyXHUwNDM1XHUwNDQxIiwiVkFMVUUiOiIwLjk1IFx1MDQzYVx1MDQzMyJ9XX0="
-                                    class="detalic__equipment-info js-output">
-                            <svg class="icon-info" width="19" height="19">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-info"></use>
-                            </svg>
-                        </a>
-                            </li> {% endcomment %}
-                            <li class="detalic__equipment-item">
-                                <p class="detalic__equipment-category">RAM</p>
-                                <div class="detalic__equipment-icon"><img src="{% static 'public/img/icon/ram.svg' %}" alt="значёк оперативной памяти ( ram )"></div>
-                                <a href="javascript:void(0)" data-json="eyJOQU1FIjoiOFx1MDQxM1x1MDQzMSBLaW5nc3RvbiBIeXBlclggRnVyeSAzMDAwXHUwNDFjXHUwNDEzXHUwNDQ2IiwiUElDVFVSRSI6IlwvdXBsb2FkXC9pYmxvY2tcL2I0ZlwvYjRmYjAyNWU4M2VjMjQ0NzM1NGQ0YmE3NWJiYTM3YTUucG5nIiwiUFJPUEVSVElFUyI6W3siTkFNRSI6Ilx1MDQyMlx1MDQzOFx1MDQzZiBcdTA0M2ZcdTA0MzBcdTA0M2NcdTA0NGZcdTA0NDJcdTA0MzgiLCJWQUxVRSI6IkREUi00In0seyJOQU1FIjoiXHUwNDI0XHUwNDNlXHUwNDQwXHUwNDNjLVx1MDQ0NFx1MDQzMFx1MDQzYVx1MDQ0Mlx1MDQzZVx1MDQ0MCIsIlZBTFVFIjoiRElNTSJ9LHsiTkFNRSI6Ilx1MDQyMlx1MDQzMFx1MDQzYVx1MDQ0Mlx1MDQzZVx1MDQzMlx1MDQzMFx1MDQ0ZiBcdTA0NDdcdTA0MzBcdTA0NDFcdTA0NDJcdTA0M2VcdTA0NDJcdTA0MzAiLCJWQUxVRSI6IjMwMDAgXHUwNDFjXHUwNDEzXHUwNDQ2In0seyJOQU1FIjoiXHUwNDFmXHUwNDQwXHUwNDNlXHUwNDNmXHUwNDQzXHUwNDQxXHUwNDNhXHUwNDNkXHUwNDMwXHUwNDRmIFx1MDQ0MVx1MDQzZlx1MDQzZVx1MDQ0MVx1MDQzZVx1MDQzMVx1MDQzZFx1MDQzZVx1MDQ0MVx1MDQ0Mlx1MDQ0YyIsIlZBTFVFIjoiMjQwMDAgXHUwNDFjXHUwNDMxXC9cdTA0NDEifSx7Ik5BTUUiOiJcdTA0MWRcdTA0MzBcdTA0M2ZcdTA0NDBcdTA0NGZcdTA0MzZcdTA0MzVcdTA0M2RcdTA0MzhcdTA0MzUgXHUwNDNmXHUwNDM4XHUwNDQyXHUwNDMwXHUwNDNkXHUwNDM4XHUwNDRmIiwiVkFMVUUiOiIxLjM1In1dfQ=="
-                                    class="detalic__equipment-name-ram js-output">{{product.rams.first}} {{product.rams.first.amount}}</a>
-                                <a href="javascript:void(0)" data-json="eyJOQU1FIjoiOFx1MDQxM1x1MDQzMSBLaW5nc3RvbiBIeXBlclggRnVyeSAzMDAwXHUwNDFjXHUwNDEzXHUwNDQ2IiwiUElDVFVSRSI6IlwvdXBsb2FkXC9pYmxvY2tcL2I0ZlwvYjRmYjAyNWU4M2VjMjQ0NzM1NGQ0YmE3NWJiYTM3YTUucG5nIiwiUFJPUEVSVElFUyI6W3siTkFNRSI6Ilx1MDQyMlx1MDQzOFx1MDQzZiBcdTA0M2ZcdTA0MzBcdTA0M2NcdTA0NGZcdTA0NDJcdTA0MzgiLCJWQUxVRSI6IkREUi00In0seyJOQU1FIjoiXHUwNDI0XHUwNDNlXHUwNDQwXHUwNDNjLVx1MDQ0NFx1MDQzMFx1MDQzYVx1MDQ0Mlx1MDQzZVx1MDQ0MCIsIlZBTFVFIjoiRElNTSJ9LHsiTkFNRSI6Ilx1MDQyMlx1MDQzMFx1MDQzYVx1MDQ0Mlx1MDQzZVx1MDQzMlx1MDQzMFx1MDQ0ZiBcdTA0NDdcdTA0MzBcdTA0NDFcdTA0NDJcdTA0M2VcdTA0NDJcdTA0MzAiLCJWQUxVRSI6IjMwMDAgXHUwNDFjXHUwNDEzXHUwNDQ2In0seyJOQU1FIjoiXHUwNDFmXHUwNDQwXHUwNDNlXHUwNDNmXHUwNDQzXHUwNDQxXHUwNDNhXHUwNDNkXHUwNDMwXHUwNDRmIFx1MDQ0MVx1MDQzZlx1MDQzZVx1MDQ0MVx1MDQzZVx1MDQzMVx1MDQzZFx1MDQzZVx1MDQ0MVx1MDQ0Mlx1MDQ0YyIsIlZBTFVFIjoiMjQwMDAgXHUwNDFjXHUwNDMxXC9cdTA0NDEifSx7Ik5BTUUiOiJcdTA0MWRcdTA0MzBcdTA0M2ZcdTA0NDBcdTA0NGZcdTA0MzZcdTA0MzVcdTA0M2RcdTA0MzhcdTA0MzUgXHUwNDNmXHUwNDM4XHUwNDQyXHUwNDMwXHUwNDNkXHUwNDM4XHUwNDRmIiwiVkFMVUUiOiIxLjM1In1dfQ=="
-                                    class="detalic__equipment-info js-output">
-                            <svg class="icon-info" width="19" height="19">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-info"></use>
-                            </svg>
-                        </a>
-                            </li>
-                            {% comment %} <li class="detalic__equipment-item">
-                                <p class="detalic__equipment-category">Материнская плата</p>
-                                <div class="detalic__equipment-icon"><img src="/local/templates/main/img/icon/motherboard.svg" alt="значёк материнской платы ( mb ) "></div>
-                                <a href="javascript:void(0)" data-json="eyJOQU1FIjoiR2lnYWJ5dGUgQjQ2ME0iLCJQSUNUVVJFIjoiXC91cGxvYWRcL2libG9ja1wvMmFmXC8yYWY3MDlkMmQzNGExMzFjNDgzOTZjMGRhNmQ4ZTZiYy5wbmciLCJQUk9QRVJUSUVTIjpbeyJOQU1FIjoiXHUwNDI0XHUwNDNlXHUwNDQwXHUwNDNjLVx1MDQ0NFx1MDQzMFx1MDQzYVx1MDQ0Mlx1MDQzZVx1MDQ0MCIsIlZBTFVFIjoibUFUWCJ9LHsiTkFNRSI6Ilx1MDQxYVx1MDQzZVx1MDQzYlx1MDQzOFx1MDQ0N1x1MDQzNVx1MDQ0MVx1MDQ0Mlx1MDQzMlx1MDQzZSBcdTA0NDFcdTA0M2JcdTA0M2VcdTA0NDJcdTA0M2VcdTA0MzIgXHUwNDNmXHUwNDMwXHUwNDNjXHUwNDRmXHUwNDQyXHUwNDM4IiwiVkFMVUUiOiIyIn0seyJOQU1FIjoiXHUwNDI3XHUwNDM4XHUwNDNmXHUwNDQxXHUwNDM1XHUwNDQyIiwiVkFMVUUiOiJJbnRlbCBCNDYwIn0seyJOQU1FIjoiXHUwNDE3XHUwNDMyXHUwNDQzXHUwNDNhIiwiVkFMVUUiOiI4LVx1MDQzYVx1MDQzMFx1MDQzZFx1MDQzMFx1MDQzYlx1MDQ0Y1x1MDQzZFx1MDQ0Ylx1MDQzOSAoNy4xKSJ9LHsiTkFNRSI6IlNvY2tldCIsIlZBTFVFIjoiMTIwMCJ9LHsiTkFNRSI6Ilx1MDQyMVx1MDQzYlx1MDQzZVx1MDQ0Mlx1MDQ0YiBcdTA0NDBcdTA0MzBcdTA0NDFcdTA0NDhcdTA0MzhcdTA0NDBcdTA0MzVcdTA0M2RcdTA0MzhcdTA0NGYiLCJWQUxVRSI6IlBDSS1FIDMuMCB4MTYsIDIgeCBQQ0ktRSB4MSwgUENJLUUgTS4yIn0seyJOQU1FIjoiXHUwNDIyXHUwNDM4XHUwNDNmIFx1MDQ0MVx1MDQzYlx1MDQzZVx1MDQ0Mlx1MDQzZVx1MDQzMiBNLjIiLCJWQUxVRSI6IlNvY2tldCAzLCBNIGtleSwgXHUwNDQyXHUwNDM4XHUwNDNmXHUwNDNlXHUwNDQwXHUwNDMwXHUwNDM3XHUwNDNjXHUwNDM1XHUwNDQwIDIyNDJcLzIyNjBcLzIyODAifV19"
-                                    class="detalic__equipment-name js-output">Gigabyte B460M</a>
-                                <a href="javascript:void(0)" data-json="eyJOQU1FIjoiR2lnYWJ5dGUgQjQ2ME0iLCJQSUNUVVJFIjoiXC91cGxvYWRcL2libG9ja1wvMmFmXC8yYWY3MDlkMmQzNGExMzFjNDgzOTZjMGRhNmQ4ZTZiYy5wbmciLCJQUk9QRVJUSUVTIjpbeyJOQU1FIjoiXHUwNDI0XHUwNDNlXHUwNDQwXHUwNDNjLVx1MDQ0NFx1MDQzMFx1MDQzYVx1MDQ0Mlx1MDQzZVx1MDQ0MCIsIlZBTFVFIjoibUFUWCJ9LHsiTkFNRSI6Ilx1MDQxYVx1MDQzZVx1MDQzYlx1MDQzOFx1MDQ0N1x1MDQzNVx1MDQ0MVx1MDQ0Mlx1MDQzMlx1MDQzZSBcdTA0NDFcdTA0M2JcdTA0M2VcdTA0NDJcdTA0M2VcdTA0MzIgXHUwNDNmXHUwNDMwXHUwNDNjXHUwNDRmXHUwNDQyXHUwNDM4IiwiVkFMVUUiOiIyIn0seyJOQU1FIjoiXHUwNDI3XHUwNDM4XHUwNDNmXHUwNDQxXHUwNDM1XHUwNDQyIiwiVkFMVUUiOiJJbnRlbCBCNDYwIn0seyJOQU1FIjoiXHUwNDE3XHUwNDMyXHUwNDQzXHUwNDNhIiwiVkFMVUUiOiI4LVx1MDQzYVx1MDQzMFx1MDQzZFx1MDQzMFx1MDQzYlx1MDQ0Y1x1MDQzZFx1MDQ0Ylx1MDQzOSAoNy4xKSJ9LHsiTkFNRSI6IlNvY2tldCIsIlZBTFVFIjoiMTIwMCJ9LHsiTkFNRSI6Ilx1MDQyMVx1MDQzYlx1MDQzZVx1MDQ0Mlx1MDQ0YiBcdTA0NDBcdTA0MzBcdTA0NDFcdTA0NDhcdTA0MzhcdTA0NDBcdTA0MzVcdTA0M2RcdTA0MzhcdTA0NGYiLCJWQUxVRSI6IlBDSS1FIDMuMCB4MTYsIDIgeCBQQ0ktRSB4MSwgUENJLUUgTS4yIn0seyJOQU1FIjoiXHUwNDIyXHUwNDM4XHUwNDNmIFx1MDQ0MVx1MDQzYlx1MDQzZVx1MDQ0Mlx1MDQzZVx1MDQzMiBNLjIiLCJWQUxVRSI6IlNvY2tldCAzLCBNIGtleSwgXHUwNDQyXHUwNDM4XHUwNDNmXHUwNDNlXHUwNDQwXHUwNDMwXHUwNDM3XHUwNDNjXHUwNDM1XHUwNDQwIDIyNDJcLzIyNjBcLzIyODAifV19"
-                                    class="detalic__equipment-info js-output">
-                            <svg class="icon-info" width="19" height="19">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-info"></use>
-                            </svg>
-                        </a>
-                            </li> {% endcomment %}
-                            <li class="detalic__equipment-item">
-                                <p class="detalic__equipment-category">HDD</p>
-                                <div class="detalic__equipment-icon"><img src="{% static 'public/img/icon/hard-disk.svg' %}" alt="значёк жесткого диска ( hdd )"></div>
-                                <a href="javascript:void(0)" data-json="eyJOQU1FIjoiMSBcdTA0MjJcdTA0MzEgU2VhZ2F0ZSIsIlBJQ1RVUkUiOiJcL3VwbG9hZFwvaWJsb2NrXC80ZGVcLzRkZWUxYTA3NjhiN2ZmM2JkYjdiYmRmNjczNDM3OWI2LnBuZyIsIlBST1BFUlRJRVMiOlt7Ik5BTUUiOiJcdTA0MWVcdTA0MzFcdTA0NGFcdTA0MzVcdTA0M2MiLCJWQUxVRSI6IjEwMDAgXHUwNDEzXHUwNDMxIn1dfQ=="
-                                    class="detalic__equipment-name-hdd js-output">{{product.hdds.first}} {{product.hdds.first.amount}}</a>
-                                <a href="javascript:void(0)" data-json="eyJOQU1FIjoiMSBcdTA0MjJcdTA0MzEgU2VhZ2F0ZSIsIlBJQ1RVUkUiOiJcL3VwbG9hZFwvaWJsb2NrXC80ZGVcLzRkZWUxYTA3NjhiN2ZmM2JkYjdiYmRmNjczNDM3OWI2LnBuZyIsIlBST1BFUlRJRVMiOlt7Ik5BTUUiOiJcdTA0MWVcdTA0MzFcdTA0NGFcdTA0MzVcdTA0M2MiLCJWQUxVRSI6IjEwMDAgXHUwNDEzXHUwNDMxIn1dfQ=="
-                                    class="detalic__equipment-info js-output">
-                            <svg class="icon-info" width="19" height="19">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-info"></use>
-                            </svg>
-                        </a>
-                            </li> 
-                            <li class="detalic__equipment-item">
-                                <p class="detalic__equipment-category">SSD</p>
-                                <div class="detalic__equipment-icon"><img src="{% static 'public/img/icon/ssd.svg' %}" alt="значёк твердотельного диска ( ssd )"></div>
-                                <a href="javascript:void(0)" data-json="eyJOQU1FIjoiMTIwIFx1MDQxM1x1MDQzMSBLaW5nc3RvbiIsIlBJQ1RVUkUiOiJcL3VwbG9hZFwvaWJsb2NrXC80NWNcLzQ1Y2E2ZDc1MGM0MzQzNWVhMzgxNTdkYjQ4NTkyZGQ2LnBuZyIsIlBST1BFUlRJRVMiOlt7Ik5BTUUiOiJcdTA0MTVcdTA0M2NcdTA0M2FcdTA0M2VcdTA0NDFcdTA0NDJcdTA0NGMiLCJWQUxVRSI6IjEyMCBcdTA0MTNcdTA0MzEifSx7Ik5BTUUiOiJcdTA0MjRcdTA0M2VcdTA0NDBcdTA0M2MtXHUwNDQ0XHUwNDMwXHUwNDNhXHUwNDQyXHUwNDNlXHUwNDQwIiwiVkFMVUUiOiIyLjVcdTAwMjZxdW90OyJ9LHsiTkFNRSI6Ilx1MDQyMlx1MDQzOFx1MDQzZiBcdTA0NDRcdTA0M2JcdTA0NGRcdTA0NDgtXHUwNDNmXHUwNDMwXHUwNDNjXHUwNDRmXHUwNDQyXHUwNDM4IiwiVkFMVUUiOiJUTEMifSx7Ik5BTUUiOiJcdTA0MWNcdTA0MzBcdTA0M2FcdTA0NDEuIFx1MDQ0MVx1MDQzYVx1MDQzZVx1MDQ0MFx1MDQzZVx1MDQ0MVx1MDQ0Mlx1MDQ0YyBcdTA0MzhcdTA0M2RcdTA0NDJcdTA0MzVcdTA0NDBcdTA0NDRcdTA0MzVcdTA0MzlcdTA0NDFcdTA0MzAiLCJWQUxVRSI6IjYwMCBcdTA0MWNcdTA0MTFcL1x1MDQ0MSJ9LHsiTkFNRSI6Ilx1MDQyMVx1MDQzYVx1MDQzZVx1MDQ0MFx1MDQzZVx1MDQ0MVx1MDQ0Mlx1MDQ0YyBcdTA0NDdcdTA0NDJcdTA0MzVcdTA0M2RcdTA0MzhcdTA0NGYiLCJWQUxVRSI6IjU1MCBcdTA0MWNcdTA0MzFcL1x1MDQ0MVx1MDQzNVx1MDQzYSJ9LHsiTkFNRSI6Ilx1MDQyMVx1MDQzYVx1MDQzZVx1MDQ0MFx1MDQzZVx1MDQ0MVx1MDQ0Mlx1MDQ0YyBcdTA0MzdcdTA0MzBcdTA0M2ZcdTA0MzhcdTA0NDFcdTA0MzgiLCJWQUxVRSI6IjM1MCBcdTA0MWNcdTA0MzFcL1x1MDQ0MVx1MDQzNVx1MDQzYSJ9XX0="
-                                    class="detalic__equipment-name-ssd js-output">{{product.ssds.first}} {{product.ssds.first.amount}}</a>
-                                <a href="javascript:void(0)" data-json="eyJOQU1FIjoiMTIwIFx1MDQxM1x1MDQzMSBLaW5nc3RvbiIsIlBJQ1RVUkUiOiJcL3VwbG9hZFwvaWJsb2NrXC80NWNcLzQ1Y2E2ZDc1MGM0MzQzNWVhMzgxNTdkYjQ4NTkyZGQ2LnBuZyIsIlBST1BFUlRJRVMiOlt7Ik5BTUUiOiJcdTA0MTVcdTA0M2NcdTA0M2FcdTA0M2VcdTA0NDFcdTA0NDJcdTA0NGMiLCJWQUxVRSI6IjEyMCBcdTA0MTNcdTA0MzEifSx7Ik5BTUUiOiJcdTA0MjRcdTA0M2VcdTA0NDBcdTA0M2MtXHUwNDQ0XHUwNDMwXHUwNDNhXHUwNDQyXHUwNDNlXHUwNDQwIiwiVkFMVUUiOiIyLjVcdTAwMjZxdW90OyJ9LHsiTkFNRSI6Ilx1MDQyMlx1MDQzOFx1MDQzZiBcdTA0NDRcdTA0M2JcdTA0NGRcdTA0NDgtXHUwNDNmXHUwNDMwXHUwNDNjXHUwNDRmXHUwNDQyXHUwNDM4IiwiVkFMVUUiOiJUTEMifSx7Ik5BTUUiOiJcdTA0MWNcdTA0MzBcdTA0M2FcdTA0NDEuIFx1MDQ0MVx1MDQzYVx1MDQzZVx1MDQ0MFx1MDQzZVx1MDQ0MVx1MDQ0Mlx1MDQ0YyBcdTA0MzhcdTA0M2RcdTA0NDJcdTA0MzVcdTA0NDBcdTA0NDRcdTA0MzVcdTA0MzlcdTA0NDFcdTA0MzAiLCJWQUxVRSI6IjYwMCBcdTA0MWNcdTA0MTFcL1x1MDQ0MSJ9LHsiTkFNRSI6Ilx1MDQyMVx1MDQzYVx1MDQzZVx1MDQ0MFx1MDQzZVx1MDQ0MVx1MDQ0Mlx1MDQ0YyBcdTA0NDdcdTA0NDJcdTA0MzVcdTA0M2RcdTA0MzhcdTA0NGYiLCJWQUxVRSI6IjU1MCBcdTA0MWNcdTA0MzFcL1x1MDQ0MVx1MDQzNVx1MDQzYSJ9LHsiTkFNRSI6Ilx1MDQyMVx1MDQzYVx1MDQzZVx1MDQ0MFx1MDQzZVx1MDQ0MVx1MDQ0Mlx1MDQ0YyBcdTA0MzdcdTA0MzBcdTA0M2ZcdTA0MzhcdTA0NDFcdTA0MzgiLCJWQUxVRSI6IjM1MCBcdTA0MWNcdTA0MzFcL1x1MDQ0MVx1MDQzNVx1MDQzYSJ9XX0="
-                                    class="detalic__equipment-info js-output">
-                            <svg class="icon-info" width="19" height="19">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-info"></use>
-                            </svg>
-                        </a>
-                            </li>
-                            <li class="detalic__equipment-item">
-                                <p class="detalic__equipment-category">DVD-Driver</p>
-                                <div class="detalic__equipment-icon"><img src="{% static 'public/img/icon/cd-rom.svg' %}" alt="	значёк оптического привода ( dvd-rw )"></div>
-                                <a href="javascript:void(0)" data-json="eyJOQU1FIjoiXHUwNDExXHUwNDM1XHUwNDM3IFx1MDQzZlx1MDQ0MFx1MDQzOFx1MDQzMlx1MDQzZVx1MDQzNFx1MDQzMCIsIlBJQ1RVUkUiOiJcL3VwbG9hZFwvaWJsb2NrXC8zNDZcLzM0NjNmYjQ0ODU0ZDc5NDg5ZmE1NmE4Zjk2NWUyYmQxLnBuZyIsIlBST1BFUlRJRVMiOltdfQ=="
-                                    class="detalic__equipment-name-dvd js-output"> {% if product.has_cd_drive == False %}Yoxdur{% else %} Var {% endif %}</a>
-                                <a href="javascript:void(0)" data-json="eyJOQU1FIjoiXHUwNDExXHUwNDM1XHUwNDM3IFx1MDQzZlx1MDQ0MFx1MDQzOFx1MDQzMlx1MDQzZVx1MDQzNFx1MDQzMCIsIlBJQ1RVUkUiOiJcL3VwbG9hZFwvaWJsb2NrXC8zNDZcLzM0NjNmYjQ0ODU0ZDc5NDg5ZmE1NmE4Zjk2NWUyYmQxLnBuZyIsIlBST1BFUlRJRVMiOltdfQ=="
-                                    class="detalic__equipment-info js-output">
-                            <svg class="icon-info" width="19" height="19">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-info"></use>
-                            </svg>
-                        </a>
-                            </li> 
-                            {% comment %} <li class="detalic__equipment-item">
-                                <p class="detalic__equipment-category">Блок питания</p>
-                                <div class="detalic__equipment-icon"><img src="/local/templates/main/img/icon/power-supply.svg" alt="	значёк блока питания ( psu )"></div>
-                                <a href="javascript:void(0)" data-json="eyJOQU1FIjoiNzAwVyBDb29sZXJNYXN0ZXIiLCJQSUNUVVJFIjoiXC91cGxvYWRcL2libG9ja1wvOTJjXC85MmNjYzI1YWI1ZDBjYWVjZWM2NzVjYzU2ZWU0ZmJiOS5wbmciLCJQUk9QRVJUSUVTIjpbeyJOQU1FIjoiXHUwNDFjXHUwNDNlXHUwNDQ5XHUwNDNkXHUwNDNlXHUwNDQxXHUwNDQyXHUwNDRjIiwiVkFMVUUiOiI3NTAifSx7Ik5BTUUiOiJcdTA0MjFcdTA0NDJcdTA0MzBcdTA0M2RcdTA0MzRcdTA0MzBcdTA0NDBcdTA0NDIiLCJWQUxVRSI6IkFUWDEyViAyLjQifV19"
-                                    class="detalic__equipment-name js-output">700W CoolerMaster</a>
-                                <a href="javascript:void(0)" data-json="eyJOQU1FIjoiNzAwVyBDb29sZXJNYXN0ZXIiLCJQSUNUVVJFIjoiXC91cGxvYWRcL2libG9ja1wvOTJjXC85MmNjYzI1YWI1ZDBjYWVjZWM2NzVjYzU2ZWU0ZmJiOS5wbmciLCJQUk9QRVJUSUVTIjpbeyJOQU1FIjoiXHUwNDFjXHUwNDNlXHUwNDQ5XHUwNDNkXHUwNDNlXHUwNDQxXHUwNDQyXHUwNDRjIiwiVkFMVUUiOiI3NTAifSx7Ik5BTUUiOiJcdTA0MjFcdTA0NDJcdTA0MzBcdTA0M2RcdTA0MzRcdTA0MzBcdTA0NDBcdTA0NDIiLCJWQUxVRSI6IkFUWDEyViAyLjQifV19"
-                                    class="detalic__equipment-info js-output">
-                            <svg class="icon-info" width="19" height="19">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-info"></use>
-                            </svg>
-                        </a>
-                            </li>  
-                            {% comment %} <li class="detalic__equipment-item">
-                                <p class="detalic__equipment-category">Корпус</p>
-                                <div class="detalic__equipment-icon"><img src="/local/templates/main/img/icon/case.svg" alt="иконка системного блока ( case )"></div>
-                                <a href="javascript:void(0)" data-json="eyJOQU1FIjoiMVNUUExBWUVSIFNURUFNIFBVTksiLCJQSUNUVVJFIjoiXC91cGxvYWRcL2libG9ja1wvNzBjXC83MGM5ZDNiZjI2NWM0NjJjZjdkNzRhYmJmZTdlODI5Zi5wbmciLCJQUk9QRVJUSUVTIjpbeyJOQU1FIjoiXHUwNDI0XHUwNDNlXHUwNDQwXHUwNDNjLVx1MDQ0NFx1MDQzMFx1MDQzYVx1MDQ0Mlx1MDQzZVx1MDQ0MCIsIlZBTFVFIjoiQVRYLCBtQVRYIn0seyJOQU1FIjoiXHUwNDIyXHUwNDM4XHUwNDNmXHUwNDNlXHUwNDQwXHUwNDMwXHUwNDM3XHUwNDNjXHUwNDM1XHUwNDQwIiwiVkFMVUUiOiJNaWRpLVRvd2VyIn0seyJOQU1FIjoiXHUwNDFjXHUwNDMwXHUwNDNhXHUwNDQxXHUwNDM4XHUwNDNjXHUwNDMwXHUwNDNiXHUwNDRjXHUwNDNkXHUwNDMwXHUwNDRmIFx1MDQzNFx1MDQzYlx1MDQzOFx1MDQzZFx1MDQzMCBcdTA0MzJcdTA0MzhcdTA0MzRcdTA0MzVcdTA0M2VcdTA0M2FcdTA0MzBcdTA0NDBcdTA0NDJcdTA0NGIiLCJWQUxVRSI6IjQwMCBcdTA0M2NcdTA0M2MifV19"
-                                    class="detalic__equipment-name js-output">1STPLAYER STEAM PUNK</a>
-                                <a href="javascript:void(0)" data-json="eyJOQU1FIjoiMVNUUExBWUVSIFNURUFNIFBVTksiLCJQSUNUVVJFIjoiXC91cGxvYWRcL2libG9ja1wvNzBjXC83MGM5ZDNiZjI2NWM0NjJjZjdkNzRhYmJmZTdlODI5Zi5wbmciLCJQUk9QRVJUSUVTIjpbeyJOQU1FIjoiXHUwNDI0XHUwNDNlXHUwNDQwXHUwNDNjLVx1MDQ0NFx1MDQzMFx1MDQzYVx1MDQ0Mlx1MDQzZVx1MDQ0MCIsIlZBTFVFIjoiQVRYLCBtQVRYIn0seyJOQU1FIjoiXHUwNDIyXHUwNDM4XHUwNDNmXHUwNDNlXHUwNDQwXHUwNDMwXHUwNDM3XHUwNDNjXHUwNDM1XHUwNDQwIiwiVkFMVUUiOiJNaWRpLVRvd2VyIn0seyJOQU1FIjoiXHUwNDFjXHUwNDMwXHUwNDNhXHUwNDQxXHUwNDM4XHUwNDNjXHUwNDMwXHUwNDNiXHUwNDRjXHUwNDNkXHUwNDMwXHUwNDRmIFx1MDQzNFx1MDQzYlx1MDQzOFx1MDQzZFx1MDQzMCBcdTA0MzJcdTA0MzhcdTA0MzRcdTA0MzVcdTA0M2VcdTA0M2FcdTA0MzBcdTA0NDBcdTA0NDJcdTA0NGIiLCJWQUxVRSI6IjQwMCBcdTA0M2NcdTA0M2MifV19"
-                                    class="detalic__equipment-info js-output">
-                            <svg class="icon-info" width="19" height="19">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-info"></use>
-                            </svg>
-                        </a>
-                            </li> {% endcomment %}
-                            <li class="detalic__equipment-item">
-                                <p class="detalic__equipment-category">OS</p>
-                                <div class="detalic__equipment-icon"><img src="{% static 'public/img/icon/os.svg' %}" alt="значёк операционной системы ( os )"></div>
-                                <a href="javascript:void(0)" data-json="eyJOQU1FIjoiV2luZG93cyAxMCIsIlBJQ1RVUkUiOiJcL3VwbG9hZFwvaWJsb2NrXC8yODlcLzI4OTE5ZDI4MGQwMjk5ZWQ0OWQ4YjFiMDQ3NDRlZGI2LnBuZyIsIlBST1BFUlRJRVMiOltdfQ==" class="detalic__equipment-name-os js-output">{{product.operative_system}}</a>
-                                <a href="javascript:void(0)" data-json="eyJOQU1FIjoiV2luZG93cyAxMCIsIlBJQ1RVUkUiOiJcL3VwbG9hZFwvaWJsb2NrXC8yODlcLzI4OTE5ZDI4MGQwMjk5ZWQ0OWQ4YjFiMDQ3NDRlZGI2LnBuZyIsIlBST1BFUlRJRVMiOltdfQ==" class="detalic__equipment-info js-output">
-                            <svg class="icon-info" width="19" height="19">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-info"></use>
-                            </svg>
-                        </a>
-                            </li>
-                        </ul>
-                        <div class="card">
-                            <a href="#" class="js-output-close card__close"></a>
-                            <div class="card__prev">
+            <form action="" method="post">
+                <div class="detalic__equipment">
+                    <div class="detalic__inner inner">
+                        <p class="detalic__equipment-title">Komplektatsiya</p>
+                        <div class="detalic__equipment-wrapper">
+                            <ul class="detalic__equipment-list">
+                                <li class="detalic__equipment-item">
+                                    <p class="detalic__equipment-category">GPU</p>
+                                    <div class="detalic__equipment-icon"><img src="{% static 'public/img/icon/vga.svg' %}" alt="значёк видеокарты ( gpu )"></div>
+                                    <a href="javascript:void(0)" data-json="eyJOQU1FIjoiR0lHQUJZVEUgR0VGT1JDRSBSVFggMzA3MCBUaSA4XHUwNDEzXHUwNDMxIEdBTUlORyIsIlBJQ1RVUkUiOiJcL3VwbG9hZFwvaWJsb2NrXC8yODVcL2I4aTlpOG9idmxzZm1icWh5ZHZzZmN1dWYyYmhvcTh4LnBuZyIsIlBST1BFUlRJRVMiOltdfQ==" class="detalic__equipment-name-gpu js-output">{{product.video_card}}</a>
+                                    <a href="javascript:void(0)" data-json="eyJOQU1FIjoiR0lHQUJZVEUgR0VGT1JDRSBSVFggMzA3MCBUaSA4XHUwNDEzXHUwNDMxIEdBTUlORyIsIlBJQ1RVUkUiOiJcL3VwbG9hZFwvaWJsb2NrXC8yODVcL2I4aTlpOG9idmxzZm1icWh5ZHZzZmN1dWYyYmhvcTh4LnBuZyIsIlBST1BFUlRJRVMiOltdfQ==" class="detalic__equipment-info js-output">
+                                <svg class="icon-info" width="19" height="19">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-info"></use>
+                                </svg>
+                            </a>
+                                </li>
+                                <li class="detalic__equipment-item">
+                                    <p class="detalic__equipment-category">CPU</p>
+                                    <div class="detalic__equipment-icon"><img src="{% static 'public/img/icon/cpu.svg' %}" alt="значёк центрального процессора ( cpu )"></div>
+                                    <a href="javascript:void(0)" data-json="eyJOQU1FIjoiSW50ZWwgQ29yZSBpNS0xMDQwMEYgMjkwMCBcdTA0MWNcdTA0MTNcdTA0NDYiLCJQSUNUVVJFIjoiXC91cGxvYWRcL2libG9ja1wvNzNkXC83M2QwODFhYTRhMmUyZjY2MGEzZmZmZjQyMDJiZDU5Mi5qcGciLCJQUk9QRVJUSUVTIjpbeyJOQU1FIjoiXHUwNDIxXHUwNDNlXHUwNDNhXHUwNDM1XHUwNDQyIiwiVkFMVUUiOiJMR0ExMjAwIn0seyJOQU1FIjoiXHUwNDFlXHUwNDMxXHUwNDRhXHUwNDM1XHUwNDNjIFx1MDQzYVx1MDQ0ZFx1MDQ0OFx1MDQzMCBMMyIsIlZBTFVFIjoiMTIgXHUwNDFjXHUwNDMxIn0seyJOQU1FIjoiXHUwNDFhXHUwNDNlXHUwNDNiXHUwNDM4XHUwNDQ3XHUwNDM1XHUwNDQxXHUwNDQyXHUwNDMyXHUwNDNlIFx1MDQ0Zlx1MDQzNFx1MDQzNVx1MDQ0MCIsIlZBTFVFIjoiNiJ9LHsiTkFNRSI6Ilx1MDQyN1x1MDQzMFx1MDQ0MVx1MDQ0Mlx1MDQzZVx1MDQ0Mlx1MDQzMCBcdTA0M2ZcdTA0NDBcdTA0M2VcdTA0NDZcdTA0MzVcdTA0NDFcdTA0NDFcdTA0M2VcdTA0NDBcdTA0MzAiLCJWQUxVRSI6IjI5MDAgXHUwNDFjXHUwNDEzXHUwNDQ2In0seyJOQU1FIjoiXHUwNDJmXHUwNDM0XHUwNDQwXHUwNDNlIiwiVkFMVUUiOiJDb21ldCBMYWtlIn1dfQ=="
+                                        class="detalic__equipment-name-cpu js-output">{{form.processor}}</a>
+                                    <a href="javascript:void(0)" data-json="eyJOQU1FIjoiSW50ZWwgQ29yZSBpNS0xMDQwMEYgMjkwMCBcdTA0MWNcdTA0MTNcdTA0NDYiLCJQSUNUVVJFIjoiXC91cGxvYWRcL2libG9ja1wvNzNkXC83M2QwODFhYTRhMmUyZjY2MGEzZmZmZjQyMDJiZDU5Mi5qcGciLCJQUk9QRVJUSUVTIjpbeyJOQU1FIjoiXHUwNDIxXHUwNDNlXHUwNDNhXHUwNDM1XHUwNDQyIiwiVkFMVUUiOiJMR0ExMjAwIn0seyJOQU1FIjoiXHUwNDFlXHUwNDMxXHUwNDRhXHUwNDM1XHUwNDNjIFx1MDQzYVx1MDQ0ZFx1MDQ0OFx1MDQzMCBMMyIsIlZBTFVFIjoiMTIgXHUwNDFjXHUwNDMxIn0seyJOQU1FIjoiXHUwNDFhXHUwNDNlXHUwNDNiXHUwNDM4XHUwNDQ3XHUwNDM1XHUwNDQxXHUwNDQyXHUwNDMyXHUwNDNlIFx1MDQ0Zlx1MDQzNFx1MDQzNVx1MDQ0MCIsIlZBTFVFIjoiNiJ9LHsiTkFNRSI6Ilx1MDQyN1x1MDQzMFx1MDQ0MVx1MDQ0Mlx1MDQzZVx1MDQ0Mlx1MDQzMCBcdTA0M2ZcdTA0NDBcdTA0M2VcdTA0NDZcdTA0MzVcdTA0NDFcdTA0NDFcdTA0M2VcdTA0NDBcdTA0MzAiLCJWQUxVRSI6IjI5MDAgXHUwNDFjXHUwNDEzXHUwNDQ2In0seyJOQU1FIjoiXHUwNDJmXHUwNDM0XHUwNDQwXHUwNDNlIiwiVkFMVUUiOiJDb21ldCBMYWtlIn1dfQ=="
+                                        class="detalic__equipment-info js-output">
+                                <svg class="icon-info" width="19" height="19">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-info"></use>
+                                </svg>
+                            </a>
+                                </li>
+                            
+                                <li class="detalic__equipment-item">
+                                    <p class="detalic__equipment-category">RAM</p>
+                                    <div class="detalic__equipment-icon"><img src="{% static 'public/img/icon/ram.svg' %}" alt="значёк оперативной памяти ( ram )"></div>
+                                    <a href="javascript:void(0)" data-json="eyJOQU1FIjoiOFx1MDQxM1x1MDQzMSBLaW5nc3RvbiBIeXBlclggRnVyeSAzMDAwXHUwNDFjXHUwNDEzXHUwNDQ2IiwiUElDVFVSRSI6IlwvdXBsb2FkXC9pYmxvY2tcL2I0ZlwvYjRmYjAyNWU4M2VjMjQ0NzM1NGQ0YmE3NWJiYTM3YTUucG5nIiwiUFJPUEVSVElFUyI6W3siTkFNRSI6Ilx1MDQyMlx1MDQzOFx1MDQzZiBcdTA0M2ZcdTA0MzBcdTA0M2NcdTA0NGZcdTA0NDJcdTA0MzgiLCJWQUxVRSI6IkREUi00In0seyJOQU1FIjoiXHUwNDI0XHUwNDNlXHUwNDQwXHUwNDNjLVx1MDQ0NFx1MDQzMFx1MDQzYVx1MDQ0Mlx1MDQzZVx1MDQ0MCIsIlZBTFVFIjoiRElNTSJ9LHsiTkFNRSI6Ilx1MDQyMlx1MDQzMFx1MDQzYVx1MDQ0Mlx1MDQzZVx1MDQzMlx1MDQzMFx1MDQ0ZiBcdTA0NDdcdTA0MzBcdTA0NDFcdTA0NDJcdTA0M2VcdTA0NDJcdTA0MzAiLCJWQUxVRSI6IjMwMDAgXHUwNDFjXHUwNDEzXHUwNDQ2In0seyJOQU1FIjoiXHUwNDFmXHUwNDQwXHUwNDNlXHUwNDNmXHUwNDQzXHUwNDQxXHUwNDNhXHUwNDNkXHUwNDMwXHUwNDRmIFx1MDQ0MVx1MDQzZlx1MDQzZVx1MDQ0MVx1MDQzZVx1MDQzMVx1MDQzZFx1MDQzZVx1MDQ0MVx1MDQ0Mlx1MDQ0YyIsIlZBTFVFIjoiMjQwMDAgXHUwNDFjXHUwNDMxXC9cdTA0NDEifSx7Ik5BTUUiOiJcdTA0MWRcdTA0MzBcdTA0M2ZcdTA0NDBcdTA0NGZcdTA0MzZcdTA0MzVcdTA0M2RcdTA0MzhcdTA0MzUgXHUwNDNmXHUwNDM4XHUwNDQyXHUwNDMwXHUwNDNkXHUwNDM4XHUwNDRmIiwiVkFMVUUiOiIxLjM1In1dfQ=="
+                                        class="detalic__equipment-name-ram js-output">{{product.rams.first}} {{product.rams.first.amount}}</a>
+                                    <a href="javascript:void(0)" data-json="eyJOQU1FIjoiOFx1MDQxM1x1MDQzMSBLaW5nc3RvbiBIeXBlclggRnVyeSAzMDAwXHUwNDFjXHUwNDEzXHUwNDQ2IiwiUElDVFVSRSI6IlwvdXBsb2FkXC9pYmxvY2tcL2I0ZlwvYjRmYjAyNWU4M2VjMjQ0NzM1NGQ0YmE3NWJiYTM3YTUucG5nIiwiUFJPUEVSVElFUyI6W3siTkFNRSI6Ilx1MDQyMlx1MDQzOFx1MDQzZiBcdTA0M2ZcdTA0MzBcdTA0M2NcdTA0NGZcdTA0NDJcdTA0MzgiLCJWQUxVRSI6IkREUi00In0seyJOQU1FIjoiXHUwNDI0XHUwNDNlXHUwNDQwXHUwNDNjLVx1MDQ0NFx1MDQzMFx1MDQzYVx1MDQ0Mlx1MDQzZVx1MDQ0MCIsIlZBTFVFIjoiRElNTSJ9LHsiTkFNRSI6Ilx1MDQyMlx1MDQzMFx1MDQzYVx1MDQ0Mlx1MDQzZVx1MDQzMlx1MDQzMFx1MDQ0ZiBcdTA0NDdcdTA0MzBcdTA0NDFcdTA0NDJcdTA0M2VcdTA0NDJcdTA0MzAiLCJWQUxVRSI6IjMwMDAgXHUwNDFjXHUwNDEzXHUwNDQ2In0seyJOQU1FIjoiXHUwNDFmXHUwNDQwXHUwNDNlXHUwNDNmXHUwNDQzXHUwNDQxXHUwNDNhXHUwNDNkXHUwNDMwXHUwNDRmIFx1MDQ0MVx1MDQzZlx1MDQzZVx1MDQ0MVx1MDQzZVx1MDQzMVx1MDQzZFx1MDQzZVx1MDQ0MVx1MDQ0Mlx1MDQ0YyIsIlZBTFVFIjoiMjQwMDAgXHUwNDFjXHUwNDMxXC9cdTA0NDEifSx7Ik5BTUUiOiJcdTA0MWRcdTA0MzBcdTA0M2ZcdTA0NDBcdTA0NGZcdTA0MzZcdTA0MzVcdTA0M2RcdTA0MzhcdTA0MzUgXHUwNDNmXHUwNDM4XHUwNDQyXHUwNDMwXHUwNDNkXHUwNDM4XHUwNDRmIiwiVkFMVUUiOiIxLjM1In1dfQ=="
+                                        class="detalic__equipment-info js-output">
+                                <svg class="icon-info" width="19" height="19">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-info"></use>
+                                </svg>
+                            </a>
+                                </li>
+                                
+                                <li class="detalic__equipment-item">
+                                    <p class="detalic__equipment-category">HDD</p>
+                                    <div class="detalic__equipment-icon"><img src="{% static 'public/img/icon/hard-disk.svg' %}" alt="значёк жесткого диска ( hdd )"></div>
+                                    <a href="javascript:void(0)" data-json="eyJOQU1FIjoiMSBcdTA0MjJcdTA0MzEgU2VhZ2F0ZSIsIlBJQ1RVUkUiOiJcL3VwbG9hZFwvaWJsb2NrXC80ZGVcLzRkZWUxYTA3NjhiN2ZmM2JkYjdiYmRmNjczNDM3OWI2LnBuZyIsIlBST1BFUlRJRVMiOlt7Ik5BTUUiOiJcdTA0MWVcdTA0MzFcdTA0NGFcdTA0MzVcdTA0M2MiLCJWQUxVRSI6IjEwMDAgXHUwNDEzXHUwNDMxIn1dfQ=="
+                                        class="detalic__equipment-name-hdd js-output">{{product.hdds.first}} {{product.hdds.first.amount}}</a>
+                                    <a href="javascript:void(0)" data-json="eyJOQU1FIjoiMSBcdTA0MjJcdTA0MzEgU2VhZ2F0ZSIsIlBJQ1RVUkUiOiJcL3VwbG9hZFwvaWJsb2NrXC80ZGVcLzRkZWUxYTA3NjhiN2ZmM2JkYjdiYmRmNjczNDM3OWI2LnBuZyIsIlBST1BFUlRJRVMiOlt7Ik5BTUUiOiJcdTA0MWVcdTA0MzFcdTA0NGFcdTA0MzVcdTA0M2MiLCJWQUxVRSI6IjEwMDAgXHUwNDEzXHUwNDMxIn1dfQ=="
+                                        class="detalic__equipment-info js-output">
+                                <svg class="icon-info" width="19" height="19">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-info"></use>
+                                </svg>
+                            </a>
+                                </li> 
+                                <li class="detalic__equipment-item">
+                                    <p class="detalic__equipment-category">SSD</p>
+                                    <div class="detalic__equipment-icon"><img src="{% static 'public/img/icon/ssd.svg' %}" alt="значёк твердотельного диска ( ssd )"></div>
+                                    <a href="javascript:void(0)" data-json="eyJOQU1FIjoiMTIwIFx1MDQxM1x1MDQzMSBLaW5nc3RvbiIsIlBJQ1RVUkUiOiJcL3VwbG9hZFwvaWJsb2NrXC80NWNcLzQ1Y2E2ZDc1MGM0MzQzNWVhMzgxNTdkYjQ4NTkyZGQ2LnBuZyIsIlBST1BFUlRJRVMiOlt7Ik5BTUUiOiJcdTA0MTVcdTA0M2NcdTA0M2FcdTA0M2VcdTA0NDFcdTA0NDJcdTA0NGMiLCJWQUxVRSI6IjEyMCBcdTA0MTNcdTA0MzEifSx7Ik5BTUUiOiJcdTA0MjRcdTA0M2VcdTA0NDBcdTA0M2MtXHUwNDQ0XHUwNDMwXHUwNDNhXHUwNDQyXHUwNDNlXHUwNDQwIiwiVkFMVUUiOiIyLjVcdTAwMjZxdW90OyJ9LHsiTkFNRSI6Ilx1MDQyMlx1MDQzOFx1MDQzZiBcdTA0NDRcdTA0M2JcdTA0NGRcdTA0NDgtXHUwNDNmXHUwNDMwXHUwNDNjXHUwNDRmXHUwNDQyXHUwNDM4IiwiVkFMVUUiOiJUTEMifSx7Ik5BTUUiOiJcdTA0MWNcdTA0MzBcdTA0M2FcdTA0NDEuIFx1MDQ0MVx1MDQzYVx1MDQzZVx1MDQ0MFx1MDQzZVx1MDQ0MVx1MDQ0Mlx1MDQ0YyBcdTA0MzhcdTA0M2RcdTA0NDJcdTA0MzVcdTA0NDBcdTA0NDRcdTA0MzVcdTA0MzlcdTA0NDFcdTA0MzAiLCJWQUxVRSI6IjYwMCBcdTA0MWNcdTA0MTFcL1x1MDQ0MSJ9LHsiTkFNRSI6Ilx1MDQyMVx1MDQzYVx1MDQzZVx1MDQ0MFx1MDQzZVx1MDQ0MVx1MDQ0Mlx1MDQ0YyBcdTA0NDdcdTA0NDJcdTA0MzVcdTA0M2RcdTA0MzhcdTA0NGYiLCJWQUxVRSI6IjU1MCBcdTA0MWNcdTA0MzFcL1x1MDQ0MVx1MDQzNVx1MDQzYSJ9LHsiTkFNRSI6Ilx1MDQyMVx1MDQzYVx1MDQzZVx1MDQ0MFx1MDQzZVx1MDQ0MVx1MDQ0Mlx1MDQ0YyBcdTA0MzdcdTA0MzBcdTA0M2ZcdTA0MzhcdTA0NDFcdTA0MzgiLCJWQUxVRSI6IjM1MCBcdTA0MWNcdTA0MzFcL1x1MDQ0MVx1MDQzNVx1MDQzYSJ9XX0="
+                                        class="detalic__equipment-name-ssd js-output">{{product.ssds.first}} {{product.ssds.first.amount}}</a>
+                                    <a href="javascript:void(0)" data-json="eyJOQU1FIjoiMTIwIFx1MDQxM1x1MDQzMSBLaW5nc3RvbiIsIlBJQ1RVUkUiOiJcL3VwbG9hZFwvaWJsb2NrXC80NWNcLzQ1Y2E2ZDc1MGM0MzQzNWVhMzgxNTdkYjQ4NTkyZGQ2LnBuZyIsIlBST1BFUlRJRVMiOlt7Ik5BTUUiOiJcdTA0MTVcdTA0M2NcdTA0M2FcdTA0M2VcdTA0NDFcdTA0NDJcdTA0NGMiLCJWQUxVRSI6IjEyMCBcdTA0MTNcdTA0MzEifSx7Ik5BTUUiOiJcdTA0MjRcdTA0M2VcdTA0NDBcdTA0M2MtXHUwNDQ0XHUwNDMwXHUwNDNhXHUwNDQyXHUwNDNlXHUwNDQwIiwiVkFMVUUiOiIyLjVcdTAwMjZxdW90OyJ9LHsiTkFNRSI6Ilx1MDQyMlx1MDQzOFx1MDQzZiBcdTA0NDRcdTA0M2JcdTA0NGRcdTA0NDgtXHUwNDNmXHUwNDMwXHUwNDNjXHUwNDRmXHUwNDQyXHUwNDM4IiwiVkFMVUUiOiJUTEMifSx7Ik5BTUUiOiJcdTA0MWNcdTA0MzBcdTA0M2FcdTA0NDEuIFx1MDQ0MVx1MDQzYVx1MDQzZVx1MDQ0MFx1MDQzZVx1MDQ0MVx1MDQ0Mlx1MDQ0YyBcdTA0MzhcdTA0M2RcdTA0NDJcdTA0MzVcdTA0NDBcdTA0NDRcdTA0MzVcdTA0MzlcdTA0NDFcdTA0MzAiLCJWQUxVRSI6IjYwMCBcdTA0MWNcdTA0MTFcL1x1MDQ0MSJ9LHsiTkFNRSI6Ilx1MDQyMVx1MDQzYVx1MDQzZVx1MDQ0MFx1MDQzZVx1MDQ0MVx1MDQ0Mlx1MDQ0YyBcdTA0NDdcdTA0NDJcdTA0MzVcdTA0M2RcdTA0MzhcdTA0NGYiLCJWQUxVRSI6IjU1MCBcdTA0MWNcdTA0MzFcL1x1MDQ0MVx1MDQzNVx1MDQzYSJ9LHsiTkFNRSI6Ilx1MDQyMVx1MDQzYVx1MDQzZVx1MDQ0MFx1MDQzZVx1MDQ0MVx1MDQ0Mlx1MDQ0YyBcdTA0MzdcdTA0MzBcdTA0M2ZcdTA0MzhcdTA0NDFcdTA0MzgiLCJWQUxVRSI6IjM1MCBcdTA0MWNcdTA0MzFcL1x1MDQ0MVx1MDQzNVx1MDQzYSJ9XX0="
+                                        class="detalic__equipment-info js-output">
+                                <svg class="icon-info" width="19" height="19">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-info"></use>
+                                </svg>
+                            </a>
+                                </li>
+                                <li class="detalic__equipment-item">
+                                    <p class="detalic__equipment-category">DVD-Driver</p>
+                                    <div class="detalic__equipment-icon"><img src="{% static 'public/img/icon/cd-rom.svg' %}" alt="	значёк оптического привода ( dvd-rw )"></div>
+                                    <a href="javascript:void(0)" data-json="eyJOQU1FIjoiXHUwNDExXHUwNDM1XHUwNDM3IFx1MDQzZlx1MDQ0MFx1MDQzOFx1MDQzMlx1MDQzZVx1MDQzNFx1MDQzMCIsIlBJQ1RVUkUiOiJcL3VwbG9hZFwvaWJsb2NrXC8zNDZcLzM0NjNmYjQ0ODU0ZDc5NDg5ZmE1NmE4Zjk2NWUyYmQxLnBuZyIsIlBST1BFUlRJRVMiOltdfQ=="
+                                        class="detalic__equipment-name-dvd js-output"> {% if product.has_cd_drive == False %}Yoxdur{% else %} Var {% endif %}</a>
+                                    <a href="javascript:void(0)" data-json="eyJOQU1FIjoiXHUwNDExXHUwNDM1XHUwNDM3IFx1MDQzZlx1MDQ0MFx1MDQzOFx1MDQzMlx1MDQzZVx1MDQzNFx1MDQzMCIsIlBJQ1RVUkUiOiJcL3VwbG9hZFwvaWJsb2NrXC8zNDZcLzM0NjNmYjQ0ODU0ZDc5NDg5ZmE1NmE4Zjk2NWUyYmQxLnBuZyIsIlBST1BFUlRJRVMiOltdfQ=="
+                                        class="detalic__equipment-info js-output">
+                                <svg class="icon-info" width="19" height="19">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-info"></use>
+                                </svg>
+                            </a>
+                                </li> 
+                                
+                                <li class="detalic__equipment-item">
+                                    <p class="detalic__equipment-category">OS</p>
+                                    <div class="detalic__equipment-icon"><img src="{% static 'public/img/icon/os.svg' %}" alt="значёк операционной системы ( os )"></div>
+                                    <a href="javascript:void(0)" data-json="eyJOQU1FIjoiV2luZG93cyAxMCIsIlBJQ1RVUkUiOiJcL3VwbG9hZFwvaWJsb2NrXC8yODlcLzI4OTE5ZDI4MGQwMjk5ZWQ0OWQ4YjFiMDQ3NDRlZGI2LnBuZyIsIlBST1BFUlRJRVMiOltdfQ==" class="detalic__equipment-name-os js-output">{{product.operative_system}}</a>
+                                    <a href="javascript:void(0)" data-json="eyJOQU1FIjoiV2luZG93cyAxMCIsIlBJQ1RVUkUiOiJcL3VwbG9hZFwvaWJsb2NrXC8yODlcLzI4OTE5ZDI4MGQwMjk5ZWQ0OWQ4YjFiMDQ3NDRlZGI2LnBuZyIsIlBST1BFUlRJRVMiOltdfQ==" class="detalic__equipment-info js-output">
+                                <svg class="icon-info" width="19" height="19">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-info"></use>
+                                </svg>
+                            </a>
+                                </li>
+                            </ul>
+                            <div class="card">
+                                <a href="#" class="js-output-close card__close"></a>
+                                <div class="card__prev">
 
-                                <div class="card__prev-img" style="padding-top: 0 !important;">
-                                    <img class="desc_img" width="100%" height="100%"/>
+                                    <div class="card__prev-img" style="padding-top: 0 !important;">
+                                        <img class="desc_img" width="100%" height="100%"/>
+                                    </div>
+                                    <div class="card__prev-title" style="width: 100% ; word-break: keep-all; display: flex; justify-content: center; align-items: center;"></div>
+                                
                                 </div>
-                                <div class="card__prev-title" style="width: 100% ; word-break: keep-all; display: flex; justify-content: center; align-items: center;"></div>
-                                <!-- <dl class="card__prev-dl">
-                                    <dt class="card__prev-dt">{{product}}</dt>
-                                    <dd class="card__prev-dd">aleykum</dd>
-                                </dl>
-                                <dl class="card__prev-dl">
-                                    <dt class="card__prev-dt"></dt>
-                                    <dd class="card__prev-dd"></dd>
-                                </dl>
-                                <dl class="card__prev-dl">
-                                    <dt class="card__prev-dt"></dt>
-                                    <dd class="card__prev-dd"></dd>
-                                </dl>
-                                <dl class="card__prev-dl">
-                                    <dt class="card__prev-dt"></dt>
-                                    <dd class="card__prev-dd"></dd>
-                                </dl>
-                                <dl class="card__prev-dl">
-                                    <dt class="card__prev-dt"></dt>
-                                    <dd class="card__prev-dd"></dd>
-                                </dl>
-                                <dl class="card__prev-dl">
-                                    <dt class="card__prev-dt"></dt>
-                                    <dd class="card__prev-dd"></dd>
-                                </dl> -->
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </form>
 
 
             <div class="detalic__description tabs">
