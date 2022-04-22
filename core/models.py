@@ -155,3 +155,8 @@ class Slider(models.Model):
 
     def __str__(self):
         return f"{self.title}"
+
+
+class FAQ(models.Model):
+    questions = models.CharField(max_length=100)
+    answer = models.CharField(max_length=200)
