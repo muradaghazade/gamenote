@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView, ListView , DetailView , CreateView
-from .models import Product, Slider
+from .models import Product, Slider, FAQ
 
 
 class IndexView(TemplateView):
@@ -41,3 +41,15 @@ class ExpensiveProductsView(ListView):
     template_name = 'expensive-products.html'
     paginate_by = 8
     queryset = Product.objects.order_by("-price")
+
+class AboutView(TemplateView):
+    template_name = 'about.html'
+
+class FaqView(ListView):
+    model = FAQ
+    template_name = 'faq.html'
+    context_object_name = 'faqs'
+    queryset = FAQ.objects.order_by("id")
+
+class ReviewsView(TemplateView):
+    template_name = 'reviews.html'

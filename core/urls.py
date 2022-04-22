@@ -11,4 +11,7 @@ urlpatterns = [
     path('products/<slug:slug>', ProductDetailView.as_view(), name='product-detail'),
     path('budget-products/', CheapProductsView.as_view(), name='budget-products'),
     path('power-products/', ExpensiveProductsView.as_view(), name='power-products'),
+    path('about/', AboutView.as_view(), name='about'),
+    path('faq/', FaqView.as_view(), name='faq'),
+    path('reviews/', ReviewsView.as_view(), name='reviews'),
 ]
