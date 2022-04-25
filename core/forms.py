@@ -1,6 +1,9 @@
+from itertools import product
 from django import forms
 from core.models import *
 from django.db import models
+from django.forms import widgets
+
 
 
 class ProductVersionForm(forms.ModelForm):
@@ -17,6 +20,10 @@ class ProductVersionForm(forms.ModelForm):
         model = ProductVersion
         fields = ['product', 'ram', 'ssd', 'hdd', 'color', 'processor']
 
+
+    # def __init__(self, *args, **kwargs):
+    #         super().__init__(*args, **kwargs)
+    #         self.fields['processor'].widget = widgets.ChoiceWidget(attrs={"class": "select2-selection select2-selection--single"})    
         
         
         

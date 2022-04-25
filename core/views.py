@@ -1,6 +1,10 @@
-from django.shortcuts import render
+from cProfile import Profile
+from imp import reload
+from urllib import request
+from django.http import HttpResponse
+from django.shortcuts import redirect, render
 from django.views.generic import TemplateView, ListView , DetailView , CreateView
-from .models import Product, Slider, FAQ
+from .models import Product, ProductVersion, Slider, FAQ
 from django.views.generic.edit import FormMixin
 from .forms import ProductVersionForm
 
@@ -29,6 +33,14 @@ class ProductDetailView(FormMixin,DetailView):
     model = Product
     form_class = ProductVersionForm
     context_object_name = "product"
+
+    # def post(self, request, *args, **kwargs):
+    #     form = self.get_form()
+    #     if form.is_valid():
+	#         return self.form_valid(form)
+    #     else:
+    #         return self.form_invalid(form)
+
 
 
 class CheapProductsView(ListView):

@@ -2,6 +2,21 @@
 {% load static %}
 
 {% block content %}
+    <style>
+        .addtocard_btn{
+            width: 8%;
+            height: 40px;
+            margin-top: -20px;
+            margin-bottom: 50px;
+            margin-left: 52%;
+            background-color: #a7e200;
+            border: #1c232e solid;
+            color: #1c232e;
+            border-radius: 10px;
+            
+        }
+        
+    </style>
     <div id="panel">
     </div>
     <div class="page">
@@ -139,6 +154,7 @@
                 </div>
             </div>
             <form action="" method="post">
+                {% csrf_token %}
                 <div class="detalic__equipment">
                     <div class="detalic__inner inner">
                         <p class="detalic__equipment-title">Komplektatsiya</p>
@@ -171,7 +187,7 @@
                                     <p class="detalic__equipment-category">RAM</p>
                                     <div class="detalic__equipment-icon"><img src="{% static 'public/img/icon/ram.svg' %}" alt="значёк оперативной памяти ( ram )"></div>
                                     <a href="javascript:void(0)" data-json="eyJOQU1FIjoiOFx1MDQxM1x1MDQzMSBLaW5nc3RvbiBIeXBlclggRnVyeSAzMDAwXHUwNDFjXHUwNDEzXHUwNDQ2IiwiUElDVFVSRSI6IlwvdXBsb2FkXC9pYmxvY2tcL2I0ZlwvYjRmYjAyNWU4M2VjMjQ0NzM1NGQ0YmE3NWJiYTM3YTUucG5nIiwiUFJPUEVSVElFUyI6W3siTkFNRSI6Ilx1MDQyMlx1MDQzOFx1MDQzZiBcdTA0M2ZcdTA0MzBcdTA0M2NcdTA0NGZcdTA0NDJcdTA0MzgiLCJWQUxVRSI6IkREUi00In0seyJOQU1FIjoiXHUwNDI0XHUwNDNlXHUwNDQwXHUwNDNjLVx1MDQ0NFx1MDQzMFx1MDQzYVx1MDQ0Mlx1MDQzZVx1MDQ0MCIsIlZBTFVFIjoiRElNTSJ9LHsiTkFNRSI6Ilx1MDQyMlx1MDQzMFx1MDQzYVx1MDQ0Mlx1MDQzZVx1MDQzMlx1MDQzMFx1MDQ0ZiBcdTA0NDdcdTA0MzBcdTA0NDFcdTA0NDJcdTA0M2VcdTA0NDJcdTA0MzAiLCJWQUxVRSI6IjMwMDAgXHUwNDFjXHUwNDEzXHUwNDQ2In0seyJOQU1FIjoiXHUwNDFmXHUwNDQwXHUwNDNlXHUwNDNmXHUwNDQzXHUwNDQxXHUwNDNhXHUwNDNkXHUwNDMwXHUwNDRmIFx1MDQ0MVx1MDQzZlx1MDQzZVx1MDQ0MVx1MDQzZVx1MDQzMVx1MDQzZFx1MDQzZVx1MDQ0MVx1MDQ0Mlx1MDQ0YyIsIlZBTFVFIjoiMjQwMDAgXHUwNDFjXHUwNDMxXC9cdTA0NDEifSx7Ik5BTUUiOiJcdTA0MWRcdTA0MzBcdTA0M2ZcdTA0NDBcdTA0NGZcdTA0MzZcdTA0MzVcdTA0M2RcdTA0MzhcdTA0MzUgXHUwNDNmXHUwNDM4XHUwNDQyXHUwNDMwXHUwNDNkXHUwNDM4XHUwNDRmIiwiVkFMVUUiOiIxLjM1In1dfQ=="
-                                        class="detalic__equipment-name-ram js-output">{{product.rams.first}} {{product.rams.first.amount}}</a>
+                                        class="detalic__equipment-name-ram js-output">{{form.ram}}</a>
                                     <a href="javascript:void(0)" data-json="eyJOQU1FIjoiOFx1MDQxM1x1MDQzMSBLaW5nc3RvbiBIeXBlclggRnVyeSAzMDAwXHUwNDFjXHUwNDEzXHUwNDQ2IiwiUElDVFVSRSI6IlwvdXBsb2FkXC9pYmxvY2tcL2I0ZlwvYjRmYjAyNWU4M2VjMjQ0NzM1NGQ0YmE3NWJiYTM3YTUucG5nIiwiUFJPUEVSVElFUyI6W3siTkFNRSI6Ilx1MDQyMlx1MDQzOFx1MDQzZiBcdTA0M2ZcdTA0MzBcdTA0M2NcdTA0NGZcdTA0NDJcdTA0MzgiLCJWQUxVRSI6IkREUi00In0seyJOQU1FIjoiXHUwNDI0XHUwNDNlXHUwNDQwXHUwNDNjLVx1MDQ0NFx1MDQzMFx1MDQzYVx1MDQ0Mlx1MDQzZVx1MDQ0MCIsIlZBTFVFIjoiRElNTSJ9LHsiTkFNRSI6Ilx1MDQyMlx1MDQzMFx1MDQzYVx1MDQ0Mlx1MDQzZVx1MDQzMlx1MDQzMFx1MDQ0ZiBcdTA0NDdcdTA0MzBcdTA0NDFcdTA0NDJcdTA0M2VcdTA0NDJcdTA0MzAiLCJWQUxVRSI6IjMwMDAgXHUwNDFjXHUwNDEzXHUwNDQ2In0seyJOQU1FIjoiXHUwNDFmXHUwNDQwXHUwNDNlXHUwNDNmXHUwNDQzXHUwNDQxXHUwNDNhXHUwNDNkXHUwNDMwXHUwNDRmIFx1MDQ0MVx1MDQzZlx1MDQzZVx1MDQ0MVx1MDQzZVx1MDQzMVx1MDQzZFx1MDQzZVx1MDQ0MVx1MDQ0Mlx1MDQ0YyIsIlZBTFVFIjoiMjQwMDAgXHUwNDFjXHUwNDMxXC9cdTA0NDEifSx7Ik5BTUUiOiJcdTA0MWRcdTA0MzBcdTA0M2ZcdTA0NDBcdTA0NGZcdTA0MzZcdTA0MzVcdTA0M2RcdTA0MzhcdTA0MzUgXHUwNDNmXHUwNDM4XHUwNDQyXHUwNDMwXHUwNDNkXHUwNDM4XHUwNDRmIiwiVkFMVUUiOiIxLjM1In1dfQ=="
                                         class="detalic__equipment-info js-output">
                                 <svg class="icon-info" width="19" height="19">
@@ -184,7 +200,7 @@
                                     <p class="detalic__equipment-category">HDD</p>
                                     <div class="detalic__equipment-icon"><img src="{% static 'public/img/icon/hard-disk.svg' %}" alt="значёк жесткого диска ( hdd )"></div>
                                     <a href="javascript:void(0)" data-json="eyJOQU1FIjoiMSBcdTA0MjJcdTA0MzEgU2VhZ2F0ZSIsIlBJQ1RVUkUiOiJcL3VwbG9hZFwvaWJsb2NrXC80ZGVcLzRkZWUxYTA3NjhiN2ZmM2JkYjdiYmRmNjczNDM3OWI2LnBuZyIsIlBST1BFUlRJRVMiOlt7Ik5BTUUiOiJcdTA0MWVcdTA0MzFcdTA0NGFcdTA0MzVcdTA0M2MiLCJWQUxVRSI6IjEwMDAgXHUwNDEzXHUwNDMxIn1dfQ=="
-                                        class="detalic__equipment-name-hdd js-output">{{product.hdds.first}} {{product.hdds.first.amount}}</a>
+                                        class="detalic__equipment-name-hdd js-output">{{form.hdd}}</a>
                                     <a href="javascript:void(0)" data-json="eyJOQU1FIjoiMSBcdTA0MjJcdTA0MzEgU2VhZ2F0ZSIsIlBJQ1RVUkUiOiJcL3VwbG9hZFwvaWJsb2NrXC80ZGVcLzRkZWUxYTA3NjhiN2ZmM2JkYjdiYmRmNjczNDM3OWI2LnBuZyIsIlBST1BFUlRJRVMiOlt7Ik5BTUUiOiJcdTA0MWVcdTA0MzFcdTA0NGFcdTA0MzVcdTA0M2MiLCJWQUxVRSI6IjEwMDAgXHUwNDEzXHUwNDMxIn1dfQ=="
                                         class="detalic__equipment-info js-output">
                                 <svg class="icon-info" width="19" height="19">
@@ -196,7 +212,7 @@
                                     <p class="detalic__equipment-category">SSD</p>
                                     <div class="detalic__equipment-icon"><img src="{% static 'public/img/icon/ssd.svg' %}" alt="значёк твердотельного диска ( ssd )"></div>
                                     <a href="javascript:void(0)" data-json="eyJOQU1FIjoiMTIwIFx1MDQxM1x1MDQzMSBLaW5nc3RvbiIsIlBJQ1RVUkUiOiJcL3VwbG9hZFwvaWJsb2NrXC80NWNcLzQ1Y2E2ZDc1MGM0MzQzNWVhMzgxNTdkYjQ4NTkyZGQ2LnBuZyIsIlBST1BFUlRJRVMiOlt7Ik5BTUUiOiJcdTA0MTVcdTA0M2NcdTA0M2FcdTA0M2VcdTA0NDFcdTA0NDJcdTA0NGMiLCJWQUxVRSI6IjEyMCBcdTA0MTNcdTA0MzEifSx7Ik5BTUUiOiJcdTA0MjRcdTA0M2VcdTA0NDBcdTA0M2MtXHUwNDQ0XHUwNDMwXHUwNDNhXHUwNDQyXHUwNDNlXHUwNDQwIiwiVkFMVUUiOiIyLjVcdTAwMjZxdW90OyJ9LHsiTkFNRSI6Ilx1MDQyMlx1MDQzOFx1MDQzZiBcdTA0NDRcdTA0M2JcdTA0NGRcdTA0NDgtXHUwNDNmXHUwNDMwXHUwNDNjXHUwNDRmXHUwNDQyXHUwNDM4IiwiVkFMVUUiOiJUTEMifSx7Ik5BTUUiOiJcdTA0MWNcdTA0MzBcdTA0M2FcdTA0NDEuIFx1MDQ0MVx1MDQzYVx1MDQzZVx1MDQ0MFx1MDQzZVx1MDQ0MVx1MDQ0Mlx1MDQ0YyBcdTA0MzhcdTA0M2RcdTA0NDJcdTA0MzVcdTA0NDBcdTA0NDRcdTA0MzVcdTA0MzlcdTA0NDFcdTA0MzAiLCJWQUxVRSI6IjYwMCBcdTA0MWNcdTA0MTFcL1x1MDQ0MSJ9LHsiTkFNRSI6Ilx1MDQyMVx1MDQzYVx1MDQzZVx1MDQ0MFx1MDQzZVx1MDQ0MVx1MDQ0Mlx1MDQ0YyBcdTA0NDdcdTA0NDJcdTA0MzVcdTA0M2RcdTA0MzhcdTA0NGYiLCJWQUxVRSI6IjU1MCBcdTA0MWNcdTA0MzFcL1x1MDQ0MVx1MDQzNVx1MDQzYSJ9LHsiTkFNRSI6Ilx1MDQyMVx1MDQzYVx1MDQzZVx1MDQ0MFx1MDQzZVx1MDQ0MVx1MDQ0Mlx1MDQ0YyBcdTA0MzdcdTA0MzBcdTA0M2ZcdTA0MzhcdTA0NDFcdTA0MzgiLCJWQUxVRSI6IjM1MCBcdTA0MWNcdTA0MzFcL1x1MDQ0MVx1MDQzNVx1MDQzYSJ9XX0="
-                                        class="detalic__equipment-name-ssd js-output">{{product.ssds.first}} {{product.ssds.first.amount}}</a>
+                                        class="detalic__equipment-name-ssd js-output">{{form.ssd}}</a>
                                     <a href="javascript:void(0)" data-json="eyJOQU1FIjoiMTIwIFx1MDQxM1x1MDQzMSBLaW5nc3RvbiIsIlBJQ1RVUkUiOiJcL3VwbG9hZFwvaWJsb2NrXC80NWNcLzQ1Y2E2ZDc1MGM0MzQzNWVhMzgxNTdkYjQ4NTkyZGQ2LnBuZyIsIlBST1BFUlRJRVMiOlt7Ik5BTUUiOiJcdTA0MTVcdTA0M2NcdTA0M2FcdTA0M2VcdTA0NDFcdTA0NDJcdTA0NGMiLCJWQUxVRSI6IjEyMCBcdTA0MTNcdTA0MzEifSx7Ik5BTUUiOiJcdTA0MjRcdTA0M2VcdTA0NDBcdTA0M2MtXHUwNDQ0XHUwNDMwXHUwNDNhXHUwNDQyXHUwNDNlXHUwNDQwIiwiVkFMVUUiOiIyLjVcdTAwMjZxdW90OyJ9LHsiTkFNRSI6Ilx1MDQyMlx1MDQzOFx1MDQzZiBcdTA0NDRcdTA0M2JcdTA0NGRcdTA0NDgtXHUwNDNmXHUwNDMwXHUwNDNjXHUwNDRmXHUwNDQyXHUwNDM4IiwiVkFMVUUiOiJUTEMifSx7Ik5BTUUiOiJcdTA0MWNcdTA0MzBcdTA0M2FcdTA0NDEuIFx1MDQ0MVx1MDQzYVx1MDQzZVx1MDQ0MFx1MDQzZVx1MDQ0MVx1MDQ0Mlx1MDQ0YyBcdTA0MzhcdTA0M2RcdTA0NDJcdTA0MzVcdTA0NDBcdTA0NDRcdTA0MzVcdTA0MzlcdTA0NDFcdTA0MzAiLCJWQUxVRSI6IjYwMCBcdTA0MWNcdTA0MTFcL1x1MDQ0MSJ9LHsiTkFNRSI6Ilx1MDQyMVx1MDQzYVx1MDQzZVx1MDQ0MFx1MDQzZVx1MDQ0MVx1MDQ0Mlx1MDQ0YyBcdTA0NDdcdTA0NDJcdTA0MzVcdTA0M2RcdTA0MzhcdTA0NGYiLCJWQUxVRSI6IjU1MCBcdTA0MWNcdTA0MzFcL1x1MDQ0MVx1MDQzNVx1MDQzYSJ9LHsiTkFNRSI6Ilx1MDQyMVx1MDQzYVx1MDQzZVx1MDQ0MFx1MDQzZVx1MDQ0MVx1MDQ0Mlx1MDQ0YyBcdTA0MzdcdTA0MzBcdTA0M2ZcdTA0MzhcdTA0NDFcdTA0MzgiLCJWQUxVRSI6IjM1MCBcdTA0MWNcdTA0MzFcL1x1MDQ0MVx1MDQzNVx1MDQzYSJ9XX0="
                                         class="detalic__equipment-info js-output">
                                 <svg class="icon-info" width="19" height="19">
@@ -242,6 +258,7 @@
                         </div>
                     </div>
                 </div>
+                <button type="submit" class="addtocard_btn">Səbətə At</button>
             </form>
 
 
