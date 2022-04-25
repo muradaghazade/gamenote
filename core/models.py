@@ -178,3 +178,7 @@ class ProductVersion(models.Model):
 
     def __str__(self):
         return f"{self.product.title}"
+
+class Reviews(models.Model):
+    author_name = models.CharField(max_length=50)
+    comments = models.TextField(max_length=200)
