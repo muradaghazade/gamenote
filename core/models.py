@@ -179,6 +179,8 @@ class ProductVersion(models.Model):
     def __str__(self):
         return f"{self.product.title}"
 
-class Reviews(models.Model):
+class Review(models.Model):
     author_name = models.CharField(max_length=50)
     comments = models.TextField(max_length=200)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)

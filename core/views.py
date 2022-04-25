@@ -4,7 +4,7 @@ from urllib import request
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from django.views.generic import TemplateView, ListView , DetailView , CreateView
-from .models import Product, ProductVersion, Slider, FAQ
+from .models import Product, ProductVersion, Review, Slider, FAQ
 from django.views.generic.edit import FormMixin
 from .forms import ProductVersionForm
 
@@ -67,5 +67,8 @@ class FaqView(ListView):
     context_object_name = 'faqs'
     queryset = FAQ.objects.order_by("id")
 
-class ReviewsView(TemplateView):
+class ReviewsView(ListView):
+    model = Review
     template_name = 'reviews.html'
+    queryset = Review.objects.order_by("-id")
+    context_object_name = 'reviews'
