@@ -223,7 +223,7 @@
                     {% for game in games|slice:"0:2" %}
 
                     <li class="games__li games__li--big" data-id="901" id="bx_3218110189_901">
-                        <a href="{% url 'game-product' game.slug %}" class="games__li-link">
+                        <a href="{% url 'core:game-product' game.slug %}" class="games__li-link">
                             <picture class="games__li-img-picture">
                                 <img src="/media/{{game.image}}" alt="Компьютер под игру Cyberpunk 2077" title="Компьютер под игру Cyberpunk 2077" class="lazzyload games__li-img lazyload">
                             </picture>
@@ -239,7 +239,7 @@
                     
                     {% for game in games|slice:"2:6" %}
                     <li class="games__li " data-id="903" id="bx_3218110189_903">
-                        <a href="/game/wot/" class="games__li-link">
+                        <a href="{% url 'core:game-product' game.slug %}" class="games__li-link">
                             <picture class="games__li-img-picture">
                                 <img src="/media/{{game.image}}" alt="Компьютер под игру Cyberpunk 2077" title="Компьютер под игру Cyberpunk 2077" class="lazzyload games__li-img lazyload">
                             </picture>

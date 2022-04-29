@@ -76,6 +76,7 @@ class GameView(ListView):
     queryset = Game.objects.order_by("-id")
     context_object_name = 'games'
 
-class GameViewDetail(ListView):
+class GameViewDetail(DetailView):
     model = Game
     template_name = 'game-products.html'
+    context_object_name = "product"

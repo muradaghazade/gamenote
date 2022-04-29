@@ -174,7 +174,7 @@ class ProductVersion(models.Model):
 
     class Meta:
         verbose_name = 'ProductVersion'
-        verbose_name_plural = 'ProductVersion'
+        verbose_name_plural = 'ProductVersions'
 
     def __str__(self):
         return f"{self.product.title}"
@@ -185,6 +185,13 @@ class Review(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    class Meta:
+        verbose_name = 'Review'
+        verbose_name_plural = 'Reviews'
+
+    def __str__(self):
+        return f"{self.author_name}"
+
 
 class Game(models.Model):
     title = models.CharField(max_length=50)
@@ -192,3 +199,15 @@ class Game(models.Model):
     description = models.CharField(max_length=500)
     products = models.ManyToManyField(Product, db_index=True, related_name='games', null=True, blank=True)
     slug = models.SlugField(max_length=255, null=True, blank=True)
+
+    def __str__(self):
+        return f"{self.title}"
+
+    def save(self, *args, **kwargs):
+        super(Game, self).save(*args, **kwargs)
+        self.slug = f'{slugify(self.title)}-{self.id}'
+        super(Game, self).save(*args, **kwargs)
+
+    class Meta:
+        verbose_name = 'Game'
+        verbose_name_plural = 'Games'
