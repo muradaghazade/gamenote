@@ -194,15 +194,15 @@
                 <h4 class="features__title">Настольные ПК для современных игровых приложений</h4>
                 <ul class="features__list">
                     <li class="features__li">
-                        <i class="features__star"></i>
+                        <i class="features__star" style="background-image: url('{% static 'public/img/icon/star.svg' %}');"></i>
                         <p class="features__text">Продажа компьютеров для игр Pubg, CS:GO, Minecraft, Fortnite, GTA5 от EDELWEISS</p>
                     </li>
                     <li class="features__li">
-                        <i class="features__star"></i>
+                        <i class="features__star" style="background-image: url('{% static 'public/img/icon/star.svg' %}');"></i>
                         <p class="features__text">Подбор геймерского компьютера под параметры современных ресурсоёмких игр</p>
                     </li>
                     <li class="features__li">
-                        <i class="features__star"></i>
+                        <i class="features__star" style="background-image: url('{% static 'public/img/icon/star.svg' %}');"></i>
                         <p class="features__text">Мощные графические видеокарты, реализация максимального FPS, философия настоящего гейминга</p>
                     </li>
                 </ul>
@@ -219,300 +219,80 @@
         <div class="games__inner inner">
             <div class="games__wrapper">
                 <ul class="games__list">
+
+                    {% for game in games|slice:"0:2" %}
+
                     <li class="games__li games__li--big" data-id="901" id="bx_3218110189_901">
-                        <a href="/game/cyberpunk-2077/" class="games__li-link">
-                            <div class="games__li-view hide">0</div>
+                        <a href="{% url 'game-product' game.slug %}" class="games__li-link">
                             <picture class="games__li-img-picture">
-                                <img srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" src="/upload/iblock/660/66044622bd51befa4b0e276c0aa830ca.jpg" alt="Компьютер под игру Cyberpunk 2077" title="Компьютер под игру Cyberpunk 2077" class="lazzyload games__li-img lazyload">
+                                <img src="/media/{{game.image}}" alt="Компьютер под игру Cyberpunk 2077" title="Компьютер под игру Cyberpunk 2077" class="lazzyload games__li-img lazyload">
                             </picture>
 
                             <div class="games__li-box-big">
                                 <div class="games__li-box-big-content">
-                                    <p class="games__li-name">Cyberpunk 2077</p>
-
-                                    <p class="games__li-big-price">
-                                        <span class="games__li-big-price-span"><span class="games__li-price-span-desc">Мин. комплектация</span> от 90 000</span>
-                                        <img src="/local/templates/main/img/icon/rub.svg" class="games__li-big-price-icon" alt="Национальная валюта рубли">
-                                    </p>
+                                    <p class="games__li-name">{{game.title}}</p>
                                 </div>
                             </div>
                         </a>
                     </li>
-                    <li class="games__li games__li--big" data-id="870" id="bx_3218110189_870">
-                        <a href="/game/pubg/" class="games__li-link">
-                            <div class="games__li-view hide">0</div>
-                            <picture class="games__li-img-picture">
-                                <img srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" src="/upload/iblock/381/381451a1e095df25010c69f26e55bcda.jpg" alt="Компьютер под игру PUBG" title="Компьютер под игру PUBG" class="lazzyload games__li-img lazyload">
-                            </picture>
-
-                            <div class="games__li-box-big">
-                                <div class="games__li-box-big-content">
-                                    <p class="games__li-name">PUBG</p>
-
-                                    <p class="games__li-big-price">
-                                        <span class="games__li-big-price-span"><span class="games__li-price-span-desc">Мин. комплектация</span> от 80 000</span>
-                                        <img src="/local/templates/main/img/icon/rub.svg" class="games__li-big-price-icon" alt="Национальная валюта рубли">
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
+                    {% endfor %}
+                    
+                    {% for game in games|slice:"2:6" %}
                     <li class="games__li " data-id="903" id="bx_3218110189_903">
                         <a href="/game/wot/" class="games__li-link">
-                            <div class="games__li-view hide">0</div>
                             <picture class="games__li-img-picture">
-                                <img srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" src="/upload/resize_cache/iblock/69c/320_424_1/69cb938f7945d921ac8f414b06382a06.jpg" alt="Компьютер под игру World of Tanks" title="Компьютер под игру World of Tanks"
-                                    class="lazzyload games__li-img lazyload">
+                                <img src="/media/{{game.image}}" alt="Компьютер под игру Cyberpunk 2077" title="Компьютер под игру Cyberpunk 2077" class="lazzyload games__li-img lazyload">
                             </picture>
 
                             <div class="games__li-box-big">
                                 <div class="games__li-box-big-content">
-                                    <p class="games__li-name">World of Tanks</p>
-
-                                    <p class="games__li-big-price">
-                                        <span class="games__li-big-price-span"><span class="games__li-price-span-desc">Мин. комплектация</span> от 40 000</span>
-                                        <img src="/local/templates/main/img/icon/rub.svg" class="games__li-big-price-icon" alt="Национальная валюта рубли">
-                                    </p>
+                                    <p class="games__li-name">{{game.title}}</p>
                                 </div>
                             </div>
                         </a>
                     </li>
-                    <li class="games__li " data-id="904" id="bx_3218110189_904">
-                        <a href="/game/dota-2/" class="games__li-link">
-                            <div class="games__li-view hide">0</div>
-                            <picture class="games__li-img-picture">
-                                <img srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" src="/upload/resize_cache/iblock/03b/320_424_1/03ba669303fd16fb4e6ce940476d833c.jpg" alt="Компьютер под игру DOTA 2" title="Компьютер под игру DOTA 2" class="lazzyload games__li-img lazyload">
-                            </picture>
+                    {% endfor %}
+                    
 
-                            <div class="games__li-box-big">
-                                <div class="games__li-box-big-content">
-                                    <p class="games__li-name">DOTA 2</p>
-
-                                    <p class="games__li-big-price">
-                                        <span class="games__li-big-price-span"><span class="games__li-price-span-desc">Мин. комплектация</span> от 35 000</span>
-                                        <img src="/local/templates/main/img/icon/rub.svg" class="games__li-big-price-icon" alt="Национальная валюта рубли">
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="games__li " data-id="905" id="bx_3218110189_905">
-                        <a href="/game/cs-go/" class="games__li-link">
-                            <div class="games__li-view hide">0</div>
-                            <picture class="games__li-img-picture">
-                                <img srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" src="/upload/resize_cache/iblock/0b0/320_424_1/0b0bda7ea5b1d28ee8299785b1a8072a.jpg" alt="Компьютер под игру CS:GO" title="Компьютер под игру CS:GO" class="lazzyload games__li-img lazyload">
-                            </picture>
-
-                            <div class="games__li-box-big">
-                                <div class="games__li-box-big-content">
-                                    <p class="games__li-name">CS:GO</p>
-
-                                    <p class="games__li-big-price">
-                                        <span class="games__li-big-price-span"><span class="games__li-price-span-desc">Мин. комплектация</span> от 50 000</span>
-                                        <img src="/local/templates/main/img/icon/rub.svg" class="games__li-big-price-icon" alt="Национальная валюта рубли">
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="games__li " data-id="906" id="bx_3218110189_906">
-                        <a href="/game/minecraft/" class="games__li-link">
-                            <div class="games__li-view hide">0</div>
-                            <picture class="games__li-img-picture">
-                                <img srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" src="/upload/resize_cache/iblock/d3f/320_424_1/d3f90ab0ed257925e9befcb2081f411e.jpg" alt="Компьютер под игру Minecraft" title="Компьютер под игру Minecraft" class="lazzyload games__li-img lazyload">
-                            </picture>
-
-                            <div class="games__li-box-big">
-                                <div class="games__li-box-big-content">
-                                    <p class="games__li-name">Minecraft</p>
-
-                                    <p class="games__li-big-price">
-                                        <span class="games__li-big-price-span"><span class="games__li-price-span-desc">Мин. комплектация</span> от 35 000</span>
-                                        <img src="/local/templates/main/img/icon/rub.svg" class="games__li-big-price-icon" alt="Национальная валюта рубли">
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
+                    {% for game in games|slice:"6:8" %}
                     <li class="games__li games__li--big" data-id="907" id="bx_3218110189_907">
                         <a href="/game/fortnite/" class="games__li-link">
                             <div class="games__li-view hide">0</div>
                             <picture class="games__li-img-picture">
-                                <img srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" src="/upload/iblock/b32/b32846efea2b6b2af4220ae9aa8bb2f7.jpg" alt="Компьютер под игру Fortnite" title="Компьютер под игру Fortnite" class="lazzyload games__li-img lazyload">
+                                <img src="/media/{{game.image}}" alt="Компьютер под игру Cyberpunk 2077" title="Компьютер под игру Cyberpunk 2077" class="lazzyload games__li-img lazyload">
                             </picture>
 
                             <div class="games__li-box-big">
                                 <div class="games__li-box-big-content">
-                                    <p class="games__li-name">Fortnite</p>
+                                    <p class="games__li-name">{{game.title}}</p>
 
                                 </div>
                             </div>
                         </a>
                     </li>
-                    <li class="games__li games__li--big" data-id="908" id="bx_3218110189_908">
-                        <a href="/game/rdr2/" class="games__li-link">
-                            <div class="games__li-view hide">0</div>
-                            <picture class="games__li-img-picture">
-                                <img srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" src="/upload/iblock/1df/1dfaec53810f7e27f3565fd446a0c374.jpg" alt="Компьютер под игру RDR2" title="Компьютер под игру RDR2" class="lazzyload games__li-img lazyload">
-                            </picture>
-
-                            <div class="games__li-box-big">
-                                <div class="games__li-box-big-content">
-                                    <p class="games__li-name">RDR2</p>
-
-                                </div>
-                            </div>
-                        </a>
-                    </li>
+                    {% endfor %}
+                    
+                    {% for game in games|slice:"8:" %}
                     <li class="games__li " data-id="909" id="bx_3218110189_909">
                         <a href="/game/rust/" class="games__li-link">
                             <div class="games__li-view hide">0</div>
                             <picture class="games__li-img-picture">
-                                <img srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" src="/upload/resize_cache/iblock/57f/320_424_1/57f25896afdb43bdec6adec7b9ddff12.jpg" alt="Компьютер под игру Rust" title="Компьютер под игру Rust" class="lazzyload games__li-img lazyload">
+                                <img src="/media/{{game.image}}" alt="Компьютер под игру Cyberpunk 2077" title="Компьютер под игру Cyberpunk 2077" class="lazzyload games__li-img lazyload">
                             </picture>
 
                             <div class="games__li-box-big">
                                 <div class="games__li-box-big-content">
-                                    <p class="games__li-name">Rust</p>
+                                    <p class="games__li-name">{{game.title}}</p>
 
                                 </div>
                             </div>
                         </a>
                     </li>
-                    <li class="games__li " data-id="910" id="bx_3218110189_910">
-                        <a href="/game/gta-v/" class="games__li-link">
-                            <div class="games__li-view hide">0</div>
-                            <picture class="games__li-img-picture">
-                                <img srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" src="/upload/resize_cache/iblock/18f/320_424_1/18f88adac3fb855834f5243dfab7970e.jpg" alt="Компьютер под игру GTA V" title="Компьютер под игру GTA V" class="lazzyload games__li-img lazyload">
-                            </picture>
+                    {% endfor %}
 
-                            <div class="games__li-box-big">
-                                <div class="games__li-box-big-content">
-                                    <p class="games__li-name">GTA V</p>
 
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="games__li " data-id="911" id="bx_3218110189_911">
-                        <a href="/game/warface/" class="games__li-link">
-                            <div class="games__li-view hide">0</div>
-                            <picture class="games__li-img-picture">
-                                <img srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" src="/upload/resize_cache/iblock/bcd/320_424_1/bcdf01410cf591bf0a6bfc00f2862e95.jpg" alt="Компьютер под игру Warface" title="Компьютер под игру Warface" class="lazzyload games__li-img lazyload">
-                            </picture>
 
-                            <div class="games__li-box-big">
-                                <div class="games__li-box-big-content">
-                                    <p class="games__li-name">Warface</p>
-
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="games__li " data-id="912" id="bx_3218110189_912">
-                        <a href="/game/overwatch/" class="games__li-link">
-                            <div class="games__li-view hide">0</div>
-                            <picture class="games__li-img-picture">
-                                <img srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" src="/upload/resize_cache/iblock/9da/320_424_1/9da35525782c1c05febd295dc548e0c8.jpg" alt="Компьютер под игру Overwatch" title="Компьютер под игру Overwatch" class="lazzyload games__li-img lazyload">
-                            </picture>
-
-                            <div class="games__li-box-big">
-                                <div class="games__li-box-big-content">
-                                    <p class="games__li-name">Overwatch</p>
-
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="games__li games__li--big" data-id="913" id="bx_3218110189_913">
-                        <a href="/game/world-of-warcraft/" class="games__li-link">
-                            <div class="games__li-view hide">0</div>
-                            <picture class="games__li-img-picture">
-                                <img srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" src="/upload/iblock/749/74931d17ec26aa0a1e73911e1c094f8b.jpg" alt="Компьютер под игру World of Warcraft" title="Компьютер под игру World of Warcraft" class="lazzyload games__li-img lazyload">
-                            </picture>
-
-                            <div class="games__li-box-big">
-                                <div class="games__li-box-big-content">
-                                    <p class="games__li-name">World of Warcraft</p>
-
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="games__li games__li--big" data-id="914" id="bx_3218110189_914">
-                        <a href="/game/apex-legends/" class="games__li-link">
-                            <div class="games__li-view hide">0</div>
-                            <picture class="games__li-img-picture">
-                                <img srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" src="/upload/iblock/7e7/7e7bdcec06914908d87d9cc378d8a3da.jpg" alt="Компьютер под игру Apex Legends" title="Компьютер под игру Apex Legends" class="lazzyload games__li-img lazyload">
-                            </picture>
-
-                            <div class="games__li-box-big">
-                                <div class="games__li-box-big-content">
-                                    <p class="games__li-name">Apex Legends</p>
-
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="games__li " data-id="33947" id="bx_3218110189_33947">
-                        <a href="/game/escape-from-tarkov/" class="games__li-link">
-                            <div class="games__li-view hide">0</div>
-                            <picture class="games__li-img-picture">
-                                <img srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" src="/upload/resize_cache/iblock/a46/320_424_1/2fxququl7oenr617w5a0qvcn57hv6wql.jpg" alt="Компьютер под игру Escape from Tarkov" title="Компьютер под игру Escape from Tarkov"
-                                    class="lazzyload games__li-img lazyload">
-                            </picture>
-
-                            <div class="games__li-box-big">
-                                <div class="games__li-box-big-content">
-                                    <p class="games__li-name">Escape from Tarkov</p>
-
-                                    <p class="games__li-big-price">
-                                        <span class="games__li-big-price-span"><span class="games__li-price-span-desc">Мин. комплектация</span> от 100 000</span>
-                                        <img src="/local/templates/main/img/icon/rub.svg" class="games__li-big-price-icon" alt="Национальная валюта рубли">
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="games__li " data-id="41407" id="bx_3218110189_41407">
-                        <a href="/game/dying-light-2/" class="games__li-link">
-                            <div class="games__li-view hide">0</div>
-                            <picture class="games__li-img-picture">
-                                <img srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" src="/upload/resize_cache/iblock/79e/320_424_1/nsje4v95yt1n8m6mweg1ja4q96x4nfon.jpg" alt="Компьютер под игру Dying Light 2" title="Компьютер под игру Dying Light 2"
-                                    class="lazzyload games__li-img lazyload">
-                            </picture>
-
-                            <div class="games__li-box-big">
-                                <div class="games__li-box-big-content">
-                                    <p class="games__li-name">Dying Light 2</p>
-
-                                    <p class="games__li-big-price">
-                                        <span class="games__li-big-price-span"><span class="games__li-price-span-desc">Мин. комплектация</span> от 90 000</span>
-                                        <img src="/local/templates/main/img/icon/rub.svg" class="games__li-big-price-icon" alt="Национальная валюта рубли">
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="games__li " data-id="41486" id="bx_3218110189_41486">
-                        <a href="/game/elden-ring/" class="games__li-link">
-                            <div class="games__li-view hide">0</div>
-                            <picture class="games__li-img-picture">
-                                <img srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" src="/upload/resize_cache/iblock/178/320_424_1/y0hb933dsb65kmaotaq9qwwxb6nv1lrz.jpg" alt="Компьютер под игру Elden Ring" title="Компьютер под игру Elden Ring" class="lazzyload games__li-img lazyload">
-                            </picture>
-
-                            <div class="games__li-box-big">
-                                <div class="games__li-box-big-content">
-                                    <p class="games__li-name">Elden Ring</p>
-
-                                    <p class="games__li-big-price">
-                                        <span class="games__li-big-price-span"><span class="games__li-price-span-desc">Мин. комплектация</span> от 90 000</span>
-                                        <img src="/local/templates/main/img/icon/rub.svg" class="games__li-big-price-icon" alt="Национальная валюта рубли">
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
+                    
                 </ul>
             </div>
         </div>

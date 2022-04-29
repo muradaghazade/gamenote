@@ -191,3 +191,4 @@ class Game(models.Model):
     image = models.ImageField('Image',upload_to='images/', null=True, blank=True)
     description = models.CharField(max_length=500)
     products = models.ManyToManyField(Product, db_index=True, related_name='games', null=True, blank=True)
+    slug = models.SlugField(max_length=255, null=True, blank=True)

@@ -15,4 +15,5 @@ urlpatterns = [
     path('faq/', FaqView.as_view(), name='faq'),
     path('reviews/', ReviewsView.as_view(), name='reviews'),
     path('games/', GameView.as_view(), name="games"),
+    path('games/<slug:slug>', GameViewDetail.as_view(), name="game-product")
 ]
