@@ -2,7 +2,7 @@ from re import search
 from django.contrib import admin
 from .models import *
 
-admin.site.register([Ram, SSD, HDD, Brand, Color, Processor, Image, Slider, FAQ, ProductVersion, Review])
+admin.site.register([Ram, SSD, HDD, Brand, Color, Processor, Image, Slider, FAQ, ProductVersion, Review, Game])
 
 class ProductImageInline(admin.TabularInline):
     model = Image
@@ -21,6 +21,9 @@ class ProcessorInline(admin.TabularInline):
 
 class ReviewInLine(admin.TabularInline):
     model = Review
+
+class GameInLine(admin.TabularInline):
+    model = Game
 
 class ProductAdmin(admin.ModelAdmin):
     inlines = [ProductImageInline, RamInline, SSDInline, HDDInline, ProcessorInline]

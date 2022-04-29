@@ -1,10 +1,7 @@
-from cProfile import Profile
-from imp import reload
-from urllib import request
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from django.views.generic import TemplateView, ListView , DetailView , CreateView
-from .models import Product, ProductVersion, Review, Slider, FAQ
+from .models import Game, Product, ProductVersion, Review, Slider, FAQ
 from django.views.generic.edit import FormMixin
 from .forms import ProductVersionForm
 
@@ -72,3 +69,13 @@ class ReviewsView(ListView):
     template_name = 'reviews.html'
     queryset = Review.objects.order_by("-id")
     context_object_name = 'reviews'
+
+class GameView(ListView):
+    model = Game
+    template_name = 'games.html'
+    queryset = Game.objects.order_by("-id")
+    context_object_name = 'games'
+
+class GameViewDetail(ListView):
+    model = Game
+    template_name = 'game-products.html'

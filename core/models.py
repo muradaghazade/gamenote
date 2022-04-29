@@ -184,3 +184,11 @@ class Review(models.Model):
     comments = models.TextField(max_length=200)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+
+class Game(models.Model):
+    title = models.CharField(max_length=50)
+    image = models.ImageField('Image',upload_to='images/', null=True, blank=True)
+    description = models.CharField(max_length=500)
+    products = models.ManyToManyField(Product, db_index=True, related_name='games', null=True, blank=True)
+    slug = models.SlugField(max_length=255, null=True, blank=True)
