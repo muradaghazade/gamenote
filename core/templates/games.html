@@ -256,7 +256,7 @@
 
                     {% for game in games|slice:"6:8" %}
                     <li class="games__li games__li--big" data-id="907" id="bx_3218110189_907">
-                        <a href="/game/fortnite/" class="games__li-link">
+                        <a href="{% url 'core:game-product' game.slug %}" class="games__li-link">
                             <div class="games__li-view hide">0</div>
                             <picture class="games__li-img-picture">
                                 <img src="/media/{{game.image}}" alt="Компьютер под игру Cyberpunk 2077" title="Компьютер под игру Cyberpunk 2077" class="lazzyload games__li-img lazyload">
@@ -274,7 +274,7 @@
                     
                     {% for game in games|slice:"8:" %}
                     <li class="games__li " data-id="909" id="bx_3218110189_909">
-                        <a href="/game/rust/" class="games__li-link">
+                        <a href="{% url 'core:game-product' game.slug %}" class="games__li-link">
                             <div class="games__li-view hide">0</div>
                             <picture class="games__li-img-picture">
                                 <img src="/media/{{game.image}}" alt="Компьютер под игру Cyberpunk 2077" title="Компьютер под игру Cyberpunk 2077" class="lazzyload games__li-img lazyload">

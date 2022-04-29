@@ -14,6 +14,7 @@ class IndexView(TemplateView):
         context = super().get_context_data(**kwargs)
         context['products'] = Product.objects.order_by("-id")
         context['sliders'] = Slider.objects.order_by("-id")
+        context['games'] = Game.objects.order_by("-id")
         return context
 
 
@@ -79,4 +80,14 @@ class GameView(ListView):
 class GameViewDetail(DetailView):
     model = Game
     template_name = 'game-products.html'
-    context_object_name = "product"
+    context_object_name = "game"
+
+
+class SupportView(TemplateView):
+    template_name = 'support.html'
+
+class DeliveryView(TemplateView):
+    template_name = 'delivery.html'
+
+class GuarantyView(TemplateView):
+    template_name = 'guaranty.html'

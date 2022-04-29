@@ -15,5 +15,8 @@ urlpatterns = [
     path('faq/', FaqView.as_view(), name='faq'),
     path('reviews/', ReviewsView.as_view(), name='reviews'),
     path('games/', GameView.as_view(), name="games"),
-    path('games/<slug:slug>', GameViewDetail.as_view(), name="game-product")
+    path('games/<slug:slug>', GameViewDetail.as_view(), name="game-product"),
+    path('support', SupportView.as_view(), name='support'),
+    path('delivery', DeliveryView.as_view(), name='delivery'),
+    path('guaranty', GuarantyView.as_view(), name='guaranty'),
 ]

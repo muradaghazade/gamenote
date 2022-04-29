@@ -977,161 +977,25 @@
                         <div class="games__wrapper">
                             <ul class="games__list">
 
+                                {% for game in games %}
+
                                 <li class="games__li " id="bx_3218110189_901">
-                                    <a href="/game/cyberpunk-2077/" class="games__li-link">
+                                    <a href="{% url 'core:game-product' game.slug %}" class="games__li-link">
 
                                         <div class="games__li-img-box">
                                             <picture class="games__li-img-picture">
-                                                <img srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" src="/upload/resize_cache/iblock/1c9/200_355_1/1c95ad00485bad6a6566f4c329b0df3c.jpg" alt="Компьютер под игру Cyberpunk 2077" class="games__li-img lazzyload">
+                                                <img src="/media/{{game.image}}" alt="Компьютер под игру Cyberpunk 2077" class="games__li-img lazzyload">
                                             </picture>
                                         </div>
 
                                         <div class="games__li-box">
-                                            <p class="games__li-name">Cyberpunk 2077</p>
-                                            <p class="games__li-price">
-                                                <span class="games__li-price-span">от 90 000</span>
-                                                <span class="games__li-price-icon-box">
-												<img src="/local/templates/main/img/icon/rub.svg"
-                                                     class="games__li-price-icon"
-                                                     alt="">
-												<img src="/local/templates/main/img/icon/rubHover.svg"
-                                                     class="games__li-price-icon games__li-price-icon-hover"
-                                                     alt="">
-											</span>
-                                            </p>
+                                            <p class="games__li-name">{{game.title}}</p>
                                         </div>
                                     </a>
                                 </li>
+                                {% endfor %}
 
-                                <li class="games__li " id="bx_3218110189_870">
-                                    <a href="/game/pubg/" class="games__li-link">
-
-                                        <div class="games__li-img-box">
-                                            <picture class="games__li-img-picture">
-                                                <img srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" src="/upload/resize_cache/iblock/c1c/200_355_1/c1c8948308042f30020ce7dfafa36d50.png" alt="Компьютер под игру PUBG" class="games__li-img lazzyload">
-                                            </picture>
-                                        </div>
-
-                                        <div class="games__li-box">
-                                            <p class="games__li-name">PUBG</p>
-                                            <p class="games__li-price">
-                                                <span class="games__li-price-span">от 80 000</span>
-                                                <span class="games__li-price-icon-box">
-												<img src="/local/templates/main/img/icon/rub.svg"
-                                                     class="games__li-price-icon"
-                                                     alt="">
-												<img src="/local/templates/main/img/icon/rubHover.svg"
-                                                     class="games__li-price-icon games__li-price-icon-hover"
-                                                     alt="">
-											</span>
-                                            </p>
-                                        </div>
-                                    </a>
-                                </li>
-
-                                <li class="games__li " id="bx_3218110189_903">
-                                    <a href="/game/wot/" class="games__li-link">
-
-                                        <div class="games__li-img-box">
-                                            <picture class="games__li-img-picture">
-                                                <img srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" src="/upload/resize_cache/iblock/69c/200_355_1/69cb938f7945d921ac8f414b06382a06.jpg" alt="Компьютер под игру World of Tanks" class="games__li-img lazzyload">
-                                            </picture>
-                                        </div>
-
-                                        <div class="games__li-box">
-                                            <p class="games__li-name">World of Tanks</p>
-                                            <p class="games__li-price">
-                                                <span class="games__li-price-span">от 40 000</span>
-                                                <span class="games__li-price-icon-box">
-												<img src="/local/templates/main/img/icon/rub.svg"
-                                                     class="games__li-price-icon"
-                                                     alt="">
-												<img src="/local/templates/main/img/icon/rubHover.svg"
-                                                     class="games__li-price-icon games__li-price-icon-hover"
-                                                     alt="">
-											</span>
-                                            </p>
-                                        </div>
-                                    </a>
-                                </li>
-
-                                <li class="games__li " id="bx_3218110189_904">
-                                    <a href="/game/dota-2/" class="games__li-link">
-
-                                        <div class="games__li-img-box">
-                                            <picture class="games__li-img-picture">
-                                                <img srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" src="/upload/resize_cache/iblock/03b/200_355_1/03ba669303fd16fb4e6ce940476d833c.jpg" alt="Компьютер под игру DOTA 2" class="games__li-img lazzyload">
-                                            </picture>
-                                        </div>
-
-                                        <div class="games__li-box">
-                                            <p class="games__li-name">DOTA 2</p>
-                                            <p class="games__li-price">
-                                                <span class="games__li-price-span">от 35 000</span>
-                                                <span class="games__li-price-icon-box">
-												<img src="/local/templates/main/img/icon/rub.svg"
-                                                     class="games__li-price-icon"
-                                                     alt="">
-												<img src="/local/templates/main/img/icon/rubHover.svg"
-                                                     class="games__li-price-icon games__li-price-icon-hover"
-                                                     alt="">
-											</span>
-                                            </p>
-                                        </div>
-                                    </a>
-                                </li>
-
-                                <li class="games__li " id="bx_3218110189_905">
-                                    <a href="/game/cs-go/" class="games__li-link">
-
-                                        <div class="games__li-img-box">
-                                            <picture class="games__li-img-picture">
-                                                <img srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" src="/upload/resize_cache/iblock/0b0/200_355_1/0b0bda7ea5b1d28ee8299785b1a8072a.jpg" alt="Компьютер под игру CS:GO" class="games__li-img lazzyload">
-                                            </picture>
-                                        </div>
-
-                                        <div class="games__li-box">
-                                            <p class="games__li-name">CS:GO</p>
-                                            <p class="games__li-price">
-                                                <span class="games__li-price-span">от 50 000</span>
-                                                <span class="games__li-price-icon-box">
-												<img src="/local/templates/main/img/icon/rub.svg"
-                                                     class="games__li-price-icon"
-                                                     alt="">
-												<img src="/local/templates/main/img/icon/rubHover.svg"
-                                                     class="games__li-price-icon games__li-price-icon-hover"
-                                                     alt="">
-											</span>
-                                            </p>
-                                        </div>
-                                    </a>
-                                </li>
-
-                                <li class="games__li " id="bx_3218110189_906">
-                                    <a href="/game/minecraft/" class="games__li-link">
-
-                                        <div class="games__li-img-box">
-                                            <picture class="games__li-img-picture">
-                                                <img srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" src="/upload/resize_cache/iblock/d3f/200_355_1/d3f90ab0ed257925e9befcb2081f411e.jpg" alt="Компьютер под игру Minecraft" class="games__li-img lazzyload">
-                                            </picture>
-                                        </div>
-
-                                        <div class="games__li-box">
-                                            <p class="games__li-name">Minecraft</p>
-                                            <p class="games__li-price">
-                                                <span class="games__li-price-span">от 35 000</span>
-                                                <span class="games__li-price-icon-box">
-												<img src="/local/templates/main/img/icon/rub.svg"
-                                                     class="games__li-price-icon"
-                                                     alt="">
-												<img src="/local/templates/main/img/icon/rubHover.svg"
-                                                     class="games__li-price-icon games__li-price-icon-hover"
-                                                     alt="">
-											</span>
-                                            </p>
-                                        </div>
-                                    </a>
-                                </li>
+                                
                             </ul>
                         </div>
                     </div>

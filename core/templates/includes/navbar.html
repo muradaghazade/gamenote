@@ -102,7 +102,7 @@
 
 
 
-                                <a itemprop="url" href="/support/" class="header__menu-top-link-second">
+                                <a itemprop="url" href="{% url 'core:support' %}" class="header__menu-top-link-second">
         <svg class="header__menu-top-link-second-icon" width="10" height="11">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-enterLink"></use>
         </svg>
@@ -113,7 +113,7 @@
 
 
 
-                                <a itemprop="url" href="/delivery/" class="header__menu-top-link-second">
+                                <a itemprop="url" href="{% url 'core:delivery' %}" class="header__menu-top-link-second">
         <svg class="header__menu-top-link-second-icon" width="10" height="11">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-enterLink"></use>
         </svg>
@@ -124,7 +124,7 @@
 
 
 
-                                <a itemprop="url" href="/garanty/" class="header__menu-top-link-second">
+                                <a itemprop="url" href="{% url 'core:guaranty' %}" class="header__menu-top-link-second">
         <svg class="header__menu-top-link-second-icon" width="10" height="11">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-enterLink"></use>
         </svg>
@@ -172,11 +172,11 @@
 </svg>
                                 </div> <span itemprop="name" class="header__menu-link-span">Büdcəli noutbuklar</span>
                             </a>
-                            <a itemprop="url" href="/power-pc/" class="header__menu-link no-pad">
+                            <a itemprop="url" href="{% url 'core:new' %}" class="header__menu-link no-pad">
             <span itemprop="name">Oyun noutbukları</span>                </a>
-                            <a itemprop="url" href="/powerfull-pc/" class="header__menu-link no-pad">
+                            <a itemprop="url" href={% url 'core:power-products' %} class="header__menu-link no-pad">
             <span itemprop="name">Güclü Noutbuklar</span>                </a>
-                            <a itemprop="url" href="/game/" class="header__menu-link no-pad">
+                            <a itemprop="url" href="{% url 'core:games' %}" class="header__menu-link no-pad">
             <span itemprop="name">Oyuna uyğun Noutbuklar</span>                </a>
 
                         </nav>
