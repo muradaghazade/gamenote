@@ -32,7 +32,7 @@
 
 
                         <div class="header__menu-top-box">
-                            <a itemprop="url" href="/articles/" class="header__menu-top-link"><span itemprop="name">Xəbərlər</span></a>
+                            <a itemprop="url" href="{% url 'core:news' %}" class="header__menu-top-link"><span itemprop="name">Xəbərlər</span></a>
                         </div>
 
 
@@ -41,7 +41,7 @@
 
 
                         <div class="header__menu-top-box">
-                            <a itemprop="url" href="/about/" class="header__menu-top-link">
+                            <a itemprop="url" href="{% url 'core:about' %}" class="header__menu-top-link">
         <span itemprop="name">Haqqımızda</span>
         <svg class="header__menu-top-link-icon" width="16" height="9">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-dotted"></use>
@@ -54,7 +54,7 @@
 
 
 
-                                <a itemprop="url" href="/faq/" class="header__menu-top-link-second">
+                                <a itemprop="url" href="{% url 'core:faq' %}" class="header__menu-top-link-second">
         <svg class="header__menu-top-link-second-icon" width="10" height="11">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-enterLink"></use>
         </svg>
@@ -65,7 +65,7 @@
 
 
 
-                                <a itemprop="url" href="/about/" class="header__menu-top-link-second">
+                                <a itemprop="url" href="{% url 'core:about' %}" class="header__menu-top-link-second">
         <svg class="header__menu-top-link-second-icon" width="10" height="11">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-enterLink"></use>
         </svg>
@@ -76,7 +76,7 @@
 
 
 
-                                <a itemprop="url" href="/reviews/" class="header__menu-top-link-second">
+                                <a itemprop="url" href="{% url 'core:reviews' %}" class="header__menu-top-link-second">
         <svg class="header__menu-top-link-second-icon" width="10" height="11">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-enterLink"></use>
         </svg>
@@ -137,7 +137,7 @@
                         </div>
 
                         <div class="header__menu-top-box">
-                            <a itemprop="url" href="/contacts/" class="header__menu-top-link"><span itemprop="name">Əlaqə</span></a>
+                            <a itemprop="url" href="{% url 'core:contact' %}" class="header__menu-top-link"><span itemprop="name">Əlaqə</span></a>
                         </div>
 
 
