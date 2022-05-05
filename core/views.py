@@ -91,3 +91,12 @@ class DeliveryView(TemplateView):
 
 class GuarantyView(TemplateView):
     template_name = 'guaranty.html'
+
+class CardView(TemplateView):
+    template_name = 'card.html'
+
+class ContactView(TemplateView):
+    template_name = 'contact.html'
+
+class NewsView(TemplateView):
+    template_name = 'news.html'

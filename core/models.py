@@ -211,3 +211,6 @@ class Game(models.Model):
     class Meta:
         verbose_name = 'Game'
         verbose_name_plural = 'Games'
+
+
+
