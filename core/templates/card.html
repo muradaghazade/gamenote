@@ -2,201 +2,534 @@
 {% load static %}
 
 {% block content %}
-    <div id="panel">
-    </div>
-    <div class="page">
+<div id="panel">
+</div>
+<div class="page">
 
 
-        <main class="page__main">
-            <div class="title-page">
-                <div class="breadcrumps" itemprop="http://schema.org/breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
-                    <div class="breadcrumps__inner inner">
-                        <div class="breadcrumps__wrapper">
-                            <a href="/" class="breadcrumps__link" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                                <link itemprop="item" href="https://edelws.ru/">
-                                <meta itemprop="position" content="1" />
-                                <meta itemprop="name" content="производство компьютеров" />
-                                <svg class="breadcrumps__link-icon" width="14" height="12">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-home"></use>
-                </svg>
-                            </a><span class="breadcrumps__text" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-<link itemprop="item" href="https://edelws.ru/cart/">
-                <meta itemprop="position" content="2" />
-                <meta itemprop="name" content="Корзина"/>
-Корзина</span></div>
-                    </div>
-                </div>
-                <div class="title-page__bg ">
-                    <picture>
-                        <img srcset="https://edelws.ru/upload/uf/bfc/bfc073b789ca7a1468b32add7c7dfa34.png" src="https://edelws.ru/upload/uf/bfc/bfc073b789ca7a1468b32add7c7dfa34.png" alt="" class="lazzyload title-page__bg-img">
-                    </picture>
-                </div>
-                <div class="title-page__inner inner">
-                    <div class="title-page__wrapp">
-                        <h1 class="title-page__h1">Корзина</h1>
+    <main class="page__main">
+        <div class="title-page">
+            <div class="breadcrumps" itemprop="http://schema.org/breadcrumb" itemscope
+                itemtype="http://schema.org/BreadcrumbList">
+                <div class="breadcrumps__inner inner">
+                    <div class="breadcrumps__wrapper">
+                        <a href="/" class="breadcrumps__link" itemprop="itemListElement" itemscope
+                            itemtype="http://schema.org/ListItem">
+                            <link itemprop="item" href="https://edelws.ru/">
+                            <meta itemprop="position" content="1" />
+                            <meta itemprop="name" content="производство компьютеров" />
+                            <svg class="breadcrumps__link-icon" width="14" height="12">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    xlink:href="/local/templates/main/img/sprite.svg#icon-home"></use>
+                            </svg>
+                        </a><span class="breadcrumps__text" itemprop="itemListElement" itemscope
+                            itemtype="http://schema.org/ListItem">
+                            <link itemprop="item" href="https://edelws.ru/cart/">
+                            <meta itemprop="position" content="2" />
+                            <meta itemprop="name" content="Корзина" />
+                            Корзина
+                        </span>
                     </div>
                 </div>
             </div>
-            <div id="basket" class="basket">
-
+            <div class="title-page__bg ">
+                <picture>
+                    <img srcset="https://edelws.ru/upload/uf/bfc/bfc073b789ca7a1468b32add7c7dfa34.png"
+                        src="https://edelws.ru/upload/uf/bfc/bfc073b789ca7a1468b32add7c7dfa34.png" alt=""
+                        class="lazzyload title-page__bg-img">
+                </picture>
             </div>
-
-
-
-
-        </main>
-    </div>
-    <div class="modal modal--little" id="successaddc">
-        <p class="modal__title">Результат</p>
-        <p class="modal__text">Товар успешно добавлен в корзину</p>
-        <div class="modal__btn-rem-box">
-            <a href="/cart/" class=" btn btn--type-3">в корзину</a>
-            <span onclick="$.fancybox.close();" class="fix_margin__ btn" style="margin-left: 25px;">закрыть окно</span>
+            <div class="title-page__inner inner">
+                <div class="title-page__wrapp">
+                    <h1 class="title-page__h1">Корзина</h1>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="modal" id="call-back">
-        <p class="modal__title">Обратный звонок</p>
-        <div class="modal__box">
-            <p class="modal__text">Мы с радостью поможем Вам с выбором компьютера и ответим на все интересующие вопросы! Перезвоним Вам в течении 10 минут.</p>
-            <a href="mailto:info@edelws.ru" class="modal__mail">info@edelws.ru</a>
-            <form name="iblock_add" data-back="formResultCallback" action="/ajax/iblock.element.add.form.php" class="modal__form form js-ajax_form " method="post" enctype="multipart/form-data">
-                <input type="hidden" name="sessid" id="sessid" value="3ebd52d48b424659a59df67aa8ce30c2" /> <input type="hidden" name="signedParamsString" value="YTo2Nzp7czo4OiJCTE9DS19JRCI7czo5OiJjYWxsLWJhY2siO3M6Mjk6IkNVU1RPTV9USVRMRV9EQVRFX0FDVElWRV9GUk9NIjtzOjA6IiI7czoyNzoiQ1VTVE9NX1RJVExFX0RBVEVfQUNUSVZFX1RPIjtzOjA6IiI7czoyNzoiQ1VTVE9NX1RJVExFX0RFVEFJTF9QSUNUVVJFIjtzOjA6IiI7czoyNDoiQ1VTVE9NX1RJVExFX0RFVEFJTF9URVhUIjtzOjA6IiI7czoyNzoiQ1VTVE9NX1RJVExFX0lCTE9DS19TRUNUSU9OIjtzOjA6IiI7czoxNzoiQ1VTVE9NX1RJVExFX05BTUUiO3M6Mjg6ItCS0LDRiNC1INC/0L7Qu9C90L7QtSDQuNC80Y8iO3M6Mjg6IkNVU1RPTV9USVRMRV9QUkVWSUVXX1BJQ1RVUkUiO3M6MDoiIjtzOjI1OiJDVVNUT01fVElUTEVfUFJFVklFV19URVhUIjtzOjE4OiLQodC+0L7QsdGJ0LXQvdC40LUiO3M6MTc6IkNVU1RPTV9USVRMRV9UQUdTIjtzOjA6IiI7czoxODoiREVGQVVMVF9JTlBVVF9TSVpFIjtzOjI6IjMwIjtzOjI3OiJERVRBSUxfVEVYVF9VU0VfSFRNTF9FRElUT1IiO2I6MDtzOjEzOiJFTEVNRU5UX0FTU09DIjtzOjEwOiJDUkVBVEVEX0JZIjtzOjY6IkdST1VQUyI7YToxOntpOjA7czoxOiIyIjt9czo5OiJJQkxPQ0tfSUQiO3M6MjoiMzkiO3M6MTE6IklCTE9DS19UWVBFIjtzOjU6ImZvcm1zIjtzOjEwOiJMRVZFTF9MQVNUIjtzOjE6IlkiO3M6ODoiTElTVF9VUkwiO3M6MDoiIjtzOjEzOiJNQVhfRklMRV9TSVpFIjtpOjA7czoxMDoiTUFYX0xFVkVMUyI7czo2OiIxMDAwMDAiO3M6MTY6Ik1BWF9VU0VSX0VOVFJJRVMiO3M6NjoiMTAwMDAwIjtzOjI4OiJQUkVWSUVXX1RFWFRfVVNFX0hUTUxfRURJVE9SIjtiOjA7czoxNDoiUFJPUEVSVFlfQ09ERVMiO2E6Mjp7aToxO3M6NDoiTkFNRSI7aTozO2k6OTc0O31zOjIzOiJQUk9QRVJUWV9DT0RFU19SRVFVSVJFRCI7YToxOntpOjE7czo0OiJOQU1FIjt9czoxMzoiUkVTSVpFX0lNQUdFUyI7YjowO3M6ODoiU0VGX01PREUiO3M6MToiTiI7czo2OiJTVEFUVVMiO2E6MTp7aTowO3M6MzoiQU5ZIjt9czoxMDoiU1RBVFVTX05FVyI7czoxOiJOIjtzOjE2OiJVU0VSX01FU1NBR0VfQUREIjtzOjQ2OiLQrdC70LXQvNC10L3RgiDRg9GB0L/QtdGI0L3QviDQtNC+0LHQsNCy0LvQtdC9IjtzOjE3OiJVU0VSX01FU1NBR0VfRURJVCI7czo1Mjoi0JjQt9C80LXQvdC10L3QuNGPINGD0YHQv9C10YjQvdC+INGB0L7RhdGA0LDQvdC10L3RiyI7czoxMToiVVNFX0NBUFRDSEEiO3M6MToiTiI7czoxODoiQ09NUE9ORU5UX1RFTVBMQVRFIjtzOjg6Ii5kZWZhdWx0IjtzOjEwOiJDQUNIRV9UWVBFIjtzOjE6IkEiO3M6OToifkJMT0NLX0lEIjtzOjk6ImNhbGwtYmFjayI7czozMDoifkNVU1RPTV9USVRMRV9EQVRFX0FDVElWRV9GUk9NIjtzOjA6IiI7czoyODoifkNVU1RPTV9USVRMRV9EQVRFX0FDVElWRV9UTyI7czowOiIiO3M6Mjg6In5DVVNUT01fVElUTEVfREVUQUlMX1BJQ1RVUkUiO3M6MDoiIjtzOjI1OiJ+Q1VTVE9NX1RJVExFX0RFVEFJTF9URVhUIjtzOjA6IiI7czoyODoifkNVU1RPTV9USVRMRV9JQkxPQ0tfU0VDVElPTiI7czowOiIiO3M6MTg6In5DVVNUT01fVElUTEVfTkFNRSI7czoyODoi0JLQsNGI0LUg0L/QvtC70L3QvtC1INC40LzRjyI7czoyOToifkNVU1RPTV9USVRMRV9QUkVWSUVXX1BJQ1RVUkUiO3M6MDoiIjtzOjI2OiJ+Q1VTVE9NX1RJVExFX1BSRVZJRVdfVEVYVCI7czoxODoi0KHQvtC+0LHRidC10L3QuNC1IjtzOjE4OiJ+Q1VTVE9NX1RJVExFX1RBR1MiO3M6MDoiIjtzOjE5OiJ+REVGQVVMVF9JTlBVVF9TSVpFIjtzOjI6IjMwIjtzOjI4OiJ+REVUQUlMX1RFWFRfVVNFX0hUTUxfRURJVE9SIjtzOjE6Ik4iO3M6MTQ6In5FTEVNRU5UX0FTU09DIjtzOjEwOiJDUkVBVEVEX0JZIjtzOjc6In5HUk9VUFMiO2E6MTp7aTowO3M6MToiMiI7fXM6MTA6In5JQkxPQ0tfSUQiO3M6MjoiMzkiO3M6MTI6In5JQkxPQ0tfVFlQRSI7czo1OiJmb3JtcyI7czoxMToifkxFVkVMX0xBU1QiO3M6MToiWSI7czo5OiJ+TElTVF9VUkwiO3M6MDoiIjtzOjE0OiJ+TUFYX0ZJTEVfU0laRSI7czoxOiIwIjtzOjExOiJ+TUFYX0xFVkVMUyI7czo2OiIxMDAwMDAiO3M6MTc6In5NQVhfVVNFUl9FTlRSSUVTIjtzOjY6IjEwMDAwMCI7czoyOToiflBSRVZJRVdfVEVYVF9VU0VfSFRNTF9FRElUT1IiO3M6MToiTiI7czoxNToiflBST1BFUlRZX0NPREVTIjthOjI6e2k6MTtzOjQ6Ik5BTUUiO2k6MztpOjk3NDt9czoyNDoiflBST1BFUlRZX0NPREVTX1JFUVVJUkVEIjthOjE6e2k6MTtzOjQ6Ik5BTUUiO31zOjE0OiJ+UkVTSVpFX0lNQUdFUyI7czoxOiJOIjtzOjk6In5TRUZfTU9ERSI7czoxOiJOIjtzOjc6In5TVEFUVVMiO3M6MzoiQU5ZIjtzOjExOiJ+U1RBVFVTX05FVyI7czoxOiJOIjtzOjE3OiJ+VVNFUl9NRVNTQUdFX0FERCI7czowOiIiO3M6MTg6In5VU0VSX01FU1NBR0VfRURJVCI7czowOiIiO3M6MTI6In5VU0VfQ0FQVENIQSI7czoxOiJOIjtzOjE5OiJ+Q09NUE9ORU5UX1RFTVBMQVRFIjtzOjg6Ii5kZWZhdWx0IjtzOjExOiJ+Q0FDSEVfVFlQRSI7czoxOiJBIjtzOjI6IklEIjtpOjA7fQ==.3b512a2cd43ad37135aa694b5a5d5aa78af99c7de0fa76f79e80200f58ee179b">
-                <div class="modal__content">
+        <div id="basket" class="basket">
+            <div class="basket">
+                <div class="basket__inner inner">
+                    <div class="basket__wrapper">
+                        <div class="basket__start">
+                            <p class="basket__title">Корзина</p>
+                            {% for product in products %}
+                            <div class="basket__item-box">
+                                <div class="basket__item" index="0">
+                                    <div class="basket__item-card">
+                                        <div class="basket__item-img-box"><img
+                                                src="{{ product.product.images.first.image.url }}"
+                                                alt="EDELWEISS GLADIATOR" class="basket__item-img"></div> <a
+                                            href="/power-pc/edelweiss-gladiator/" class="basket__item-name">{{ product.product.title }}</a>
+                                    </div>
+                                    <div class="basket__item-price"><span>{{ product.final_price }}</span> ₼</div>
+                                    <div class="basket__item-control"><a
+                                            href="javascript:void(0)" class="basket__item-rem">
+                                            <img src="{% static 'public/img/x.png' %}" alt="" style="width: 20px;">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                            <div class="basket__worth">
+                                <p class="basket__worth-title">Общая стоимость</p>
+                                <div class="basket__worth-box">
+                                    <p class="basket__worth-price"><span>198&nbsp;400</span>₼</p>
+                                    <div class="basket__worth-credit"><span class="basket__worth-credit-sum">от
+                                            <span>19&nbsp;840</span> руб. в месяц</span>
+                                        <div class="catalog__credit"><a href="javascript:void(0)"
+                                                class="basket__worth-i"><svg width="13" height="13" class="icon-info">
+                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                        xlink:href="/local/templates/main/img/sprite.svg#icon-info">
+                                                    </use>
+                                                </svg></a>
+                                            <div class="catalog__credit-hidd">
+                                                <p class="catalog__credit-hidd-title">Оплата в кредит</p>
+                                                <dl class="catalog__credit-hidd-dl">
+                                                    <dt class="catalog__credit-hidd-dt">Быстро и просто</dt>
+                                                    <dd class="catalog__credit-hidd-dd">Заполните анкету на сайте
+                                                        магазина и получите решение по вашей заявке за 2 минуты.</dd>
+                                                </dl>
+                                                <dl class="catalog__credit-hidd-dl">
+                                                    <dt class="catalog__credit-hidd-dt">Выбор лучших условий</dt>
+                                                    <dd class="catalog__credit-hidd-dd">Заявка уходит на рассмотрение в
+                                                        большое число финансовых организаций: Альфа-Банк, Pay P.S, Банк
+                                                        Восточный, Тинькофф Банк, Кредит Европа Банк, Second Bank и др.
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> <a href="javascript:void(0)" class="btn basket__btn-clear">очистить корзину</a>
+                        </div>
+                        <div class="basket__end">
+                            <div class="basket__order">
+                                <p class="basket__title">Оформление заказа</p>
+                                <form class="Valid">
+                                    <div class="basket__order-box">
+                                        <p class="basket__title basket__title--type-2">Личные данные</p>
+                                        <dl class="input__dl">
+                                            <dt class="input__dt">
+                                                <p class="input__title">Ваше полное имя</p>
+                                            </dt>
+                                            <dd class="input__dd"><label class="input__box"><input type="text"
+                                                        data-msg="" class="input__text">
+                                                    <!---->
+                                                </label></dd>
+                                        </dl>
+                                        <dl class="input__dl">
+                                            <dt class="input__dt">
+                                                <p class="input__title">Телефон</p>
+                                            </dt>
+                                            <dd class="input__dd"><label class="input__box"><input type="tel"
+                                                        data-msg="" class="input__text">
+                                                    <!---->
+                                                </label></dd>
+                                        </dl>
+                                        <dl class="input__dl">
+                                            <dt class="input__dt">
+                                                <p class="input__title">E-mail</p>
+                                            </dt>
+                                            <dd class="input__dd"><label class="input__box"><input type="email"
+                                                        data-msg="" class="input__text">
+                                                    <!---->
+                                                </label></dd>
+                                        </dl>
+                                        <p class="input__massage basket__input-massage"><img
+                                                src="/local/templates/main/img/icon/required1.svg" alt=""
+                                                class="input__massage-icon"> <span class="input__massage-text">– Поля
+                                                обязательны для заполнения</span></p>
+                                    </div>
+                                    <div class="basket__order-box">
+                                        <p class="basket__title basket__title--type-2">Доставка</p>
+                                        <div class="radio radio--big" index="0"><label class="radio__label"><input
+                                                    type="radio" name="delivery" class="radio__input"> <span
+                                                    class="radio__text radio__text--big">Доставка по России (<a
+                                                        style="color:#aaadad" target="_blank"
+                                                        href="http://www.dellin.ru/requests/">"Деловые
+                                                        линии"</a>)</span></label>
+                                            <div class="catalog__credit"><a href="javascript:void(0)"
+                                                    class="basket__worth-i"><svg width="14" height="14"
+                                                        class="icon-info">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                            xlink:href="/local/templates/main/img/sprite.svg#icon-info">
+                                                        </use>
+                                                    </svg></a>
+                                                <div class="catalog__credit-hidd basket__credit-hidd">Минимальная сумма
+                                                    заказа - 40 000 руб.</div>
+                                            </div>
+                                        </div>
+                                        <!---->
+                                    </div>
+                                    <!---->
+                                    <div class="basket__order-box">
+                                        <p class="basket__title basket__title--type-2">Оплата</p>
+                                        <div class="radio radio--big" index="0"><label class="radio__label"><input
+                                                    type="radio" name="pay" class="radio__input"> <span
+                                                    class="radio__text radio__text--big">Банковской
+                                                    картой</span></label>
+                                            <div class="catalog__credit"><a href="javscript:void(0)"
+                                                    class="basket__worth-i"><svg width="14" height="14"
+                                                        class="icon-info">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                            xlink:href="/local/templates/main/img/sprite.svg#icon-info">
+                                                        </use>
+                                                    </svg></a>
+                                                <div class="catalog__credit-hidd basket__credit-hidd">+4.5% к стоимости
+                                                    заказа</div>
+                                            </div>
+                                        </div>
+                                        <div class="radio radio--big" index="1"><label class="radio__label"><input
+                                                    type="radio" name="pay" class="radio__input"> <span
+                                                    class="radio__text radio__text--big">Безналичный расчет (для юр.
+                                                    лиц)</span></label>
+                                            <div class="catalog__credit"><a href="javscript:void(0)"
+                                                    class="basket__worth-i"><svg width="14" height="14"
+                                                        class="icon-info">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                            xlink:href="/local/templates/main/img/sprite.svg#icon-info">
+                                                        </use>
+                                                    </svg></a>
+                                                <div class="catalog__credit-hidd basket__credit-hidd">при данном способе
+                                                    оплаты +10%</div>
+                                            </div>
+                                        </div>
+                                        <!---->
+                                    </div>
+                                    <div class="basket__order-box">
+                                        <p class="basket__title basket__title--type-2">Комментарий к заказу</p>
+                                        <dl class="input__dl input__dl--texter">
+                                            <dd class="input__dd basket__order-dd"><textarea name="massage"
+                                                    class="input__textarea"></textarea></dd>
+                                        </dl>
+                                        <div class="checkbox checkbox--ok"><label class="checkbox__label"><input
+                                                    type="checkbox" class="checkbox__input"> <span
+                                                    class="checkbox__text">Я согласен на обработку персональных
+                                                    данных</span></label>
+                                            <!---->
+                                        </div>
+                                    </div>
+                                    <div class="basket__order-box-btn"><a href="javascript:void(0)"
+                                            class="btn btn--type-2 basket__order-btn">оформить заказ</a>
+                                        <p class="basket__order-info">После оформления с вами свяжется оператор для
+                                            уточнения деталей</p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!---->
+                    </div>
+                </div>
+                <div class="basket__control">
+                    <div class="basket__worth">
+                        <p class="basket__worth-title">Общая стоимость</p>
+                        <div class="basket__worth-box">
+                            <p class="basket__worth-price"><span>198&nbsp;400</span> <img
+                                    src="/local/templates/main/img/icon/rub.svg" alt="Национальная валюта рубли"
+                                    class="catalog__li-price-r"></p>
+                            <div class="basket__worth-credit"><span class="basket__worth-credit-sum">от
+                                    <span>19&nbsp;840</span> руб. в месяц</span>
+                                <div class="catalog__credit"><a href="javascript:void(0)" class="basket__worth-i"><svg
+                                            width="13" height="13" class="icon-info">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                xlink:href="/local/templates/main/img/sprite.svg#icon-info"></use>
+                                        </svg></a>
+                                    <div class="catalog__credit-hidd">
+                                        <p class="catalog__credit-hidd-title">Оплата в кредит</p>
+                                        <dl class="catalog__credit-hidd-dl">
+                                            <dt class="catalog__credit-hidd-dt">Быстро и просто</dt>
+                                            <dd class="catalog__credit-hidd-dd">Заполните анкету на сайте магазина и
+                                                получите решение по вашей заявке за 2 минуты.</dd>
+                                        </dl>
+                                        <dl class="catalog__credit-hidd-dl">
+                                            <dt class="catalog__credit-hidd-dt">Выбор лучших условий</dt>
+                                            <dd class="catalog__credit-hidd-dd">Заявка уходит на рассмотрение в большое
+                                                число финансовых организаций: Альфа-Банк, Pay P.S, Банк Восточный,
+                                                Тинькофф Банк, Кредит Европа Банк, Second Bank и др.</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <a href="javascript:void(0)" class="btn btn--type-2 basket__order-btn">оформить заказ</a>
+                </div>
+                <div id="order" class="modal">
+                    <p class="modal__title"><span>Заказ</span>&nbsp;<span style="color: rgb(167, 226, 0);">№</span>
+                        <span class="msg_order">успешно оформлен</span></p>
+                    <!---->
+                    <p class="modal__text">В ближайшее время специалист свяжеться с Вами. Информация о заказе отправлена
+                        Вам на єлектронный ящик.</p>
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <p class="modal__text">ВАЖНО: Обращаем Ваше внимание, заказ оформлен до 12.00 и будет обработан
+                        сегодня с 12.00, специалист свяжется с Вами по указанному номеру телефона. Информация о заказе
+                        отправлена Вам на электронный ящик.</p>
+                    <!----> <span onclick="$.fancybox.close();" class="modal__btn btn">Закрыть окно</span>
+                </div>
+                <div id="credit" class="modal">
+                    <p class="modal__title">
+                        ВАЖНАЯ ИНФОРМАЦИЯ ПРОСЬБА ОЗНАКОМИТЬСЯ
+                    </p>
+                    <p class="modal__text">
+                        Являюсь гражданином Российской Федерации с постоянной регистрацией
+                    </p>
+                    <p class="modal__text">
+                        На данный момент мой возраст составляет 21 год или больше
+                    </p>
+                    <p class="modal__text">
+                        Учитывайте, что заказы, оформленные в выходные, будут обработаны в понедельник, и с вами
+                        свяжется специалист.
+                    </p>
+                    <p style="text-align: center;">
+                        <a href="javascript:void(0)" class=" btn btn--type-3"
+                            onclick="$.fancybox.close();">Ознакомился</a>
+                    </p>
+                </div>
+                <div id="bankinfo" class="modal">
+                    <ul class="bank__info__items__wrapper">
+                        <li class="bank__info__item">
+                            <div class="bank__info__item__image__wrapper"><img
+                                    src="/local/templates/main/img/basket/visa.png" alt="Visa"></div>
+                            <div class="bank__info__item__info__wrapper">
+                                <div class="bank__info__item__title">Банковская карта - Visa</div>
+                                <div class="bank__info__item__description"><b>VISA</b> - Муждународная платежная система
+                                    VISA гарантирует клиенту простоту, удобство и безопасность проведения online-оплаты.
+                                </div>
+                            </div>
+                        </li>
+                        <li class="bank__info__item">
+                            <div class="bank__info__item__image__wrapper"><img
+                                    src="/local/templates/main/img/basket/Master.png" alt="MasterCard"></div>
+                            <div class="bank__info__item__info__wrapper">
+                                <div class="bank__info__item__title">Банковская карта - MasterCard</div>
+                                <div class="bank__info__item__description"><b>MasterCard</b> - Муждународная платежная
+                                    система MasterCard гарантирует клиенту простоту, удобство и безопасность проведения
+                                    online-оплаты.</div>
+                            </div>
+                        </li>
+                        <li class="bank__info__item">
+                            <div class="bank__info__item__image__wrapper"><img
+                                    src="/local/templates/main/img/basket/mir.png" alt="Мир"></div>
+                            <div class="bank__info__item__info__wrapper">
+                                <div class="bank__info__item__title">Банковская карта - "Мир"</div>
+                                <div class="bank__info__item__description"><b>Платежная система "Мир"</b> - это
+                                    российская национальная платежаня система, обеспечиваетнадежность, безопасность и
+                                    удобство при совершении оплат.</div>
+                            </div>
+                        </li>
+                    </ul>
+                    <p style="text-align: center;"><a href="javascript:void(0)" onclick="$.fancybox.close();"
+                            class=" btn btn--type-3">Ознакомился</a></p>
+                </div>
+                <div id="installmentplan" class="modal">
+                    <p class="modal__title">
+                        ВАЖНАЯ ИНФОРМАЦИЯ ПРОСЬБА ОЗНАКОМИТЬСЯ
+                    </p>
+                    <p class="modal__text">
+                        Являюсь гражданином Российской Федерации с постоянной регистрацией
+                    </p>
+                    <p class="modal__text">
+                        На данный момент мой возраст составляет 21 год или больше
+                    </p>
+                    <p class="modal__text">
+                        Учитывайте, что заказы, оформленные в выходные, будут обработаны в понедельник в первой половине
+                        дня, и с вами свяжется специалист call-центра.
+                    </p>
+                    <p style="text-align: center;">
+                        <a href="javascript:void(0)" class=" btn btn--type-3"
+                            onclick="$.fancybox.close();">Ознакомился</a>
+                    </p>
+                </div>
+                <div id="amount" class="modal modal--amount">
+                    <p class="modal__amount-title">Количество товара</p>
+                    <p class="modal__amount-name"></p>
+                    <form class="modal__amount-form"><label class="input__box"><input type="tel"
+                                class="modal__amount-input">
+                            <!---->
+                        </label></form>
+                    <div class="modal__amount-btn-box"><span
+                            class="modal__amount-btn btn btn--type-3 js-modal-amount">выбрать</span> <span
+                            onclick="$.fancybox.close();" class="modal__amount-btn btn">отмена</span></div>
+                </div>
+            </div>
+        </div>
 
-                    <div class="modal__col">
-                        <div class="response"></div>
-                        <dl class="input__dl">
-                            <dt class="input__dt">
-                                <p class="input__title">Телефон</p></dt>
-                            <dd class="input__dd">
-                                <label class="input__box">
-                                                            <input
-            name="PROPERTY[NAME][0]"
-            value=""
-            type="tel" class="input__text mask" data-msg="Поле обязательно" data-msg-required="Поле обязательно" required="required" id="PROPERTY_NAME_text"             />                                </label>
-                            </dd>
-                        </dl>
-                        <dl class="input__dl">
-                            <dt class="input__dt">
-                                <p class="input__title">Ваше полное имя</p></dt>
-                            <dd class="input__dd">
-                                <label class="input__box">
-                                                            <input
-            name="PROPERTY[974][0]"
-            value=""
-            class="input__text" id="PROPERTY_974_text" type="text"             />                                </label>
-                            </dd>
-                        </dl>
-                        <p class="modal__massage">
-                            <img src="/local/templates/main/img/icon/required1.svg" alt="" class="modal__massage-icon">
-                            <span class="modal__massage-text">– Поля обязательны для заполнения</span>
-                        </p>
-                        <div class="checkbox checkbox--ok">
-                            <label class="checkbox__label">
+
+
+
+    </main>
+</div>
+<div class="modal modal--little" id="successaddc">
+    <p class="modal__title">Результат</p>
+    <p class="modal__text">Товар успешно добавлен в корзину</p>
+    <div class="modal__btn-rem-box">
+        <a href="/cart/" class=" btn btn--type-3">в корзину</a>
+        <span onclick="$.fancybox.close();" class="fix_margin__ btn" style="margin-left: 25px;">закрыть окно</span>
+    </div>
+</div>
+<div class="modal" id="call-back">
+    <p class="modal__title">Обратный звонок</p>
+    <div class="modal__box">
+        <p class="modal__text">Мы с радостью поможем Вам с выбором компьютера и ответим на все интересующие вопросы!
+            Перезвоним Вам в течении 10 минут.</p>
+        <a href="mailto:info@edelws.ru" class="modal__mail">info@edelws.ru</a>
+        <form name="iblock_add" data-back="formResultCallback" action="/ajax/iblock.element.add.form.php"
+            class="modal__form form js-ajax_form " method="post" enctype="multipart/form-data">
+            <input type="hidden" name="sessid" id="sessid" value="3ebd52d48b424659a59df67aa8ce30c2" /> <input
+                type="hidden" name="signedParamsString"
+                value="YTo2Nzp7czo4OiJCTE9DS19JRCI7czo5OiJjYWxsLWJhY2siO3M6Mjk6IkNVU1RPTV9USVRMRV9EQVRFX0FDVElWRV9GUk9NIjtzOjA6IiI7czoyNzoiQ1VTVE9NX1RJVExFX0RBVEVfQUNUSVZFX1RPIjtzOjA6IiI7czoyNzoiQ1VTVE9NX1RJVExFX0RFVEFJTF9QSUNUVVJFIjtzOjA6IiI7czoyNDoiQ1VTVE9NX1RJVExFX0RFVEFJTF9URVhUIjtzOjA6IiI7czoyNzoiQ1VTVE9NX1RJVExFX0lCTE9DS19TRUNUSU9OIjtzOjA6IiI7czoxNzoiQ1VTVE9NX1RJVExFX05BTUUiO3M6Mjg6ItCS0LDRiNC1INC/0L7Qu9C90L7QtSDQuNC80Y8iO3M6Mjg6IkNVU1RPTV9USVRMRV9QUkVWSUVXX1BJQ1RVUkUiO3M6MDoiIjtzOjI1OiJDVVNUT01fVElUTEVfUFJFVklFV19URVhUIjtzOjE4OiLQodC+0L7QsdGJ0LXQvdC40LUiO3M6MTc6IkNVU1RPTV9USVRMRV9UQUdTIjtzOjA6IiI7czoxODoiREVGQVVMVF9JTlBVVF9TSVpFIjtzOjI6IjMwIjtzOjI3OiJERVRBSUxfVEVYVF9VU0VfSFRNTF9FRElUT1IiO2I6MDtzOjEzOiJFTEVNRU5UX0FTU09DIjtzOjEwOiJDUkVBVEVEX0JZIjtzOjY6IkdST1VQUyI7YToxOntpOjA7czoxOiIyIjt9czo5OiJJQkxPQ0tfSUQiO3M6MjoiMzkiO3M6MTE6IklCTE9DS19UWVBFIjtzOjU6ImZvcm1zIjtzOjEwOiJMRVZFTF9MQVNUIjtzOjE6IlkiO3M6ODoiTElTVF9VUkwiO3M6MDoiIjtzOjEzOiJNQVhfRklMRV9TSVpFIjtpOjA7czoxMDoiTUFYX0xFVkVMUyI7czo2OiIxMDAwMDAiO3M6MTY6Ik1BWF9VU0VSX0VOVFJJRVMiO3M6NjoiMTAwMDAwIjtzOjI4OiJQUkVWSUVXX1RFWFRfVVNFX0hUTUxfRURJVE9SIjtiOjA7czoxNDoiUFJPUEVSVFlfQ09ERVMiO2E6Mjp7aToxO3M6NDoiTkFNRSI7aTozO2k6OTc0O31zOjIzOiJQUk9QRVJUWV9DT0RFU19SRVFVSVJFRCI7YToxOntpOjE7czo0OiJOQU1FIjt9czoxMzoiUkVTSVpFX0lNQUdFUyI7YjowO3M6ODoiU0VGX01PREUiO3M6MToiTiI7czo2OiJTVEFUVVMiO2E6MTp7aTowO3M6MzoiQU5ZIjt9czoxMDoiU1RBVFVTX05FVyI7czoxOiJOIjtzOjE2OiJVU0VSX01FU1NBR0VfQUREIjtzOjQ2OiLQrdC70LXQvNC10L3RgiDRg9GB0L/QtdGI0L3QviDQtNC+0LHQsNCy0LvQtdC9IjtzOjE3OiJVU0VSX01FU1NBR0VfRURJVCI7czo1Mjoi0JjQt9C80LXQvdC10L3QuNGPINGD0YHQv9C10YjQvdC+INGB0L7RhdGA0LDQvdC10L3RiyI7czoxMToiVVNFX0NBUFRDSEEiO3M6MToiTiI7czoxODoiQ09NUE9ORU5UX1RFTVBMQVRFIjtzOjg6Ii5kZWZhdWx0IjtzOjEwOiJDQUNIRV9UWVBFIjtzOjE6IkEiO3M6OToifkJMT0NLX0lEIjtzOjk6ImNhbGwtYmFjayI7czozMDoifkNVU1RPTV9USVRMRV9EQVRFX0FDVElWRV9GUk9NIjtzOjA6IiI7czoyODoifkNVU1RPTV9USVRMRV9EQVRFX0FDVElWRV9UTyI7czowOiIiO3M6Mjg6In5DVVNUT01fVElUTEVfREVUQUlMX1BJQ1RVUkUiO3M6MDoiIjtzOjI1OiJ+Q1VTVE9NX1RJVExFX0RFVEFJTF9URVhUIjtzOjA6IiI7czoyODoifkNVU1RPTV9USVRMRV9JQkxPQ0tfU0VDVElPTiI7czowOiIiO3M6MTg6In5DVVNUT01fVElUTEVfTkFNRSI7czoyODoi0JLQsNGI0LUg0L/QvtC70L3QvtC1INC40LzRjyI7czoyOToifkNVU1RPTV9USVRMRV9QUkVWSUVXX1BJQ1RVUkUiO3M6MDoiIjtzOjI2OiJ+Q1VTVE9NX1RJVExFX1BSRVZJRVdfVEVYVCI7czoxODoi0KHQvtC+0LHRidC10L3QuNC1IjtzOjE4OiJ+Q1VTVE9NX1RJVExFX1RBR1MiO3M6MDoiIjtzOjE5OiJ+REVGQVVMVF9JTlBVVF9TSVpFIjtzOjI6IjMwIjtzOjI4OiJ+REVUQUlMX1RFWFRfVVNFX0hUTUxfRURJVE9SIjtzOjE6Ik4iO3M6MTQ6In5FTEVNRU5UX0FTU09DIjtzOjEwOiJDUkVBVEVEX0JZIjtzOjc6In5HUk9VUFMiO2E6MTp7aTowO3M6MToiMiI7fXM6MTA6In5JQkxPQ0tfSUQiO3M6MjoiMzkiO3M6MTI6In5JQkxPQ0tfVFlQRSI7czo1OiJmb3JtcyI7czoxMToifkxFVkVMX0xBU1QiO3M6MToiWSI7czo5OiJ+TElTVF9VUkwiO3M6MDoiIjtzOjE0OiJ+TUFYX0ZJTEVfU0laRSI7czoxOiIwIjtzOjExOiJ+TUFYX0xFVkVMUyI7czo2OiIxMDAwMDAiO3M6MTc6In5NQVhfVVNFUl9FTlRSSUVTIjtzOjY6IjEwMDAwMCI7czoyOToiflBSRVZJRVdfVEVYVF9VU0VfSFRNTF9FRElUT1IiO3M6MToiTiI7czoxNToiflBST1BFUlRZX0NPREVTIjthOjI6e2k6MTtzOjQ6Ik5BTUUiO2k6MztpOjk3NDt9czoyNDoiflBST1BFUlRZX0NPREVTX1JFUVVJUkVEIjthOjE6e2k6MTtzOjQ6Ik5BTUUiO31zOjE0OiJ+UkVTSVpFX0lNQUdFUyI7czoxOiJOIjtzOjk6In5TRUZfTU9ERSI7czoxOiJOIjtzOjc6In5TVEFUVVMiO3M6MzoiQU5ZIjtzOjExOiJ+U1RBVFVTX05FVyI7czoxOiJOIjtzOjE3OiJ+VVNFUl9NRVNTQUdFX0FERCI7czowOiIiO3M6MTg6In5VU0VSX01FU1NBR0VfRURJVCI7czowOiIiO3M6MTI6In5VU0VfQ0FQVENIQSI7czoxOiJOIjtzOjE5OiJ+Q09NUE9ORU5UX1RFTVBMQVRFIjtzOjg6Ii5kZWZhdWx0IjtzOjExOiJ+Q0FDSEVfVFlQRSI7czoxOiJBIjtzOjI6IklEIjtpOjA7fQ==.3b512a2cd43ad37135aa694b5a5d5aa78af99c7de0fa76f79e80200f58ee179b">
+            <div class="modal__content">
+
+                <div class="modal__col">
+                    <div class="response"></div>
+                    <dl class="input__dl">
+                        <dt class="input__dt">
+                            <p class="input__title">Телефон</p>
+                        </dt>
+                        <dd class="input__dd">
+                            <label class="input__box">
+                                <input name="PROPERTY[NAME][0]" value="" type="tel" class="input__text mask"
+                                    data-msg="Поле обязательно" data-msg-required="Поле обязательно" required="required"
+                                    id="PROPERTY_NAME_text" /> </label>
+                        </dd>
+                    </dl>
+                    <dl class="input__dl">
+                        <dt class="input__dt">
+                            <p class="input__title">Ваше полное имя</p>
+                        </dt>
+                        <dd class="input__dd">
+                            <label class="input__box">
+                                <input name="PROPERTY[974][0]" value="" class="input__text" id="PROPERTY_974_text"
+                                    type="text" /> </label>
+                        </dd>
+                    </dl>
+                    <p class="modal__massage">
+                        <img src="/local/templates/main/img/icon/required1.svg" alt="" class="modal__massage-icon">
+                        <span class="modal__massage-text">– Поля обязательны для заполнения</span>
+                    </p>
+                    <div class="checkbox checkbox--ok">
+                        <label class="checkbox__label">
                             <input required type="checkbox" class="checkbox__input">
                             <span class="checkbox__text">Я согласен на обработку персональных данных</span>
                         </label>
-                        </div>
-                        <div class="captcha_container">
-                        </div>
-                        <input type="hidden" name="iblock_submit" value="Отправить" />
-                        <input type="submit" name="iblock_submit" value="отправить" class="form__button-send modal__btn btn btn--type-3" />
                     </div>
-
-
-
-
+                    <div class="captcha_container">
+                    </div>
+                    <input type="hidden" name="iblock_submit" value="Отправить" />
+                    <input type="submit" name="iblock_submit" value="отправить"
+                        class="form__button-send modal__btn btn btn--type-3" />
                 </div>
-            </form>
-        </div>
+
+
+
+
+            </div>
+        </form>
     </div>
+</div>
 
 
 
 
 
 
-    <div class="custom">
-        <div class="tm-chat-btn" onclick="this.classList.toggle('active')">
-            <a class="tm-chat-btn__item uk-icon" style="background-color: #4a76a8;" title="Написать нам во Вконтакте" href="//vk.me/-80425418" target="_blank" rel="noopener" uk-icon="hp-vk">
+<div class="custom">
+    <div class="tm-chat-btn" onclick="this.classList.toggle('active')">
+        <a class="tm-chat-btn__item uk-icon" style="background-color: #4a76a8;" title="Написать нам во Вконтакте"
+            href="//vk.me/-80425418" target="_blank" rel="noopener" uk-icon="hp-vk">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" data-svg="hp-vk">
-                <path d="M20 5c0,-1 0,-1 -1,-1l-2 0c-1,0 -1,0 -1,1 0,0 -1,2 -3,4 0,1 -1,1 -1,1 0,0 0,0 0,-1l0 -4c0,-1 0,-1 -1,-1l-3 0c-1,0 -1,0 -1,1 0,0 1,0 1,2l0 3c0,1 0,1 0,1 -1,0 -3,-3 -4,-6 0,-1 -1,-1 -1,-1l-2 0c-1,0 -1,0 -1,1 0,0 1,3 3,7 2,3 5,4 7,4 2,0 2,0 2,-1l0 -2c0,-1 0,-1 0,-1 1,0 1,1 2,2 2,1 2,2 3,2l2 0c1,0 1,0 1,-1 0,-1 -1,-1 -2,-3 0,0 -1,-1 -1,-1 -1,-1 -1,-1 0,-1 0,0 2,-4 3,-5z"></path>
+                <path
+                    d="M20 5c0,-1 0,-1 -1,-1l-2 0c-1,0 -1,0 -1,1 0,0 -1,2 -3,4 0,1 -1,1 -1,1 0,0 0,0 0,-1l0 -4c0,-1 0,-1 -1,-1l-3 0c-1,0 -1,0 -1,1 0,0 1,0 1,2l0 3c0,1 0,1 0,1 -1,0 -3,-3 -4,-6 0,-1 -1,-1 -1,-1l-2 0c-1,0 -1,0 -1,1 0,0 1,3 3,7 2,3 5,4 7,4 2,0 2,0 2,-1l0 -2c0,-1 0,-1 0,-1 1,0 1,1 2,2 2,1 2,2 3,2l2 0c1,0 1,0 1,-1 0,-1 -1,-1 -2,-3 0,0 -1,-1 -1,-1 -1,-1 -1,-1 0,-1 0,0 2,-4 3,-5z">
+                </path>
             </svg>
         </a>
-            <a class="tm-chat-btn__item uk-icon" style="background-color: #1da1f2;" title="Написать нам в Telegram" href="//t.me/edelweisspc" target="_blank" rel="noopener" uk-icon="hp-telegram">
+        <a class="tm-chat-btn__item uk-icon" style="background-color: #1da1f2;" title="Написать нам в Telegram"
+            href="//t.me/edelweisspc" target="_blank" rel="noopener" uk-icon="hp-telegram">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" data-svg="hp-telegram">
-                <path d="M7.59,14.74,6.45,11.18,19,1.68,1.46,8.7S.69,9,.75,9.48s.69.74.69.74l4.08,1.43,1.85,6.12,3.13-2.86h0l4.11,3.28a1.06,1.06,0,0,0,1.51-.55L19,1.68Z"></path>
+                <path
+                    d="M7.59,14.74,6.45,11.18,19,1.68,1.46,8.7S.69,9,.75,9.48s.69.74.69.74l4.08,1.43,1.85,6.12,3.13-2.86h0l4.11,3.28a1.06,1.06,0,0,0,1.51-.55L19,1.68Z">
+                </path>
             </svg>
         </a>
-            <a class="tm-chat-btn__item uk-icon" style="background-color: #00e676;" title="Написать нам в WhatsApp" href="//wa.me/79199947083" target="_blank" rel="noopener" uk-icon="whatsapp">
+        <a class="tm-chat-btn__item uk-icon" style="background-color: #00e676;" title="Написать нам в WhatsApp"
+            href="//wa.me/79199947083" target="_blank" rel="noopener" uk-icon="whatsapp">
             <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="whatsapp">
-                <path d="M16.7,3.3c-1.8-1.8-4.1-2.8-6.7-2.8c-5.2,0-9.4,4.2-9.4,9.4c0,1.7,0.4,3.3,1.3,4.7l-1.3,4.9l5-1.3c1.4,0.8,2.9,1.2,4.5,1.2 l0,0l0,0c5.2,0,9.4-4.2,9.4-9.4C19.5,7.4,18.5,5,16.7,3.3 M10.1,17.7L10.1,17.7c-1.4,0-2.8-0.4-4-1.1l-0.3-0.2l-3,0.8l0.8-2.9 l-0.2-0.3c-0.8-1.2-1.2-2.7-1.2-4.2c0-4.3,3.5-7.8,7.8-7.8c2.1,0,4.1,0.8,5.5,2.3c1.5,1.5,2.3,3.4,2.3,5.5 C17.9,14.2,14.4,17.7,10.1,17.7 M14.4,11.9c-0.2-0.1-1.4-0.7-1.6-0.8c-0.2-0.1-0.4-0.1-0.5,0.1c-0.2,0.2-0.6,0.8-0.8,0.9 c-0.1,0.2-0.3,0.2-0.5,0.1c-0.2-0.1-1-0.4-1.9-1.2c-0.7-0.6-1.2-1.4-1.3-1.6c-0.1-0.2,0-0.4,0.1-0.5C8,8.8,8.1,8.7,8.2,8.5 c0.1-0.1,0.2-0.2,0.2-0.4c0.1-0.2,0-0.3,0-0.4C8.4,7.6,7.9,6.5,7.7,6C7.5,5.5,7.3,5.6,7.2,5.6c-0.1,0-0.3,0-0.4,0 c-0.2,0-0.4,0.1-0.6,0.3c-0.2,0.2-0.8,0.8-0.8,2c0,1.2,0.8,2.3,1,2.4c0.1,0.2,1.7,2.5,4,3.5c0.6,0.2,1,0.4,1.3,0.5 c0.6,0.2,1.1,0.2,1.5,0.1c0.5-0.1,1.4-0.6,1.6-1.1c0.2-0.5,0.2-1,0.1-1.1C14.8,12.1,14.6,12,14.4,11.9"></path>
+                <path
+                    d="M16.7,3.3c-1.8-1.8-4.1-2.8-6.7-2.8c-5.2,0-9.4,4.2-9.4,9.4c0,1.7,0.4,3.3,1.3,4.7l-1.3,4.9l5-1.3c1.4,0.8,2.9,1.2,4.5,1.2 l0,0l0,0c5.2,0,9.4-4.2,9.4-9.4C19.5,7.4,18.5,5,16.7,3.3 M10.1,17.7L10.1,17.7c-1.4,0-2.8-0.4-4-1.1l-0.3-0.2l-3,0.8l0.8-2.9 l-0.2-0.3c-0.8-1.2-1.2-2.7-1.2-4.2c0-4.3,3.5-7.8,7.8-7.8c2.1,0,4.1,0.8,5.5,2.3c1.5,1.5,2.3,3.4,2.3,5.5 C17.9,14.2,14.4,17.7,10.1,17.7 M14.4,11.9c-0.2-0.1-1.4-0.7-1.6-0.8c-0.2-0.1-0.4-0.1-0.5,0.1c-0.2,0.2-0.6,0.8-0.8,0.9 c-0.1,0.2-0.3,0.2-0.5,0.1c-0.2-0.1-1-0.4-1.9-1.2c-0.7-0.6-1.2-1.4-1.3-1.6c-0.1-0.2,0-0.4,0.1-0.5C8,8.8,8.1,8.7,8.2,8.5 c0.1-0.1,0.2-0.2,0.2-0.4c0.1-0.2,0-0.3,0-0.4C8.4,7.6,7.9,6.5,7.7,6C7.5,5.5,7.3,5.6,7.2,5.6c-0.1,0-0.3,0-0.4,0 c-0.2,0-0.4,0.1-0.6,0.3c-0.2,0.2-0.8,0.8-0.8,2c0,1.2,0.8,2.3,1,2.4c0.1,0.2,1.7,2.5,4,3.5c0.6,0.2,1,0.4,1.3,0.5 c0.6,0.2,1.1,0.2,1.5,0.1c0.5-0.1,1.4-0.6,1.6-1.1c0.2-0.5,0.2-1,0.1-1.1C14.8,12.1,14.6,12,14.4,11.9">
+                </path>
             </svg>
         </a>
-            <span class="tm-chat-btn__text"> <span>Начать чат</span> </span>
-        </div>
+        <span class="tm-chat-btn__text"> <span>Начать чат</span> </span>
     </div>
-    <!-- Yandex.Metrika counter -->
-    <noscript><div><img src="https://mc.yandex.ru/watch/42310539" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
-    <div class="modal" id="locationModal">
-        <div class="js-location__modal_size">
-            <p class="modal__title">Выберите ваш город</p>
-            <p class="modal__text modal__text-gr location__modal_text">Для отображения верной стоимости и сроков доставки укажите населенный пункт доставки в поле ниже.</p>
-            <form class="Valid modal__form">
-                <div class="location__modal_search_box">
-                    <input type="text" class="input__text location__modal_search js-location__modal_search" placeholder="начните вводить ваш город">
-                    <div class="location__modal_search_list"></div>
-                </div>
-            </form>
-            <p class="location__modal_title-list">Популярные города</p>
-        </div>
-        <ul class="location__modal_list">
-            <li class="location__modal_list_li">
-                <a data-code="0000073738" href="javascript:void(0)" class="location__modal_list_link">Москва и подмосковье</a>
-            </li>
-            <li class="location__modal_list_li">
-                <a data-code="0000103664" href="javascript:void(0)" class="location__modal_list_link">Санкт-Петербург</a>
-            </li>
-            <li class="location__modal_list_li">
-                <a data-code="0000949228" href="javascript:void(0)" class="location__modal_list_link">Новосибирск</a>
-            </li>
-            <li class="location__modal_list_li">
-                <a data-code="0000812044" href="javascript:void(0)" class="location__modal_list_link">Екатеринбург</a>
-            </li>
-            <li class="location__modal_list_li">
-                <a data-code="0000550426" href="javascript:void(0)" class="location__modal_list_link">Казань</a>
-            </li>
-            <li class="location__modal_list_li">
-                <a data-code="0000600317" href="javascript:void(0)" class="location__modal_list_link">Нижний Новгород</a>
-            </li>
-            <li class="location__modal_list_li">
-                <a data-code="0000854968" href="javascript:void(0)" class="location__modal_list_link">Челябинск</a>
-            </li>
-            <li class="location__modal_list_li">
-                <a data-code="0000650509" href="javascript:void(0)" class="location__modal_list_link">Самара</a>
-            </li>
-            <li class="location__modal_list_li">
-                <a data-code="0000965067" href="javascript:void(0)" class="location__modal_list_link">Омск</a>
-            </li>
-            <li class="location__modal_list_li">
-                <a data-code="0000445112" href="javascript:void(0)" class="location__modal_list_link">Ростов-на-Дону</a>
-            </li>
-            <li class="location__modal_list_li">
-                <a data-code="0000728734" href="javascript:void(0)" class="location__modal_list_link">Уфа</a>
-            </li>
-            <li class="location__modal_list_li">
-                <a data-code="0000896058" href="javascript:void(0)" class="location__modal_list_link">Красноярск</a>
-            </li>
-            <li class="location__modal_list_li">
-                <a data-code="0000293598" href="javascript:void(0)" class="location__modal_list_link">Воронеж</a>
-            </li>
-            <li class="location__modal_list_li">
-                <a data-code="0000670178" href="javascript:void(0)" class="location__modal_list_link">Пермь</a>
-            </li>
-            <li class="location__modal_list_li">
-                <a data-code="0000426112" href="javascript:void(0)" class="location__modal_list_link">Волгоград</a>
-            </li>
-        </ul>
+</div>
+<!-- Yandex.Metrika counter -->
+<noscript>
+    <div><img src="https://mc.yandex.ru/watch/42310539" style="position:absolute; left:-9999px;" alt="" /></div>
+</noscript>
+<!-- /Yandex.Metrika counter -->
+<div class="modal" id="locationModal">
+    <div class="js-location__modal_size">
+        <p class="modal__title">Выберите ваш город</p>
+        <p class="modal__text modal__text-gr location__modal_text">Для отображения верной стоимости и сроков доставки
+            укажите населенный пункт доставки в поле ниже.</p>
+        <form class="Valid modal__form">
+            <div class="location__modal_search_box">
+                <input type="text" class="input__text location__modal_search js-location__modal_search"
+                    placeholder="начните вводить ваш город">
+                <div class="location__modal_search_list"></div>
+            </div>
+        </form>
+        <p class="location__modal_title-list">Популярные города</p>
     </div>
+    <ul class="location__modal_list">
+        <li class="location__modal_list_li">
+            <a data-code="0000073738" href="javascript:void(0)" class="location__modal_list_link">Москва и
+                подмосковье</a>
+        </li>
+        <li class="location__modal_list_li">
+            <a data-code="0000103664" href="javascript:void(0)" class="location__modal_list_link">Санкт-Петербург</a>
+        </li>
+        <li class="location__modal_list_li">
+            <a data-code="0000949228" href="javascript:void(0)" class="location__modal_list_link">Новосибирск</a>
+        </li>
+        <li class="location__modal_list_li">
+            <a data-code="0000812044" href="javascript:void(0)" class="location__modal_list_link">Екатеринбург</a>
+        </li>
+        <li class="location__modal_list_li">
+            <a data-code="0000550426" href="javascript:void(0)" class="location__modal_list_link">Казань</a>
+        </li>
+        <li class="location__modal_list_li">
+            <a data-code="0000600317" href="javascript:void(0)" class="location__modal_list_link">Нижний Новгород</a>
+        </li>
+        <li class="location__modal_list_li">
+            <a data-code="0000854968" href="javascript:void(0)" class="location__modal_list_link">Челябинск</a>
+        </li>
+        <li class="location__modal_list_li">
+            <a data-code="0000650509" href="javascript:void(0)" class="location__modal_list_link">Самара</a>
+        </li>
+        <li class="location__modal_list_li">
+            <a data-code="0000965067" href="javascript:void(0)" class="location__modal_list_link">Омск</a>
+        </li>
+        <li class="location__modal_list_li">
+            <a data-code="0000445112" href="javascript:void(0)" class="location__modal_list_link">Ростов-на-Дону</a>
+        </li>
+        <li class="location__modal_list_li">
+            <a data-code="0000728734" href="javascript:void(0)" class="location__modal_list_link">Уфа</a>
+        </li>
+        <li class="location__modal_list_li">
+            <a data-code="0000896058" href="javascript:void(0)" class="location__modal_list_link">Красноярск</a>
+        </li>
+        <li class="location__modal_list_li">
+            <a data-code="0000293598" href="javascript:void(0)" class="location__modal_list_link">Воронеж</a>
+        </li>
+        <li class="location__modal_list_li">
+            <a data-code="0000670178" href="javascript:void(0)" class="location__modal_list_link">Пермь</a>
+        </li>
+        <li class="location__modal_list_li">
+            <a data-code="0000426112" href="javascript:void(0)" class="location__modal_list_link">Волгоград</a>
+        </li>
+    </ul>
+</div>
 {% endblock %}

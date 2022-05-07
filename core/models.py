@@ -186,6 +186,7 @@ class ProductVersion(models.Model):
     gpu = models.ForeignKey(GPU, on_delete=models.CASCADE, db_index=True, related_name='product_versions', null=True, blank=True)
     color = models.CharField(max_length=500)
     processor = models.ForeignKey(Processor, on_delete=models.CASCADE, db_index=True, related_name='product_versions', null=True, blank=True)
+    final_price = models.DecimalField("Price", max_digits=6, decimal_places=2, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -195,6 +196,24 @@ class ProductVersion(models.Model):
 
     def __str__(self):
         return f"{self.product.title}"
+
+    def save(self, *args, **kwargs):
+        super(ProductVersion, self).save(*args, **kwargs)
+        price = int(self.product.price)
+        print(price, "before")
+        price+=int(self.ssd.added_price)
+        price+=int(self.hdd.added_price)
+        price+=int(self.gpu.added_price)
+        price+=int(self.ram.added_price)
+        price+=int(self.processor.added_price)
+        print(price, "after")
+        self.final_price = price
+        super(ProductVersion, self).save(*args, **kwargs)
+
+    # def get_final_price(self):
+    #     price = int(self.product.price)
+
+    #     return quantity*price
 
 class Review(models.Model):
     author_name = models.CharField(max_length=50)

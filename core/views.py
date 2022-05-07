@@ -52,6 +52,17 @@ class ProductDetailView(FormMixin,DetailView):
     def form_valid(self, form):
         form.instance.product = self.object
         form.save()
+
+        if "cart" not in self.request.session:
+            products = []
+            products.append(form.instance.id)
+            self.request.session["cart"] = products
+            print(self.request.session["cart"], "well ma nigga")
+
+        else:        
+            products = self.request.session["cart"]
+            products.append(form.instance.id)
+            print(self.request.session["cart"], "hey ma nigga")
         return super(ProductDetailView, self).form_valid(form)
 
 
@@ -71,8 +82,10 @@ class ExpensiveProductsView(ListView):
     paginate_by = 8
     queryset = Product.objects.order_by("-price")
 
+
 class AboutView(TemplateView):
     template_name = 'about.html'
+
 
 class FaqView(ListView):
     model = FAQ
@@ -80,11 +93,13 @@ class FaqView(ListView):
     context_object_name = 'faqs'
     queryset = FAQ.objects.order_by("id")
 
+
 class ReviewsView(ListView):
     model = Review
     template_name = 'reviews.html'
     queryset = Review.objects.order_by("-id")
     context_object_name = 'reviews'
+
 
 class GameView(ListView):
     model = Game
@@ -98,22 +113,34 @@ class GameViewDetail(DetailView):
     context_object_name = "game"
     
 
-
-
 class SupportView(TemplateView):
     template_name = 'support.html'
+
 
 class DeliveryView(TemplateView):
     template_name = 'delivery.html'
 
+
 class GuarantyView(TemplateView):
     template_name = 'guaranty.html'
+
 
 class CardView(TemplateView):
     template_name = 'card.html'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        products = self.request.session["cart"]
+        queryset = ProductVersion.objects.all()
+        for product in products:
+            queryset |= ProductVersion.objects.filter(pk=product)
+        context["products"] = queryset
+        return context
+
+
 class ContactView(TemplateView):
     template_name = 'contact.html'
+
 
 class NewsView(ListView):
     model = News
