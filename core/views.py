@@ -36,8 +36,9 @@ class ProductDetailView(FormMixin,DetailView):
         return reverse('core:product-detail', kwargs={'slug': self.object.slug})
 
     def get_context_data(self, **kwargs):
+        self.object = self.get_object()
         context = super(ProductDetailView, self).get_context_data(**kwargs)
-        context['form'] = ProductVersionForm(initial={'product': self.object})
+        context['form'] = ProductVersionForm(initial={'product': self.object}, product=self.object)
         return context
 
     def post(self, request, *args, **kwargs):
