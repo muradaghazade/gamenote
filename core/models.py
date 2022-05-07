@@ -231,3 +231,15 @@ class Game(models.Model):
 
 
 
+class News(models.Model):
+    title = models.CharField(max_length=50)
+    image = models.ImageField('Image',upload_to='images/', null=True, blank=True)
+    description = models.CharField(max_length=500)
+    slug = models.SlugField(max_length=255, null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def save(self, *args, **kwargs):
+        super(News, self).save(*args, **kwargs)
+        self.slug = f'{slugify(self.title)}-{self.id}'
+        super(News, self).save(*args, **kwargs)

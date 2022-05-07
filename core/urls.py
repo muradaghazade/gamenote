@@ -21,5 +21,6 @@ urlpatterns = [
     path('guaranty/', GuarantyView.as_view(), name='guaranty'),
     path('cart/', CardView.as_view(), name='cart'),
     path('contact/', ContactView.as_view(), name='contact'),
-    path('news/', NewsView.as_view(), name="news")
+    path('news/', NewsView.as_view(), name="news"),
+    path('news/<slug:slug>', NewsDetailView.as_view(), name="news-detail"),
 ]
