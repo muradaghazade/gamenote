@@ -4,7 +4,7 @@ from django.views.generic import TemplateView, ListView , DetailView , CreateVie
 from .models import Game, Product, ProductVersion, Review, Slider, FAQ
 from django.views.generic.edit import FormMixin
 from .forms import ProductVersionForm
-
+from django.urls import reverse
 
 
 class IndexView(TemplateView):
@@ -32,12 +32,26 @@ class ProductDetailView(FormMixin,DetailView):
     form_class = ProductVersionForm
     context_object_name = "product"
 
-    # def post(self, request, *args, **kwargs):
-    #     form = self.get_form()
-    #     if form.is_valid():
-	#         return self.form_valid(form)
-    #     else:
-    #         return self.form_invalid(form)
+    def get_success_url(self):
+        return reverse('core:product-detail', kwargs={'slug': self.object.slug})
+
+    def get_context_data(self, **kwargs):
+        context = super(ProductDetailView, self).get_context_data(**kwargs)
+        context['form'] = ProductVersionForm(initial={'product': self.object})
+        return context
+
+    def post(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        form = self.get_form()
+        if form.is_valid():
+            return self.form_valid(form)
+        else:
+            return self.form_invalid(form)
+
+    def form_valid(self, form):
+        form.instance.product = self.object
+        form.save()
+        return super(ProductDetailView, self).form_valid(form)
 
 
 
