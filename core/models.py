@@ -176,8 +176,8 @@ class ProductVersion(models.Model):
         verbose_name = 'ProductVersion'
         verbose_name_plural = 'ProductVersions'
 
-    def __str__(self):
-        return f"{self.product.title}"
+    # def __str__(self):
+    #     return f"{self.product.title}"
 
 class Review(models.Model):
     author_name = models.CharField(max_length=50)

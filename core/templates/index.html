@@ -168,14 +168,9 @@
                                                 </div>
                                             </div>
                                             <div class="catalog__li-controll">
-                                                <a href="javascript:void(0)" class="catalog__li-controll-link catalog__li-controll-link--buy add2basket" style="width: 45%;">Əldə et</a>
-                                                <a href="/power-pc/edelweiss-gladiator/" class="catalog__li-controll-link catalog__li-controll-link-periphery" style="width: 45%;">
-                <span class="catalog__li-controll-link--desc" >Ətraflı</span>
-                <span class="catalog__li-controll-link--mob"><img src="{% static 'main/img/icon/info-list.svg' %}" alt="" width="11"></span>
-            </a>
+                                                <a href="{% url 'core:product-detail' product.slug%}" class="catalog__li-controll-link catalog__li-controll-link--buy add2basket">Ətraflı</a>
                                                 
-                                                <img src="{% static 'main/img/icon/setting.svg' %}" alt="" width="13">
-            </a>
+                                               
                                             </div>
                                             <p class="catalog__li-desc" itemprop="description">{{product.description}} &nbsp;&nbsp; </p>
                                         </div>
