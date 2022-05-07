@@ -8,7 +8,7 @@ class Product(models.Model):
     price = models.DecimalField("Price", max_digits=6, decimal_places=2)
     operative_system = models.CharField(max_length=200)
     has_cd_drive = models.BooleanField(default=False)
-    video_card = models.CharField(max_length=40)
+    # video_card = models.CharField(max_length=40)
     screen_size = models.CharField(max_length=50)
     manufacturer_country = models.CharField(max_length=50)
     slug = models.SlugField(max_length=255, null=True, blank=True)
@@ -140,6 +140,22 @@ class Processor(models.Model):
         return f"{self.title}"
 
 
+class GPU(models.Model):
+    title = models.CharField(max_length=50)
+    image = models.ImageField('Image',upload_to='images/', null=True, blank=True)
+    added_price = models.DecimalField("Price", max_digits=6, decimal_places=2)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, db_index=True, related_name="gpus", null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = 'GPU'
+        verbose_name_plural = 'GPUs'
+
+    def __str__(self):
+        return f"{self.title}"
+
+
 class Slider(models.Model):
     title = models.CharField(max_length=50)
     description = models.TextField("Description")
@@ -167,6 +183,7 @@ class ProductVersion(models.Model):
     ram = models.ForeignKey(Ram, on_delete=models.CASCADE, db_index=True, related_name='product_versions', null=True, blank=True)
     hdd = models.ForeignKey(HDD, on_delete=models.CASCADE, db_index=True, related_name='product_versions', null=True, blank=True)
     ssd = models.ForeignKey(SSD, on_delete=models.CASCADE, db_index=True, related_name='product_versions', null=True, blank=True)
+    gpu = models.ForeignKey(GPU, on_delete=models.CASCADE, db_index=True, related_name='product_versions', null=True, blank=True)
     color = models.CharField(max_length=500)
     processor = models.ForeignKey(Processor, on_delete=models.CASCADE, db_index=True, related_name='product_versions', null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
