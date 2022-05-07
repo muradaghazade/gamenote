@@ -2,7 +2,7 @@ from re import search
 from django.contrib import admin
 from .models import *
 
-admin.site.register([Ram, SSD, HDD, Brand, Color, Processor, Image, Slider, FAQ, ProductVersion, Review, Game])
+admin.site.register([Ram, SSD, HDD, Brand, Color, Processor, Image, Slider, FAQ, ProductVersion, Review, Game, News])
 
 class ProductImageInline(admin.TabularInline):
     model = Image

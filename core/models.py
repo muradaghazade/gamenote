@@ -214,3 +214,10 @@ class Game(models.Model):
 
 
 
+class News(models.Model):
+    title = models.CharField(max_length=50)
+    image = models.ImageField('Image',upload_to='images/', null=True, blank=True)
+    description = models.CharField(max_length=500)
+    slug = models.SlugField(max_length=255, null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)

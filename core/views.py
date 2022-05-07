@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from django.views.generic import TemplateView, ListView , DetailView , CreateView
-from .models import Game, Product, ProductVersion, Review, Slider, FAQ
+from .models import Game, News, Product, ProductVersion, Review, Slider, FAQ
 from django.views.generic.edit import FormMixin
 from .forms import ProductVersionForm
 
@@ -98,5 +98,9 @@ class CardView(TemplateView):
 class ContactView(TemplateView):
     template_name = 'contact.html'
 
-class NewsView(TemplateView):
+class NewsView(ListView):
+    model = News
     template_name = 'news.html'
+    queryset = News.objects.order_by('-id')
+    context_object_name = 'news'
+    
