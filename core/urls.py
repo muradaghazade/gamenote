@@ -16,10 +16,11 @@ urlpatterns = [
     path('reviews/', ReviewsView.as_view(), name='reviews'),
     path('games/', GameView.as_view(), name="games"),
     path('games/<slug:slug>', GameViewDetail.as_view(), name="game-product"),
-    path('support', SupportView.as_view(), name='support'),
-    path('delivery', DeliveryView.as_view(), name='delivery'),
-    path('guaranty', GuarantyView.as_view(), name='guaranty'),
-    path('card', CardView.as_view(), name='card'),
-    path('contact', ContactView.as_view(), name='contact'),
-    path('news', NewsView.as_view(), name="news")
+    path('support/', SupportView.as_view(), name='support'),
+    path('delivery/', DeliveryView.as_view(), name='delivery'),
+    path('guaranty/', GuarantyView.as_view(), name='guaranty'),
+    path('cart/', CardView.as_view(), name='cart'),
+    path('contact/', ContactView.as_view(), name='contact'),
+    path('news/', NewsView.as_view(), name="news"),
+    path('news/<slug:slug>', NewsDetailView.as_view(), name="news-detail"),
 ]

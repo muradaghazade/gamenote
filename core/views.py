@@ -36,8 +36,9 @@ class ProductDetailView(FormMixin,DetailView):
         return reverse('core:product-detail', kwargs={'slug': self.object.slug})
 
     def get_context_data(self, **kwargs):
+        self.object = self.get_object()
         context = super(ProductDetailView, self).get_context_data(**kwargs)
-        context['form'] = ProductVersionForm(initial={'product': self.object})
+        context['form'] = ProductVersionForm(initial={'product': self.object}, product=self.object)
         return context
 
     def post(self, request, *args, **kwargs):
@@ -95,6 +96,8 @@ class GameViewDetail(DetailView):
     model = Game
     template_name = 'game-products.html'
     context_object_name = "game"
+    
+
 
 
 class SupportView(TemplateView):
@@ -118,3 +121,8 @@ class NewsView(ListView):
     queryset = News.objects.order_by('-id')
     context_object_name = 'news'
     
+
+class NewsDetailView(DetailView):
+    model = News
+    template_name = 'news-detail.html'
+    context_object_name = "new"

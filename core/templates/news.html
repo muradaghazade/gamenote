@@ -129,16 +129,16 @@
                 <ul class="article-list__container load_more_items_container">
                     {% for new in news %}
                     <li class="load_more_item article-list__li" id="bx_3218110189_25650">
-                        <a href="/articles/rtx-3070-ti/" class="article-list__li-box">
+                        <a href="/news/{{new.slug}}" class="article-list__li-box">
                             <div class="article-list__li-img-box">
                                 <picture>
-                                    <img class="article-list__li-img lazzyload" src={{new.image}} alt="{{new.title}}" title="Игровые видеокарты RTX 3070 Ti"
+                                    <img class="article-list__li-img lazzyload" src={{new.image.url}} alt="{{new.title}}" title="Игровые видеокарты RTX 3070 Ti"
                                     />
                                 </picture>
                             </div>
 
                             <div class="article-list__li-content">
-                                <time class="article-list__li-time">10.06.2021</time>
+                                <time class="article-list__li-time">{{new.created_at}}</time>
                                 <p class="article-list__li-text">{{new.title}}</p>
 
                             </div>
