@@ -4726,8 +4726,6 @@ h4,
 
 .basket__item-rem {
     display: inline-block;
-    width: .875rem;
-    height: .875rem;
     font-size: 0;
     margin-left: 2.8125rem
 }
