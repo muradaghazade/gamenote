@@ -45,10 +45,7 @@ body {
     word-wrap: break-word
 }
 
-button,
-input {
-    overflow: hidden
-}
+
 
 button:hover:focus,
 input:hover:focus {
@@ -84,12 +81,7 @@ textarea::-ms-clear {
     height: 0
 }
 
-[type="checkbox"],
-[type="radio"] {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 0
-}
+
 
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
@@ -3048,11 +3040,6 @@ a:hover svg {
     fill: #fff
 }
 
-input {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none
-}
 
 .macos .catalog__credit,
 .macos .catalog__li-price-r {
@@ -9229,7 +9216,6 @@ h4,
 }
 
 .detalic__text {
-    font-family: 'PF DinDisplay Pro';
     font-size: 1.5rem;
     line-height: 1.33;
     color: #8490a4;
@@ -9785,7 +9771,6 @@ h4,
     align-items: center;
     padding: 1rem 0;
     border-bottom: 1px dashed #56617c;
-    font-family: 'PF DinDisplay Pro'
 }
 
 @media(min-width:1025px) {
@@ -10074,7 +10059,6 @@ h4,
 .detalic__description-tabs-li {
     position: relative;
     font-size: 1rem;
-    font-family: 'PF DinDisplay Pro';
     line-height: 1.5;
     color: #8490a4;
     margin-bottom: 1rem;

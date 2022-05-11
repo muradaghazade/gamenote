@@ -2,7 +2,7 @@ from re import search
 from django.contrib import admin
 from .models import *
 
-admin.site.register([Ram, SSD, HDD, Brand, Color, Processor, Image, Slider, FAQ, ProductVersion, Review, Game, GPU, News,])
+admin.site.register([Ram, SSD, HDD, Brand, Color, Processor, ProductVersion, Image, Slider, FAQ, Review, Game, GPU, News, Order])
 
 class ProductImageInline(admin.TabularInline):
     model = Image
@@ -26,7 +26,6 @@ class ProductAdmin(admin.ModelAdmin):
     inlines = [ProductImageInline, RamInline, SSDInline, HDDInline, ProcessorInline, GPUInline]
     raw_id_fields = ['brand']
     search_fields = ['title']
-
 
 
 admin.site.register(Product, ProductAdmin)

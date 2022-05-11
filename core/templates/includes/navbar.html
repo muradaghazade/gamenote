@@ -197,9 +197,9 @@
                             </a>
                             <div class="search" style="visibility: hidden;">
                                 <div class="search__inner inner">
-                                    <form class="search__form" action="/search/">
-                                        <input type="text" value="" name="q" class="search__input" placeholder="Введите слово или фразу...">
-                                        <input type="submit" name="s" class="search__btn btn" value="axtar" >
+                                    <form class="search__form"  action="{% url 'core:new' %}">
+                                        <input type="text" value="{{request.GET.title}}" name="title" class="search__input" placeholder="Axtar...">
+                                        <input type="submit" class="search__btn btn">
                                     </form>
                                 </div>
                             </div>
@@ -212,7 +212,7 @@
                                         <img width="30px" height="50px" src="{% static 'public/img/icon/basket.png' %}"/>
                                     </svg>
                                 </div>
-                                <span class="header__controll-sum">0</span>
+                                <!-- <span class="header__controll-sum"></span> -->
                             </div>
                             <span class="header__controll-text">Корзина</span>
                             <!--'end_frame_cache_bx_basketFKauiI'-->

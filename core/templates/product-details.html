@@ -64,7 +64,7 @@
                             <h1 class="detalic__h1" itemprop="name">{{product.title}}</h1>
                             <div class="detalic__text" itemprop="description">{{product.description}}</div>
                             <div class="detalic__control">
-                                <a href="javascript:void(0)" class="btn btn--type-2 detalic__control-btn-1 add2basket">Əldə Et</a>
+                                <a href="#confiq" class="btn btn--type-2 detalic__control-btn-1 add2basket">Əldə Et</a>
                                 <div class="detalic__control-price-box" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                                     <p class="detalic__control-price" itemprop="price" content="324410">
                                         {{product.price}} ₼
@@ -81,41 +81,7 @@
                                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-info"></use>
                                     </svg>
                                 </span>
-                                            <div class="catalog__credit-hidd">
-                                                <p class="catalog__credit-hidd-title">Оплата в кредит</p>
-                                                <dl class="catalog__credit-hidd-dl">
-                                                    <dt class="catalog__credit-hidd-dt">Быстро и просто</dt>
-                                                    <dd class="catalog__credit-hidd-dd">Заполните анкету на сайте магазина и получите решение по вашей заявке за 2 минуты.</dd>
-                                                </dl>
-                                                <dl class="catalog__credit-hidd-dl">
-                                                    <dt class="catalog__credit-hidd-dt">Выбор лучших условий</dt>
-                                                    <dd class="catalog__credit-hidd-dd">Заявка уходит на рассмотрение в большое число финансовых организаций: Альфа-Банк, Pay P.S, Банк Восточный, Тинькофф Банк, Кредит Европа Банк, Second Bank и др.</dd>
-                                                </dl>
-                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="detalic__control-price-credit detalic__control-price-credit--mob">от 32 441 руб/мес
-
-                                        <div class="catalog__credit">
-                                            <span class="detalic__control-price-i">
-                                    <svg class="icon-info" width="13" height="13">
-                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-info"></use>
-                                    </svg>
-                                </span>
-                                            <div class="catalog__credit-hidd">
-                                                <p class="catalog__credit-hidd-title">Оплата в кредит</p>
-                                                <dl class="catalog__credit-hidd-dl">
-                                                    <dt class="catalog__credit-hidd-dt">Быстро и просто</dt>
-                                                    <dd class="catalog__credit-hidd-dd">Заполните анкету на сайте магазина и получите решение по вашей заявке за 2 минуты.</dd>
-                                                </dl>
-                                                <dl class="catalog__credit-hidd-dl">
-                                                    <dt class="catalog__credit-hidd-dt">Выбор лучших условий</dt>
-                                                    <dd class="catalog__credit-hidd-dd">Заявка уходит на рассмотрение в большое число финансовых организаций: Альфа-Банк, Pay P.S, Банк Восточный, Тинькофф Банк, Кредит Европа Банк, Second Bank и др.</dd>
-                                                </dl>
-                                            </div>
-
-                                        </div>
-
                                     </div>
                                 </div>
                                 <a href="#" class="btn detalic__control-btn-3 js-control-btn">
@@ -123,10 +89,7 @@
                             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-btn"></use>
                         </svg>
                     </a>
-                                <div class="detalic__control-btn-box">
-                                    <a href="/constructor/#edelweiss-terminator" class="btn  detalic__control-btn-2">изменить конфигурацию</a>
-                                    <a href="#help" class="btn  detalic__control-btn-2 helpclick" data-modal="text">помощь специалиста</a>
-                                </div>
+                                
                             </div>
                         </div>
 
@@ -153,7 +116,7 @@
                     </div>
                 </div>
             </div>
-            <form action="{% url 'core:product-detail' product.slug%}" method="post">
+            <form action="{% url 'core:product-detail' product.slug%}" method="post" id="confiq">
                 {% csrf_token %}
                 <div class="detalic__equipment">
                     <div class="detalic__inner inner">

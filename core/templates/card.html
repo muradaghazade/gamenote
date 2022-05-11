@@ -27,7 +27,7 @@
                             <link itemprop="item" href="https://edelws.ru/cart/">
                             <meta itemprop="position" content="2" />
                             <meta itemprop="name" content="Корзина" />
-                            Корзина
+                            Səbət
                         </span>
                     </div>
                 </div>
@@ -41,7 +41,7 @@
             </div>
             <div class="title-page__inner inner">
                 <div class="title-page__wrapp">
-                    <h1 class="title-page__h1">Корзина</h1>
+                    <h1 class="title-page__h1">Səbət</h1>
                 </div>
             </div>
         </div>
@@ -50,7 +50,7 @@
                 <div class="basket__inner inner">
                     <div class="basket__wrapper">
                         <div class="basket__start">
-                            <p class="basket__title">Корзина</p>
+                            <p class="basket__title">Səbət</p>
                             {% for product in products %}
                             <div class="basket__item-box">
                                 <div class="basket__item" index="0">
@@ -63,18 +63,24 @@
                                     <div class="basket__item-price"><span>{{ product.final_price }}</span> ₼</div>
                                     <div class="basket__item-control"><a
                                             href="javascript:void(0)" class="basket__item-rem">
-                                            <img src="{% static 'public/img/x.png' %}" alt="" style="width: 20px;">
+                                            <form action="{% url 'core:delete-from-cart' %}" method="POST">
+                                                {% csrf_token %}
+                                                <input style="display: none;" name="id" type="text" value="{{product.id}}">
+                                                <button type="submit" style="border: transparent;">
+                                                    <img src="{% static 'public/img/x.png' %}" alt="" style="width: 20px;">
+                                                </button>
+                                            
+                                            </form>
                                         </a>
                                     </div>
                                 </div>
                             </div>
                             {% endfor %}
                             <div class="basket__worth">
-                                <p class="basket__worth-title">Общая стоимость</p>
+                                <p class="basket__worth-title">Ümumi qimət</p>
                                 <div class="basket__worth-box">
-                                    <p class="basket__worth-price"><span>198&nbsp;400</span>₼</p>
-                                    <div class="basket__worth-credit"><span class="basket__worth-credit-sum">от
-                                            <span>19&nbsp;840</span> руб. в месяц</span>
+                                    <p class="basket__worth-price"><span>{{sum}}</span>₼</p>
+                                    <div class="basket__worth-credit"><span class="basket__worth-credit-sum">
                                         <div class="catalog__credit"><a href="javascript:void(0)"
                                                 class="basket__worth-i"><svg width="13" height="13" class="icon-info">
                                                     <use xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -104,35 +110,33 @@
                         <div class="basket__end">
                             <div class="basket__order">
                                 <p class="basket__title">Оформление заказа</p>
-                                <form class="Valid">
+                                <form class="Valid" method="POST">
+                                    {% csrf_token %}
                                     <div class="basket__order-box">
                                         <p class="basket__title basket__title--type-2">Личные данные</p>
                                         <dl class="input__dl">
                                             <dt class="input__dt">
                                                 <p class="input__title">Ваше полное имя</p>
                                             </dt>
-                                            <dd class="input__dd"><label class="input__box"><input type="text"
-                                                        data-msg="" class="input__text">
+                                            <dd class="input__dd"><label class="input__box">{{form.full_name}}
                                                     <!---->
-                                                </label></dd>
+                                                </label>{{form.full_name.errors}}</dd>
                                         </dl>
                                         <dl class="input__dl">
                                             <dt class="input__dt">
                                                 <p class="input__title">Телефон</p>
                                             </dt>
-                                            <dd class="input__dd"><label class="input__box"><input type="tel"
-                                                        data-msg="" class="input__text">
+                                            <dd class="input__dd"><label class="input__box">{{form.number}}
                                                     <!---->
-                                                </label></dd>
+                                                </label>{{form.number.errors}}</dd>
                                         </dl>
                                         <dl class="input__dl">
                                             <dt class="input__dt">
                                                 <p class="input__title">E-mail</p>
                                             </dt>
-                                            <dd class="input__dd"><label class="input__box"><input type="email"
-                                                        data-msg="" class="input__text">
+                                            <dd class="input__dd"><label class="input__box">{{form.email}}
                                                     <!---->
-                                                </label></dd>
+                                                </label>{{form.email.errors}}</dd>
                                         </dl>
                                         <p class="input__massage basket__input-massage"><img
                                                 src="/local/templates/main/img/icon/required1.svg" alt=""
@@ -141,65 +145,20 @@
                                     </div>
                                     <div class="basket__order-box">
                                         <p class="basket__title basket__title--type-2">Доставка</p>
-                                        <div class="radio radio--big" index="0"><label class="radio__label"><input
-                                                    type="radio" name="delivery" class="radio__input"> <span
-                                                    class="radio__text radio__text--big">Доставка по России (<a
-                                                        style="color:#aaadad" target="_blank"
-                                                        href="http://www.dellin.ru/requests/">"Деловые
-                                                        линии"</a>)</span></label>
-                                            <div class="catalog__credit"><a href="javascript:void(0)"
-                                                    class="basket__worth-i"><svg width="14" height="14"
-                                                        class="icon-info">
-                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                            xlink:href="/local/templates/main/img/sprite.svg#icon-info">
-                                                        </use>
-                                                    </svg></a>
-                                                <div class="catalog__credit-hidd basket__credit-hidd">Минимальная сумма
-                                                    заказа - 40 000 руб.</div>
-                                            </div>
-                                        </div>
-                                        <!---->
+                                        {{form.delivery}}
+                                        {{form.delivery.errors}}
                                     </div>
                                     <!---->
                                     <div class="basket__order-box">
                                         <p class="basket__title basket__title--type-2">Оплата</p>
-                                        <div class="radio radio--big" index="0"><label class="radio__label"><input
-                                                    type="radio" name="pay" class="radio__input"> <span
-                                                    class="radio__text radio__text--big">Банковской
-                                                    картой</span></label>
-                                            <div class="catalog__credit"><a href="javscript:void(0)"
-                                                    class="basket__worth-i"><svg width="14" height="14"
-                                                        class="icon-info">
-                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                            xlink:href="/local/templates/main/img/sprite.svg#icon-info">
-                                                        </use>
-                                                    </svg></a>
-                                                <div class="catalog__credit-hidd basket__credit-hidd">+4.5% к стоимости
-                                                    заказа</div>
-                                            </div>
-                                        </div>
-                                        <div class="radio radio--big" index="1"><label class="radio__label"><input
-                                                    type="radio" name="pay" class="radio__input"> <span
-                                                    class="radio__text radio__text--big">Безналичный расчет (для юр.
-                                                    лиц)</span></label>
-                                            <div class="catalog__credit"><a href="javscript:void(0)"
-                                                    class="basket__worth-i"><svg width="14" height="14"
-                                                        class="icon-info">
-                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                            xlink:href="/local/templates/main/img/sprite.svg#icon-info">
-                                                        </use>
-                                                    </svg></a>
-                                                <div class="catalog__credit-hidd basket__credit-hidd">при данном способе
-                                                    оплаты +10%</div>
-                                            </div>
-                                        </div>
-                                        <!---->
+                                        {{form.payment_type}}
+                                        {{form.payment_type.errors}}
                                     </div>
                                     <div class="basket__order-box">
                                         <p class="basket__title basket__title--type-2">Комментарий к заказу</p>
                                         <dl class="input__dl input__dl--texter">
-                                            <dd class="input__dd basket__order-dd"><textarea name="massage"
-                                                    class="input__textarea"></textarea></dd>
+                                            <dd class="input__dd basket__order-dd">{{form.comment}}</dd>
+                                            {{form.comment.errors}}
                                         </dl>
                                         <div class="checkbox checkbox--ok"><label class="checkbox__label"><input
                                                     type="checkbox" class="checkbox__input"> <span
@@ -208,8 +167,8 @@
                                             <!---->
                                         </div>
                                     </div>
-                                    <div class="basket__order-box-btn"><a href="javascript:void(0)"
-                                            class="btn btn--type-2 basket__order-btn">оформить заказ</a>
+                                    <div class="basket__order-box-btn"><button type="submit"
+                                            class="btn btn--type-2 basket__order-btn">оформить заказ</button>
                                         <p class="basket__order-info">После оформления с вами свяжется оператор для
                                             уточнения деталей</p>
                                     </div>

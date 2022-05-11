@@ -1,18 +1,22 @@
+from urllib import request
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from django.views.generic import TemplateView, ListView , DetailView , CreateView
-from .models import Game, News, Product, ProductVersion, Review, Slider, FAQ
+from .models import Game, News, Order, Product, ProductVersion, Review, Slider, FAQ
 from django.views.generic.edit import FormMixin
-from .forms import ProductVersionForm
-from django.urls import reverse
+from .forms import OrderForm, ProductVersionForm
+from django.urls import reverse, reverse_lazy
 
 
 class IndexView(TemplateView):
     template_name = 'index.html'
 
     def get_context_data(self, **kwargs):
+        if "cart" not in self.request.session:
+            products = []
+            self.request.session["cart"] = products
         context = super().get_context_data(**kwargs)
-        context['products'] = Product.objects.order_by("-id")
+        context['products'] = Product.objects.order_by("-id")[:4]
         context['sliders'] = Slider.objects.order_by("-id")
         context['games'] = Game.objects.order_by("-id")
         return context
@@ -24,6 +28,13 @@ class NewProductsView(ListView):
     template_name = 'new.html'
     paginate_by = 8
     queryset = Product.objects.order_by("-id")
+
+    def get_queryset(self):
+        queryset = Product.objects.order_by("-id")
+        title = self.request.GET.get('title')
+        if title:
+            queryset = queryset.filter(title__icontains=title)
+        return queryset
 
 
 class ProductDetailView(FormMixin,DetailView):
@@ -57,14 +68,12 @@ class ProductDetailView(FormMixin,DetailView):
             products = []
             products.append(form.instance.id)
             self.request.session["cart"] = products
-            print(self.request.session["cart"], "well ma nigga")
 
         else:        
             products = self.request.session["cart"]
             products.append(form.instance.id)
-            print(self.request.session["cart"], "hey ma nigga")
+            self.request.session["cart"] = products
         return super(ProductDetailView, self).form_valid(form)
-
 
 
 class CheapProductsView(ListView):
@@ -111,6 +120,13 @@ class GameViewDetail(DetailView):
     model = Game
     template_name = 'game-products.html'
     context_object_name = "game"
+
+    def get_context_data(self, **kwargs):
+        self.object = self.get_object()
+        context = super(GameViewDetail, self).get_context_data(**kwargs)
+        context['best'] = self.object.products.order_by("-price").first()
+        print(self.object.products.order_by("-price").first())
+        return context
     
 
 class SupportView(TemplateView):
@@ -125,17 +141,29 @@ class GuarantyView(TemplateView):
     template_name = 'guaranty.html'
 
 
-class CardView(TemplateView):
+class CardView(CreateView):
+    model = Order
+    form_class = OrderForm
     template_name = 'card.html'
+    success_url = reverse_lazy('core:index')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         products = self.request.session["cart"]
-        queryset = ProductVersion.objects.all()
+        queryset = ProductVersion.objects.none()
+        price = 0
         for product in products:
             queryset |= ProductVersion.objects.filter(pk=product)
+        for product in queryset:
+            price+=product.final_price
+        context["sum"] = price
         context["products"] = queryset
         return context
+
+    def form_valid(self, form):
+        self.request.session['cart'] = []
+        form.save()
+        return super().form_valid(form)
 
 
 class ContactView(TemplateView):
@@ -153,3 +181,12 @@ class NewsDetailView(DetailView):
     model = News
     template_name = 'news-detail.html'
     context_object_name = "new"
+
+
+def delete_from_cart(request):
+    if request.method == 'POST':
+        products = request.session['cart']
+        print(products, "im heeeereeeee")
+        products.remove(int(request.POST.get('id')))
+        request.session["cart"] = products
+        return redirect('core:cart')
