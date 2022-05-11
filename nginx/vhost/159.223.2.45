@@ -1,0 +1,6 @@
+location /static/ {
+    alias /gamenote/static/;
+}
+location /media/ {
+    alias /gamenote/media/;
+}
