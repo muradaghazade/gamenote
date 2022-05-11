@@ -222,6 +222,27 @@ Oyun noutbukları</span></div>
                         {% endfor %}
                     </ul>
                 </div>
+                <nav class="pagin" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+                    {% if page_obj.has_previous %}
+                    <span class="pagin__link pagin__arrow pagin__arrow--prev pagin__link--disabled">
+            <svg class="pagin__arrow-icon pagin__arrow-icon--prev" width="16" height="16">
+                <img style="border-radius: 30px;" src="{% static 'public/img/icon/leftArrow.png' %}"/>
+        </svg>
+            </span>
+            {% endif %} 
+            <span class="pagin__link _active">{{page_obj.number}}</span>
+            {% if page_obj.has_next %}
+                    <a itemprop="url" href="?page={{ page_obj.next_page_number }}" class="pagin__link"><span itemprop="name">{{page_obj.next_page_number}}</span></a>
+            {% endif %}
+            {% if page_obj.has_next %}
+                    <a itemprop="url" href="?page={{ page_obj.next_page_number }}" class="pagin__link pagin__arrow pagin__arrow--next">
+                        <meta itemprop="name" content="Следующая" />
+                        <svg class="pagin__arrow-icon pagin__arrow-icon--next" width="16" height="16">
+                            <img style="border-radius: 30px;" src="{% static 'public/img/icon/rightArrow.png' %}"/>
+        </svg>
+                    </a>
+                    {% endif %}
+                </nav>
         </main>
         </div>
         <div class="modal modal--little" id="successaddc">
