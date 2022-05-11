@@ -18,13 +18,12 @@
                     <div class="swiper-wrapper">
 
                       {% for slider in sliders%}
-                      <!-- <div class="swiper-slide">
-                          <img src="{{slider.image.url}}"/>
-                      </div> -->
                       <div class="swiper-slide main-slider__slide">
+                          {% if slider.image %}
                         <picture>
                             <source srcset="{{slider.image.url}}" media="(max-width: 1024px)"><img srcset="{{slider.image.url}}" src="{{slider.image.url}}" alt="" class="lazzyload main-slider__bg">
                         </picture>
+                        {% endif %}
                         <div class="main-slider__content">
                             <div class="main-slider__box">
                                 <p class="main-slider__name">{{ slider.title }}</p>
