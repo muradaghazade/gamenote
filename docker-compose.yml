@@ -21,7 +21,7 @@ services:
             - ./postgre_db:/var/lib/postgresql/
         env_file: ./.env
     web:
-        container_name: ipekyolu
+        container_name: gamenote
         build: .
         restart: "always"
         ports:
