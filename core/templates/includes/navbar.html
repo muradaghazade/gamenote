@@ -158,31 +158,24 @@
 
                     <div class="header__menu">
                         <nav itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="header__menu-box">
-<!-- 
-                            <a itemprop="url" href="/constructor/" class="header__menu-link ">
-                                <div class="header__menu-link-icon-box">
-                                    <svg class="header__menu-link-icon" width="20" height="20">
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-mobile_konfig"></use>
-</svg>
-                                </div> <span itemprop="name" class="header__menu-link-span">Konfiqurator</span>
-                            </a> -->
-                            <a itemprop="url" href="{% url 'core:budget-products' %}" class="header__menu-link ">
-                                <div class="header__menu-link-icon-box">
-                                    <svg class="header__menu-link-icon" width="22" height="22">
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-game"></use>
-</svg>
-                                </div> <span itemprop="name" class="header__menu-link-span">Büdcəli noutbuklar</span>
-                            </a>
-                            <a itemprop="url" href="{% url 'core:new' %}" class="header__menu-link no-pad">
-            <span itemprop="name">Oyun noutbukları</span>                </a>
-                            <a itemprop="url" href={% url 'core:power-products' %} class="header__menu-link no-pad">
-            <span itemprop="name">Güclü Noutbuklar</span>                </a>
-                            <a itemprop="url" href="{% url 'core:games' %}" class="header__menu-link no-pad">
-            <span itemprop="name">Oyuna uyğun Noutbuklar</span>                </a>
+                            
+
+                           
+
+                           
+                           
 
                         </nav>
                     </div>
 
+                </div>
+                <div class="search" style="visibility: hidden; position: absolute; top: 50px; border: red solid;">
+                    <div class="search__inner inner">
+                        <form class="search__form" action="/search/">
+                            <input type="text" value="" name="q" class="search__input" placeholder="Введите слово или фразу...">
+                            <input type="submit" name="s" class="search__btn btn" value="axtar" >
+                        </form>
+                    </div>
                 </div>
                 <div class="header__end">
                     <div class="header__controll">
@@ -195,14 +188,7 @@
                                 </div>
                                 <span class="header__controll-text">Axtar</span>
                             </a>
-                            <div class="search" style="visibility: hidden;">
-                                <div class="search__inner inner">
-                                    <form class="search__form" action="/search/">
-                                        <input type="text" value="" name="q" class="search__input" placeholder="Введите слово или фразу...">
-                                        <input type="submit" name="s" class="search__btn btn" value="axtar" >
-                                    </form>
-                                </div>
-                            </div>
+                            
                         </div>
                         <a href="/cart/" id="bx_basketFKauiI" class="header__controll-link js-btn-search" style="display: flex; justify-content: center; align-items: center;">
                             <!--'start_frame_cache_bx_basketFKauiI'-->
@@ -227,14 +213,34 @@
                         </a>
                     </div>
                 </div>
+                
             </div>
         </div>
+    </div>
+    <div class="footer-header">
+        <a href="{% url 'core:budget-products' %}" class="budget-products-footer"><img src="{% static '/public/img/productrouter.png' %}"/>Büdcəli Noutbuklar</a>
+        <a href="{% url 'core:new' %}" class="budget-products-footer"><img src="{% static '/public/img/productrouter.png' %}"/>Oyun Noutbuklar</a>
+        <a href="{% url 'core:power-products' %}" class="budget-products-footer"><img src="{% static '/public/img/productrouter.png' %}"/>Güclü Noutbuklar</a>
+        <a href="{% url 'core:games' %}" class="budget-products-footer"><img src="{% static '/public/img/productrouter.png' %}"/>Oyuna uyğun Noutbuklar</a>
+        <span class="axtar-footer"><img src="{% static '/public/img/searchIcon.png' %}"/> Axtar</span>
+        <a href="/cart/" class="budget-products-footer"><img src="{% static '/public/img/basketIcon.png' %}"/>Səbət</a>
     </div>
 </header>
 
 <script>
     document.querySelector('.header__controll-link').addEventListener('click', () => {
         var searchLayer =  document.querySelector('.search')
+        if (searchLayer.style.visibility == "visible"){
+            searchLayer.style.visibility = "hidden"
+        }else{
+            searchLayer.style.visibility = "visible"
+        }
+    })
+
+
+    document.querySelector('.axtar-footer').addEventListener('click', () => {
+        var searchLayer =  document.querySelector('.search')
+        console.log('A.y.e')
         if (searchLayer.style.visibility == "visible"){
             searchLayer.style.visibility = "hidden"
         }else{
