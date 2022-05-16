@@ -188,7 +188,18 @@
                                 </div>
                                 <span class="header__controll-text">Axtar</span>
                             </a>
+<<<<<<< HEAD
                             
+=======
+                            <div class="search" style="visibility: hidden;">
+                                <div class="search__inner inner">
+                                    <form class="search__form"  action="{% url 'core:new' %}">
+                                        <input type="text" value="{{request.GET.title}}" name="title" class="search__input" placeholder="Axtar...">
+                                        <input type="submit" class="search__btn btn">
+                                    </form>
+                                </div>
+                            </div>
+>>>>>>> bd0a473ccbc5f880262b5235366cdcdf97bd82c1
                         </div>
                         <a href="/cart/" id="bx_basketFKauiI" class="header__controll-link js-btn-search" style="display: flex; justify-content: center; align-items: center;">
                             <!--'start_frame_cache_bx_basketFKauiI'-->
@@ -198,7 +209,7 @@
                                         <img width="30px" height="50px" src="{% static 'public/img/icon/basket.png' %}"/>
                                     </svg>
                                 </div>
-                                <span class="header__controll-sum">0</span>
+                                <!-- <span class="header__controll-sum"></span> -->
                             </div>
                             <span class="header__controll-text">Корзина</span>
                             <!--'end_frame_cache_bx_basketFKauiI'-->

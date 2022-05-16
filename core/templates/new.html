@@ -77,17 +77,7 @@ Oyun noutbukları</span></div>
                                                     <span class="catalog__li-price-i"><svg class="icon-info" width="14" height="14">
                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-info"></use>
                     </svg></span>
-                                                    <div class="catalog__credit-hidd">
-                                                        <p class="catalog__credit-hidd-title">Оплата в кредит</p>
-                                                        <dl class="catalog__credit-hidd-dl">
-                                                            <dt class="catalog__credit-hidd-dt">Быстро и просто</dt>
-                                                            <dd class="catalog__credit-hidd-dd">Заполните анкету на сайте магазина и получите решение по вашей заявке за 2 минуты.</dd>
-                                                        </dl>
-                                                        <dl class="catalog__credit-hidd-dl">
-                                                            <dt class="catalog__credit-hidd-dt">Выбор лучших условий</dt>
-                                                            <dd class="catalog__credit-hidd-dd">Заявка уходит на рассмотрение в большое число финансовых организаций: Альфа-Банк, Pay P.S, Банк Восточный, Тинькофф Банк, Кредит Европа Банк, Second Bank и др.</dd>
-                                                        </dl>
-                                                    </div>
+                                                    
                                                 </div>
 
 
@@ -95,14 +85,9 @@ Oyun noutbukları</span></div>
                                         </div>
                                     </div>
                                     <div class="catalog__li-controll">
-                                        <a href="javascript:void(0)" class="catalog__li-controll-link catalog__li-controll-link--buy add2basket">Əldə et</a>
                                         <a href="/power-pc/edelweiss-gladiator/" class="catalog__li-controll-link catalog__li-controll-link-periphery">
         <span class="catalog__li-controll-link--desc">Ətraflı</span>
         <span class="catalog__li-controll-link--mob"><img src="{% static 'main/img/icon/info-list.svg' %}" alt="" width="11"></span>
-    </a>
-                                        <a href="/constructor/#edelweiss-gladiator" class="catalog__li-controll-link">
-                                        <img src="{% static 'main/img/icon/setting.svg' %}" alt="" width="13">
-        <span class="catalog__li-controll-link-hidd">конфигурировать</span>
     </a>
                                     </div>
                                     <p class="catalog__li-desc" itemprop="description">{{product.description}} &nbsp;&nbsp; </p>
@@ -237,6 +222,27 @@ Oyun noutbukları</span></div>
                         {% endfor %}
                     </ul>
                 </div>
+                <nav class="pagin" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+                    {% if page_obj.has_previous %}
+                    <span class="pagin__link pagin__arrow pagin__arrow--prev pagin__link--disabled">
+            <svg class="pagin__arrow-icon pagin__arrow-icon--prev" width="16" height="16">
+                <img style="border-radius: 30px;" src="{% static 'public/img/icon/leftArrow.png' %}"/>
+        </svg>
+            </span>
+            {% endif %} 
+            <span class="pagin__link _active">{{page_obj.number}}</span>
+            {% if page_obj.has_next %}
+                    <a itemprop="url" href="?page={{ page_obj.next_page_number }}" class="pagin__link"><span itemprop="name">{{page_obj.next_page_number}}</span></a>
+            {% endif %}
+            {% if page_obj.has_next %}
+                    <a itemprop="url" href="?page={{ page_obj.next_page_number }}" class="pagin__link pagin__arrow pagin__arrow--next">
+                        <meta itemprop="name" content="Следующая" />
+                        <svg class="pagin__arrow-icon pagin__arrow-icon--next" width="16" height="16">
+                            <img style="border-radius: 30px;" src="{% static 'public/img/icon/rightArrow.png' %}"/>
+        </svg>
+                    </a>
+                    {% endif %}
+                </nav>
         </main>
         </div>
         <div class="modal modal--little" id="successaddc">

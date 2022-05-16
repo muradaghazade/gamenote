@@ -58,7 +58,7 @@ class Ram(models.Model):
         verbose_name_plural = 'Rams'
 
     def __str__(self):
-        return f"{self.title}"
+        return f"{self.amount} {self.title} +{self.added_price}AZN"
 
 
 class Brand(models.Model):
@@ -103,7 +103,7 @@ class SSD(models.Model):
         verbose_name_plural = 'SSDs'
 
     def __str__(self):
-        return f"{self.title}"
+        return f"{self.amount} {self.title} +{self.added_price}AZN"
 
 
 class HDD(models.Model):
@@ -121,7 +121,7 @@ class HDD(models.Model):
         verbose_name_plural = 'HDDs'
 
     def __str__(self):
-        return f"{self.title}"
+        return f"{self.amount} {self.title} +{self.added_price}AZN"
 
 
 class Processor(models.Model):
@@ -137,7 +137,7 @@ class Processor(models.Model):
         verbose_name_plural = 'Processors'
 
     def __str__(self):
-        return f"{self.title}"
+        return f"{self.title} +{self.added_price}AZN"
 
 
 class GPU(models.Model):
@@ -153,7 +153,7 @@ class GPU(models.Model):
         verbose_name_plural = 'GPUs'
 
     def __str__(self):
-        return f"{self.title}"
+        return f"{self.title} +{self.added_price}AZN"
 
 
 class Slider(models.Model):
@@ -262,3 +262,25 @@ class News(models.Model):
         super(News, self).save(*args, **kwargs)
         self.slug = f'{slugify(self.title)}-{self.id}'
         super(News, self).save(*args, **kwargs)
+
+
+class Order(models.Model):
+    PAYMENT_CHOICES =(
+        ("Nəğd", ("Nəğd")),
+        ("Kartla", ("Kartla"))
+    )
+    full_name = models.CharField(max_length=200)
+    number = models.CharField(max_length=500)
+    email = models.EmailField(('email adress'),null=True, blank=True)
+    delivery = models.BooleanField(default=False)
+    payment_type = models.CharField(choices=PAYMENT_CHOICES, max_length=50)
+    comment = models.TextField('Comment', null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = 'Order'
+        verbose_name_plural = 'Orders'
+
+    def __str__(self):
+        return f"{self.full_name}'s Order"

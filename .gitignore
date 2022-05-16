@@ -3,4 +3,6 @@ venv
 .venv
 /myenv
 myenv
+db.sqlite3
+
 
