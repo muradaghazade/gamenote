@@ -1,3 +1,4 @@
+{% load static %}
 <footer class="footer">
     <div class="footer__head">
         <div class="footer__inner inner">
@@ -5,7 +6,7 @@
                 <div class="footer__start">
                     <div class="footer-logo">
 
-                        <img src="/local/templates/main/img/logo-footer.svg" alt="" class="footer-logo-img">
+                        <img src="{% static '/public/img/gamenotepnglogo.png' %}" alt="" class="footer-logo-img">
                     </div>
 
                 </div>
@@ -73,15 +74,26 @@
                                     <ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="footer__catalog-category">
 
                                         <li itemprop="name" class="footer__catalog-category-li">
-                                            <a itemprop="url" href="{% url 'core:news' %}" class="footer__catalog-link">XƏBƏRLƏR</a>
+                                            <a itemprop="url" href="{% url 'core:new' %}" class="footer__catalog-link">Dizaynerər üçün Noutbuklar</a>
                                         </li>
 
 
                                         <li itemprop="name" class="footer__catalog-category-li">
 
-                                        <a itemprop="url" href="{% url 'core:contact' %}" class="footer__catalog-link">ƏLAQƏ</a>
+                                        <a itemprop="url" href="{% url 'core:new' %}" class="footer__catalog-link">Oyun üçün Noutbuklar</a>
 
                                         </li>
+                                        <li itemprop="name" class="footer__catalog-category-li">
+
+                                            <a itemprop="url" href="{% url 'core:new' %}" class="footer__catalog-link">Video Render üçün Noutbuklar</a>
+    
+                                            </li>
+
+                                            <li itemprop="name" class="footer__catalog-category-li">
+
+                                                <a itemprop="url" href="{% url 'core:new' %}" class="footer__catalog-link">Foto Render üçün Noutbuklar</a>
+        
+                                                </li>
                                         
 
 
@@ -95,15 +107,19 @@
                                     <ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="footer__catalog-category">
 
                                         <li itemprop="name" class="footer__catalog-category-li">
-                                            <a itemprop="url" href="{% url 'core:faq' %}" class="footer__catalog-link">FAQ</a>
+                                            <a itemprop="url" href="{% url 'core:new' %}?price=2000" class="footer__catalog-link">2000AZN qədər Noutbuklar</a>
                                         </li>
 
                                         <li itemprop="name" class="footer__catalog-category-li">
-                                            <a itemprop="url" href="{% url 'core:about' %}" class="footer__catalog-link">HAQQIMIZDA</a>
+                                            <a itemprop="url" href="{% url 'core:new' %}?price=3000" class="footer__catalog-link">3000AZN qədər Noutbuklar</a>
                                         </li>
 
                                         <li itemprop="name" class="footer__catalog-category-li">
-                                            <a itemprop="url" href="{% url 'core:reviews' %}" class="footer__catalog-link">RƏYLƏR</a>
+                                            <a itemprop="url" href="{% url 'core:new' %}?price=4000" class="footer__catalog-link">4000AZN qədər Noutbuklar</a>
+                                        </li>
+
+                                        <li itemprop="name" class="footer__catalog-category-li">
+                                            <a itemprop="url" href="{% url 'core:new' %}?price=5000" class="footer__catalog-link">5000AZN qədər Noutbuklar</a>
                                         </li>
 
                                     
@@ -153,11 +169,41 @@
             <div class="partners-container">
                 <div class="partners-title"><span>Partnyorlarimiz</span></div>
                 <div class="partners-image">
-                    <img src="https://121computers.com/wp-content/uploads/2018/05/5fc807_9bc3045d6af04afe834908422ace2d61_mv2-300x227.png" width="100%" height="100%"/>
+                    <img src="{% static 'public/logos/acer.png' %}" width="100%" height="100%"/>
+                </div>
+                <div class="partners-image">
+                    <img src='{% static "public/logos/alienware.png" %}' width="100%" height="100%"/>
+                </div>
+                <div class="partners-image">
+                    <img src='{% static "public/logos/asus.png" %}' width="100%" height="100%"/>
+                </div>
+                <div class="partners-image">
+                    <img src='{% static "public/logos/dell.png" %}' width="100%" height="100%"/>
+                </div>
+                <div class="partners-image">
+                    <img src='{% static "public/logos/legion.png" %}' width="100%" height="100%"/>
+                </div>
+                <div class="partners-image">
+                    <img src='{% static "public/logos/logitech.png" %}' width="100%" height="100%"/>
+                </div>
+                <div class="partners-image">
+                    <img src='{% static "public/logos/ms.png" %}' width="100%" height="100%"/>
+                </div>
+                <div class="partners-image">
+                    <img src='{% static "public/logos/msi.png" %}' width="100%" height="100%"/>
+                </div>
+                <div class="partners-image">
+                    <img src='{% static "public/logos/predator.png" %}' width="100%" height="100%"/>
+                </div>
+                <div class="partners-image">
+                    <img src='{% static "public/logos/razer.png" %}' width="100%" height="100%"/>
+                </div>
+                <div class="partners-image">
+                    <img src='{% static "public/logos/rog.png" %}' width="100%" height="100%"/>
                 </div>
             </div>  
             <div class="instagram-container">
-                <div class="instagram-title"><span>Instagram</span></div>
+                <div class="instagram-title"><span class="instagram-title-span">Instagram</span></div>
                 <div class="instagram-photos">
                     <img src="https://images.unsplash.com/photo-1626218174358-7769486c4b79?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGMlMjBnYW1pbmd8ZW58MHx8MHx8&w=1000&q=80" width="100%" height="100%"/>
                 </div>

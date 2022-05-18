@@ -32,8 +32,12 @@ class NewProductsView(ListView):
     def get_queryset(self):
         queryset = Product.objects.order_by("-id")
         title = self.request.GET.get('title')
+        price = self.request.GET.get('price')
+        print(price)
         if title:
             queryset = queryset.filter(title__icontains=title)
+        if price:
+            queryset = queryset.filter(price__lte=price)
         return queryset
 
 

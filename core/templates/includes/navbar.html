@@ -5,15 +5,14 @@
             <div class="header__wrapper">
                 <div class="header__start">
                     <div class="header__logo">
-                        <a href="{% url 'core:index' %}">
-                        <img src={% static '/public/img/logo.png' %} width="250px" height="50px" alt="">
-                        </a>
+                        <a href="{% url 'core:index' %}"><img src='{% static '/public/img/gamenotepnglogo.png' %}' width="250px" height="50px" alt=""></a>
+
                     </div>
                     <span href="#call-back" data-modal="text" class="call_back"><img
                                 src={% static '/public/img/call-back.svg' %}
                                 alt=""></span> <a href="tel:88002349919" class="header__phone">
                             <img src="/local/templates/main/img/icon/phone.svg" alt="">
-                            <span class="header__phone-tel">+994 55 555 55 55</span>
+                            <span class="header__phone-tel">+994 77 517 57 47</span>
                         </a>
                     <a href="#locationModal" class="location__header" data-modal="text">
                         <svg class="location__header_icon">
@@ -33,7 +32,7 @@
 
 
                         <div class="header__menu-top-box">
-                            <a itemprop="url" href="{% url 'core:news' %}" class="header__menu-top-link"><span itemprop="name">Xəbərlər</span></a>
+                            <a itemprop="url" href="/news/" class="header__menu-top-link"><span itemprop="name">Xəbərlər</span></a>
                         </div>
 
 
@@ -42,7 +41,7 @@
 
 
                         <div class="header__menu-top-box">
-                            <a itemprop="url" href="{% url 'core:about' %}" class="header__menu-top-link">
+                            <a itemprop="url" href="/about/" class="header__menu-top-link">
         <span itemprop="name">Haqqımızda</span>
         <svg class="header__menu-top-link-icon" width="16" height="9">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-dotted"></use>
@@ -55,7 +54,7 @@
 
 
 
-                                <a itemprop="url" href="{% url 'core:faq' %}" class="header__menu-top-link-second">
+                                <a itemprop="url" href="/faq/" class="header__menu-top-link-second">
         <svg class="header__menu-top-link-second-icon" width="10" height="11">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-enterLink"></use>
         </svg>
@@ -66,7 +65,7 @@
 
 
 
-                                <a itemprop="url" href="{% url 'core:about' %}" class="header__menu-top-link-second">
+                                <a itemprop="url" href="/about/" class="header__menu-top-link-second">
         <svg class="header__menu-top-link-second-icon" width="10" height="11">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-enterLink"></use>
         </svg>
@@ -77,7 +76,7 @@
 
 
 
-                                <a itemprop="url" href="{% url 'core:reviews' %}" class="header__menu-top-link-second">
+                                <a itemprop="url" href="/reviews/" class="header__menu-top-link-second">
         <svg class="header__menu-top-link-second-icon" width="10" height="11">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-enterLink"></use>
         </svg>
@@ -103,7 +102,7 @@
 
 
 
-                                <a itemprop="url" href="{% url 'core:support' %}" class="header__menu-top-link-second">
+                                <a itemprop="url" href="/support/" class="header__menu-top-link-second">
         <svg class="header__menu-top-link-second-icon" width="10" height="11">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-enterLink"></use>
         </svg>
@@ -114,7 +113,7 @@
 
 
 
-                                <a itemprop="url" href="{% url 'core:delivery' %}" class="header__menu-top-link-second">
+                                <a itemprop="url" href="/delivery/" class="header__menu-top-link-second">
         <svg class="header__menu-top-link-second-icon" width="10" height="11">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-enterLink"></use>
         </svg>
@@ -158,24 +157,24 @@
 
                     <div class="header__menu">
                         <nav itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="header__menu-box">
-                            
 
-                           
-
-                           
-                           
+                            <a itemprop="url" href="{% url 'core:budget-products' %}" class="header__menu-link ">
+                                <div class="header__menu-link-icon-box">
+                                    <svg class="header__menu-link-icon" width="22" height="22">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-game"></use>
+</svg>
+                                </div> <span itemprop="name" class="header__menu-link-span">Büdcəli noutbuklar</span>
+                            </a>
+                            <a itemprop="url" href="{% url 'core:new' %}" class="header__menu-link no-pad">
+            <span itemprop="name">Oyun noutbukları</span>                </a>
+                            <a itemprop="url" href="{% url 'core:power-products' %}" class="header__menu-link no-pad">
+            <span itemprop="name">Güclü Noutbuklar</span>                </a>
+                            <a itemprop="url" href="{% url 'core:games' %}" class="header__menu-link no-pad">
+            <span itemprop="name">Oyuna uyğun Noutbuklar</span>                </a>
 
                         </nav>
                     </div>
 
-                </div>
-                <div class="search" style="visibility: hidden; position: absolute; top: 50px; border: red solid;">
-                    <div class="search__inner inner">
-                        <form class="search__form" action="/search/">
-                            <input type="text" value="" name="q" class="search__input" placeholder="Введите слово или фразу...">
-                            <input type="submit" name="s" class="search__btn btn" value="axtar" >
-                        </form>
-                    </div>
                 </div>
                 <div class="header__end">
                     <div class="header__controll">
@@ -190,9 +189,9 @@
                             </a>
                             <div class="search" style="visibility: hidden;">
                                 <div class="search__inner inner">
-                                    <form class="search__form"  action="{% url 'core:new' %}">
-                                        <input type="text" value="{{request.GET.title}}" name="title" class="search__input" placeholder="Axtar...">
-                                        <input type="submit" class="search__btn btn">
+                                    <form class="search__form" action="/search/">
+                                        <input type="text" value="" name="q" class="search__input" placeholder="Введите слово или фразу...">
+                                        <input type="submit" name="s" class="search__btn btn" value="axtar" >
                                     </form>
                                 </div>
                             </div>
@@ -205,7 +204,7 @@
                                         <img width="30px" height="50px" src="{% static 'public/img/icon/basket.png' %}"/>
                                     </svg>
                                 </div>
-                                <!-- <span class="header__controll-sum"></span> -->
+                                <!-- <span class="header__controll-sum">0</span> -->
                             </div>
                             <span class="header__controll-text">Корзина</span>
                             <!--'end_frame_cache_bx_basketFKauiI'-->
@@ -220,7 +219,6 @@
                         </a>
                     </div>
                 </div>
-                
             </div>
         </div>
     </div>
@@ -244,13 +242,13 @@
         }
     })
 
-
     document.querySelector('.axtar-footer').addEventListener('click', () => {
         var searchLayer =  document.querySelector('.search')
         if (searchLayer.style.visibility == "visible"){
             searchLayer.style.visibility = "hidden"
         }else{
             searchLayer.style.visibility = "visible"
+            // document.querySelector('.header__foot').style.display="block"
         }
     })
 
