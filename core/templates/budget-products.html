@@ -66,7 +66,6 @@
                         </div>
                     </div>
                     <ul class="catalog__list ">
-                       
                         {% for product in products %}
                         <li class="catalog__li product__" data-id="816" id="bx_3966226736_816_362ce596257894d11ab5c1d73d13c755" data-entity="item" itemscope itemtype="https://schema.org/Product">
                             <div class="catalog__li-box">
@@ -91,17 +90,7 @@
                                                     <span class="catalog__li-price-i"><svg class="icon-info" width="14" height="14">
                         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/local/templates/main/img/sprite.svg#icon-info"></use>
                     </svg></span>
-                                                    <div class="catalog__credit-hidd">
-                                                        <p class="catalog__credit-hidd-title">Оплата в кредит</p>
-                                                        <dl class="catalog__credit-hidd-dl">
-                                                            <dt class="catalog__credit-hidd-dt">Быстро и просто</dt>
-                                                            <dd class="catalog__credit-hidd-dd">Заполните анкету на сайте магазина и получите решение по вашей заявке за 2 минуты.</dd>
-                                                        </dl>
-                                                        <dl class="catalog__credit-hidd-dl">
-                                                            <dt class="catalog__credit-hidd-dt">Выбор лучших условий</dt>
-                                                            <dd class="catalog__credit-hidd-dd">Заявка уходит на рассмотрение в большое число финансовых организаций: Альфа-Банк, Pay P.S, Банк Восточный, Тинькофф Банк, Кредит Европа Банк, Second Bank и др.</dd>
-                                                        </dl>
-                                                    </div>
+                                                    
                                                 </div>
 
 
@@ -109,14 +98,9 @@
                                         </div>
                                     </div>
                                     <div class="catalog__li-controll">
-                                        <a href="javascript:void(0)" class="catalog__li-controll-link catalog__li-controll-link--buy add2basket">Əldə et</a>
-                                        <a href="/power-pc/edelweiss-gladiator/" class="catalog__li-controll-link catalog__li-controll-link-periphery">
+                                        <a href="{% url 'core:product-detail' product.slug%}" class="catalog__li-controll-link catalog__li-controll-link-periphery">
         <span class="catalog__li-controll-link--desc">Ətraflı</span>
         <span class="catalog__li-controll-link--mob"><img src="{% static 'main/img/icon/info-list.svg' %}" alt="" width="11"></span>
-    </a>
-                                        <a href="/constructor/#edelweiss-gladiator" class="catalog__li-controll-link">
-                                        <img src="{% static 'main/img/icon/setting.svg' %}" alt="" width="13">
-        <span class="catalog__li-controll-link-hidd">конфигурировать</span>
     </a>
                                     </div>
                                     <p class="catalog__li-desc" itemprop="description">{{product.description}} &nbsp;&nbsp; </p>
@@ -249,9 +233,6 @@
                             </div>
                         </li>
                         {% endfor %}
-                        
-                        
-                        
                     </ul>
                     <nav class="pagin" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
                         {% if page_obj.has_previous %}
